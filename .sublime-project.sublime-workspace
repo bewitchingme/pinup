@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"date",
+				"date_end"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
 				"event",
 				"event_params"
 			],
@@ -276,10 +292,6 @@
 				"italic"
 			],
 			[
-				"font",
-				"font-style"
-			],
-			[
 				"sani",
 				"sanitize_name"
 			],
@@ -502,23 +514,35 @@
 			[
 				"valida",
 				"validates_length_of"
-			],
-			[
-				"displa",
-				"display_error_for"
-			],
-			[
-				"two",
-				"two_weeks"
-			],
-			[
-				"sha",
-				"shadow-depth"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/events/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 1154,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/events.css.scss",
+			"settings":
+			{
+				"buffer_size": 626,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Coldfury/Downloads/Pinup Data - Aug 31-Sept 6 - Sheet1.csv",
+			"settings":
+			{
+				"buffer_size": 71135,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -572,18 +596,29 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Coldfury/Documents/radiant-sands/config/initializers/devise.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/events_controller.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/Gemfile",
+		"/C/Users/Coldfury/Documents/radiant-sands/config/application.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_form.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/events.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/bootstrap_and_overrides.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/global.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/layout.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/application.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/application.css",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/application.js",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/new.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/users.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/scaffolds.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/show.json.jbuilder",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/show.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.json.jbuilder",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/edit.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_form.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/application_controller.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/Gemfile",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/routes.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/application.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/environments/development.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/config/initializers/devise.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141011053414_add_devise_to_users.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141006170818_create_events.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141011053345_create_users.rb",
@@ -688,18 +723,7 @@
 		"/C/Users/Coldfury/Documents/demoriat/app/models/comment.rb",
 		"/C/Users/Coldfury/Documents/demoriat/app/models/user.rb",
 		"/C/Users/Coldfury/Documents/demoriat/db/migrate/20141002043213_add_verified_and_confirmation_token_to_people.rb",
-		"/C/Users/Coldfury/Documents/demoriat/config/locales/bootsy.en.yml",
-		"/C/Users/Coldfury/Documents/demoriat/db/migrate/20141001073107_change_description_to_text.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/enterprises/form/_description.html.haml",
-		"/C/Users/Coldfury/Documents/demoriat/app/assets/stylesheets/people.css.scss",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/people/form/_description.html.haml",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/pages/contact.html.erb",
-		"/C/Users/Coldfury/Documents/demoriat/app/controllers/contacts_controller.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/mailers/contact_mailer.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/pages/_form.html.erb",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/pages/form/_message.html.erb",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/pages/form/_subject.html.erb",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/pages/form/_phone.html.erb"
+		"/C/Users/Coldfury/Documents/demoriat/config/locales/bootsy.en.yml"
 	],
 	"find":
 	{
@@ -863,8 +887,91 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/events/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 1154,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								124,
+								124
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/assets/stylesheets/events.css.scss",
+					"settings":
+					{
+						"buffer_size": 626,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								530,
+								530
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 71.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Coldfury/Downloads/Pinup Data - Aug 31-Sept 6 - Sheet1.csv",
+					"settings":
+					{
+						"buffer_size": 71135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

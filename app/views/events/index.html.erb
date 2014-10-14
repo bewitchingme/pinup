@@ -1,24 +1,33 @@
 <% events.each_slice(1) do |slice| %>
   <div class="row">
     <% slice.each do |event| %>
-      <div id="event-<%=event.id%>" class="container event">
-        <div class="col-md-8 col-md-offset-2">
-          <%= link_to event do %>
-            <div class="row">
-              <legend><%= event.title %></legend>
-            </div>
+      <div id="event-<%= event.id %>" class="event">
+        <%= link_to event do %>
+          <div class="col-md-8 col-md-offset-2">
             
-            <div class="row">
-              <div class="col-md-6 col-md-offset-6">
-                <strong>
-                  <%= event.location %> <time datetime="<%= event.date_begin %>"><%= event.date_begin %></time>
-                </strong>
-                <p><%= truncate(event.content, length: 140, separator: ' ') %></p>
-                <!-- <time datetime="<%= event.date_end %>"><%= event.date_end %></time> -->
+            <div class="container-fluid">
+              <div class="row">
+                <legend><%= event.title %></legend>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 col-md-offset-6">
+                  <strong>
+                    <%= event.location %><br>
+                    <span>
+                      From : <time datetime="<%= event.date_begin %>"><%= event.date_begin %></time>
+                      <% unless event.date_end.nil? %>
+                      To : <time datetime="<%= event.date_end %>"><%= event.date_end %></time>
+                      <% end %>
+                    </span>
+                  </strong>
+                  <p><%= truncate(event.content, length: 140, separator: ' ') %></p>
+                </div>
               </div>
             </div>
-          <% end %>
-        </div>
+
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>

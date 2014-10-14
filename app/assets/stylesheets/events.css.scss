@@ -4,30 +4,26 @@
 
 @import "global";
 
-.event {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 
-  legend {
-    font-size: $font-size + 8px;
-    color: lighten(black, 5%);
-  }
-  
-  a {
-    outline: 0;
-    color: lighten(black, 5%);
-    
-    &:hover, &:active, &:focus {
-      color: lighten(black, 5%);
-      text-decoration: none;
-    }
-  }
-
-  &:hover {
+// Set hover background color
+.event a div[class*='col-'] {
+  &:hover, &:active, &:focus {
     background-color: darken(white, 5%);
   }
+}
+
+// Event title size
+.event legend {
+  font-size: $font-size + 8px;
+  color: lighten(black, 5%);
+}
+
+// Remove default bootstrap link effects
+.event a {
+  outline: 0;
+  color: lighten(black, 5%);
+  &:hover, &:active, &:focus {
+    color: lighten(black, 5%);
+    text-decoration: none;
+  } 
 }

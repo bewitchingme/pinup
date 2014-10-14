@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
 
-      <%= form_for(event) do |f| %>
+      <%= form_for event, html: { multipart: true } do |f| %>
         <div class="row">
           <div class="col-md-12">
             <div class="form-group">
@@ -17,6 +17,16 @@
             <div class="form-group">
               <%= f.label :content %>
               <%= f.text_area :content, rows: 6, class: 'form-control' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <%= f.label :cover %>
+              <%= f.file_field :cover, id: 'cover-upload', style: 'display: none;' %>
+              <%= link_to 'Upload cover', '#', onclick: 'uploadCoverClicked(event);', class: 'form-control' %>
             </div>
           </div>
         </div>

@@ -18,5 +18,10 @@
 //= require_tree .
 
 $(document).ready(function(){
-  $('.datepicker').datepicker();
+  $('.datepicker').datepicker({format: 'dd-mm-yyyy'});
 });
+
+function uploadCoverClicked(event) {
+  event.preventDefault();
+  $('#cover-upload').click();
+}

@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
+
+gem 'rails_12factor', group: :production
+
 # Use postgre for production
 gem 'pg', group: :production
 # Use sqlite3 as the database for Active Record

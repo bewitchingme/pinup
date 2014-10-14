@@ -31,6 +31,8 @@ gem 'devise'
 
 gem 'decent_exposure'
 
+gem 'bootstrap-datepicker-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

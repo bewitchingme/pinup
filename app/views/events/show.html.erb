@@ -2,28 +2,28 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @event.title %>
+  <%= event.title %>
 </p>
 
 <p>
   <strong>Content:</strong>
-  <%= @event.content %>
+  <%= event.content %>
 </p>
 
 <p>
   <strong>Date begin:</strong>
-  <%= @event.date_begin %>
+  <%= event.date_begin %>
 </p>
 
 <p>
   <strong>Date end:</strong>
-  <%= @event.date_end %>
+  <%= event.date_end %>
 </p>
 
 <p>
   <strong>Location:</strong>
-  <%= @event.location %>
+  <%= event.location %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Edit', edit_event_path(event) %> |
 <%= link_to 'Back', events_path %>

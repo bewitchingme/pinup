@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
-  resources :users, except: [ :new, :create ]
+  resources :users, except: [ :new, :create, :destroy ]
 
   resources :events, path: '/'
 end

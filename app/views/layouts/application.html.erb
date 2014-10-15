@@ -8,13 +8,14 @@
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<%= render 'layouts/navbar' %>
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <%= yield %>
+      <section id="body">
+        <%= yield %>
+      </section>
     </div>
   </div>
 </div>

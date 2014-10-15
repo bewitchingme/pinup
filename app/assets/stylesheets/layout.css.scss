@@ -3,3 +3,20 @@
 textarea {
   resize: vertical;
 }
+
+body {
+  padding-top: 65px;
+}
+
+#logo {
+  font-size: $font-size + 4px;
+  font-weight: bolder;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px darken(white, 75%);
+  
+  &:hover, &:focus, &:active {
+    color: darken(white, 15%);
+  }
+}

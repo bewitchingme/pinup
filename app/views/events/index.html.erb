@@ -1,7 +1,7 @@
 <% events.each_slice(1) do |slice| %>
   <div class="row">
     <% slice.each do |event| %>
-      <div id="event-<%= event.id %>" class="event">
+      <div id="event-<%= event.id %>" class="event" data-cover-url="<%= event.cover %>">
         <%= link_to event do %>
           <div class="col-md-8 col-md-offset-2">
             
@@ -15,9 +15,9 @@
                   <strong>
                     <%= event.location %><br>
                     <span>
-                      From : <time datetime="<%= event.date_begin %>"><%= event.date_begin %></time>
+                      <time datetime="<%= event.date_begin %>"><%= event.date_begin.strftime('%F %R') %></time>
                       <% unless event.date_end.nil? %>
-                      To : <time datetime="<%= event.date_end %>"><%= event.date_end %></time>
+                      - <time datetime="<%= event.date_end %>"><%= event.date_end.strftime('%F %R') %></time>
                       <% end %>
                     </span>
                   </strong>

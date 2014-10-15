@@ -1,6 +1,12 @@
 class EventsController < ApplicationController
   expose(:events) { Event.where('date_begin > ?', Time.now).order('date_begin ASC') }
-  expose(:event, attributes: :event_params)
+  expose(:event, attributes: :event_params) do
+    unless params[:id].nil?
+      Event.find(params[:id])
+    else
+      Event.new
+    end
+  end
 
   def create
     self.event = Event.new(event_params)

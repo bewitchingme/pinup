@@ -23,7 +23,8 @@
 // Event title size
 .event legend {
   overflow: hidden;
-  font-size: $font-size + 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1 * ($font-size + 8px);
   font-weight: bold;
   color: yellow;
   text-shadow: 1px 1px darken(yellow, 75%);
@@ -32,14 +33,16 @@
 
 .event strong {
   overflow: hidden;
-  font-size: $font-size + 4px;
+  font-family: 'Noticia Text', serif;
+  font-size: 1.2 * ($font-size + 4px);
   color: yellow;
   text-shadow: 1px 1px darken(yellow, 75%);
 }
 
 .event p {
   overflow: hidden;
-  font-size: $font-size + 2px;
+  font-family: 'Chivo', sans-serif;
+  font-size: 1.2 * ($font-size + 2px);
   color: lighten(yellow, 10%);
   text-shadow: 1px 1px darken(lighten(yellow, 10%), 75%);
 }

@@ -8,9 +8,9 @@
                          data: { toggle: 'collapse', target: '.navbar-collapse' } do %>
           
             <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <% 3.times do %>
+             <span class="icon-bar"></span>
+            <% end %>
           <% end %>
 
           <%= link_to 'Pin-up Gattawa', root_path, id: 'logo', class: 'navbar-brand' %>
@@ -27,6 +27,11 @@
           </ul>
         
           <ul class="nav navbar-nav navbar-right">
+            <li>
+              <form class="navbar-form">
+                <%= link_to 'Post an event', new_event_path, class: 'btn btn-primary' %>
+              </form>
+            </li>
             <li><%= link_to 'Sign in', new_user_session_path %></li>
             <li><%= link_to 'Sign up', new_user_registration_path %></li>
           </ul>      

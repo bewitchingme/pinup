@@ -4,16 +4,64 @@
 		"selected_items":
 		[
 			[
+				"lin",
+				"link_to"
+			],
+			[
+				"bold",
+				"bolder"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"navba",
+				"navbar-brand"
+			],
+			[
+				"colla",
+				"collapse"
+			],
+			[
+				"nav",
+				"navbar-toggle"
+			],
+			[
+				"ad",
+				"admin_ads"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"co",
+				"cover_url"
+			],
+			[
 				"date",
-				"date_end"
+				"date_begin"
+			],
+			[
+				"dat",
+				"date_begin"
 			],
 			[
 				"form",
 				"form-control"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"tex",
@@ -78,10 +126,6 @@
 			[
 				"crea",
 				"create_success"
-			],
-			[
-				"co",
-				"controllers"
 			],
 			[
 				"sign_",
@@ -264,14 +308,6 @@
 				"Contacts"
 			],
 			[
-				"max",
-				"maximum"
-			],
-			[
-				"text",
-				"text_field_tag"
-			],
-			[
 				"contac",
 				"contact_param"
 			],
@@ -412,10 +448,6 @@
 				"userable"
 			],
 			[
-				"back",
-				"background-color"
-			],
-			[
 				"border-ra",
 				"border-top-left-radius"
 			],
@@ -476,73 +508,17 @@
 				"submit"
 			],
 			[
-				"nav",
-				"navigation"
-			],
-			[
 				"navbar",
 				"navbar-btn"
 			],
 			[
 				"titl",
 				"titleize"
-			],
-			[
-				"us",
-				"user"
-			],
-			[
-				"pas",
-				"password_confirmation"
-			],
-			[
-				"avatar",
-				"avatar-upload"
-			],
-			[
-				"cate",
-				"categories"
-			],
-			[
-				"crede",
-				"credential"
-			],
-			[
-				"ca",
-				"category"
-			],
-			[
-				"valida",
-				"validates_length_of"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "app/views/events/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 1154,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/events.css.scss",
-			"settings":
-			{
-				"buffer_size": 626,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Coldfury/Downloads/Pinup Data - Aug 31-Sept 6 - Sheet1.csv",
-			"settings":
-			{
-				"buffer_size": 71135,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -596,19 +572,32 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Coldfury/Documents/radiant-sands/config/initializers/devise.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/application.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/_navbar.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/layout.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/config/routes.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141015033137_create_admin_ads.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/models/admin/ad.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/events_controller.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/Gemfile",
-		"/C/Users/Coldfury/Documents/radiant-sands/config/application.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_form.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/events.js.coffee",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/application.js",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/events.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/Gemfile",
+		"/C/Users/Coldfury/Documents/radiant-sands/.gitignore",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/models/event.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_form.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/config/environments/development.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/config/initializers/paperclip.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/config/environments/production.rb",
+		"/C/Users/Coldfury/Downloads/credentials.csv",
+		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141014180241_add_cover_to_events.rb",
+		"/C/Users/Coldfury/Downloads/Pinup Data - Aug 31-Sept 6 - Sheet1.csv",
+		"/C/Users/Coldfury/Documents/radiant-sands/config/initializers/devise.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/config/application.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/bootstrap_and_overrides.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/global.css.scss",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/layout.css.scss",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/application.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/application.css",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/application.js",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/new.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/users.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/scaffolds.css.scss",
@@ -617,8 +606,6 @@
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.json.jbuilder",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/edit.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/application_controller.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/config/routes.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/config/environments/development.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141011053414_add_devise_to_users.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141006170818_create_events.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141011053345_create_users.rb",
@@ -712,18 +699,7 @@
 		"/C/Users/Coldfury/Documents/demoriat/test/mailers/previews/enterprise_mailer_preview.rb",
 		"/C/Users/Coldfury/Documents/demoriat/app/mailers/enterprise_mailer.rb",
 		"/C/Users/Coldfury/Documents/demoriat/app/models/enterprise.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/enterprise_mailer/verify_email.html.erb",
-		"/C/Users/Coldfury/Documents/demoriat/db/migrate/20141003035429_add_verified_and_confirmation_token_to_enterprises.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/person_mailer/verify_email.html.erb",
-		"/C/Users/Coldfury/Documents/demoriat/app/mailers/person_mailer.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/helpers/comments_helper.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/layouts/_footer.html.haml",
-		"/C/Users/Coldfury/Documents/demoriat/app/assets/stylesheets/projects.css.scss",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/layouts/header/_menu.html.erb",
-		"/C/Users/Coldfury/Documents/demoriat/app/models/comment.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/models/user.rb",
-		"/C/Users/Coldfury/Documents/demoriat/db/migrate/20141002043213_add_verified_and_confirmation_token_to_people.rb",
-		"/C/Users/Coldfury/Documents/demoriat/config/locales/bootsy.en.yml"
+		"/C/Users/Coldfury/Documents/demoriat/app/views/enterprise_mailer/verify_email.html.erb"
 	],
 	"find":
 	{
@@ -742,6 +718,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"container",
+			"avatar",
 			"@",
 			"@event",
 			"@",
@@ -867,9 +845,7 @@
 			"li class=\"col-md-3\"",
 			" style=\"display: inline-block; width: 19%;\"",
 			"style=\"display: inline-block; width: 19%;\"",
-			"th",
-			"</td>",
-			"user"
+			"th"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -887,91 +863,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/views/events/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 1154,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								124,
-								124
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/assets/stylesheets/events.css.scss",
-					"settings":
-					{
-						"buffer_size": 626,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								530,
-								530
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 71.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/Coldfury/Downloads/Pinup Data - Aug 31-Sept 6 - Sheet1.csv",
-					"settings":
-					{
-						"buffer_size": 71135,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

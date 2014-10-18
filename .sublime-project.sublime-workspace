@@ -519,6 +519,54 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/assets/stylesheets/events.css.scss",
+			"settings":
+			{
+				"buffer_size": 1448,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/layout.css.scss",
+			"settings":
+			{
+				"buffer_size": 415,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/global.css.scss",
+			"settings":
+			{
+				"buffer_size": 218,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/layouts/_navbar.html.erb",
+			"settings":
+			{
+				"buffer_size": 1477,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/events/new.html.erb",
+			"settings":
+			{
+				"buffer_size": 1979,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 492,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -718,6 +766,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"#ff0",
+			"#000",
 			"container",
 			"avatar",
 			"@",
@@ -843,9 +893,7 @@
 			" class=\"col-md-3\"",
 			"li",
 			"li class=\"col-md-3\"",
-			" style=\"display: inline-block; width: 19%;\"",
-			"style=\"display: inline-block; width: 19%;\"",
-			"th"
+			" style=\"display: inline-block; width: 19%;\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -863,8 +911,173 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/assets/stylesheets/events.css.scss",
+					"settings":
+					{
+						"buffer_size": 1448,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1203,
+								1203
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/assets/stylesheets/layout.css.scss",
+					"settings":
+					{
+						"buffer_size": 415,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/stylesheets/global.css.scss",
+					"settings":
+					{
+						"buffer_size": 218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								199,
+								199
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/layouts/_navbar.html.erb",
+					"settings":
+					{
+						"buffer_size": 1477,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								488,
+								488
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/events/new.html.erb",
+					"settings":
+					{
+						"buffer_size": 1979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1537,
+								1537
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 566.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": ".gitignore",
+					"settings":
+					{
+						"buffer_size": 492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								492,
+								492
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

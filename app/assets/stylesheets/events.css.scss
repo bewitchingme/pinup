@@ -4,8 +4,15 @@
 
 @import "global";
 
+@mixin outline() {
+  text-shadow: -1px -1px 0 darken(lighten(yellow, 10%), 75%),
+                0px -1px 0 darken(lighten(yellow, 10%), 75%),
+                1px -1px 0 darken(lighten(yellow, 10%), 75%),
+               -1px  1px 0 darken(lighten(yellow, 10%), 75%),
+                0px  1px 0 darken(lighten(yellow, 10%), 75%),
+                1px  1px 0 darken(lighten(yellow, 10%), 75%);
+}
 
-// Set hover background color
 .event a > div[class*='col-'] {
   overflow: hidden;
   height: 200px;
@@ -20,34 +27,32 @@
   }
 }
 
-// Event title size
 .event legend {
   overflow: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.1 * ($font-size + 8px);
   font-weight: bold;
   color: yellow;
-  text-shadow: 1px 1px darken(yellow, 75%);
+  @include outline();
   border: 0;
 }
 
 .event strong {
   overflow: hidden;
-  font-family: 'Noticia Text', serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.2 * ($font-size + 4px);
   color: yellow;
-  text-shadow: 1px 1px darken(yellow, 75%);
+  @include outline();
 }
 
 .event p {
   overflow: hidden;
-  font-family: 'Chivo', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.2 * ($font-size + 2px);
   color: lighten(yellow, 10%);
-  text-shadow: 1px 1px darken(lighten(yellow, 10%), 75%);
+  @include outline();
 }
 
-// Remove default bootstrap link effects
 .event a {
   outline: 0;
   color: lighten(black, 5%);

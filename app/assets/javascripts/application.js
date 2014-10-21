@@ -22,7 +22,16 @@ $(document).ready(function(){
   $('.datepicker').datepicker({format: 'yyyy-mm-dd'});
 });
 
+$(document).ready(function(){
+  $('#ad').css('background-image', 'url("' + $('#ad').data('img-url') + '")');
+});
+
 function uploadCoverClicked(event) {
   event.preventDefault();
   $('#cover-upload').click();
+}
+
+function uploadImageClicked(event) {
+  event.preventDefault();
+  $('#image-upload').click();
 }

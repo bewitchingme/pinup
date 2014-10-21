@@ -69,6 +69,6 @@ class Admin::AdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_ad_params
-      params[:admin_ad]
+      params.require(:admin_ad).permit(:image)
     end
 end

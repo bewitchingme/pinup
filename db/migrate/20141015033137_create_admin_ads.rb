@@ -1,7 +1,6 @@
 class CreateAdminAds < ActiveRecord::Migration
   def change
     create_table :admin_ads do |t|
-
       t.timestamps
     end
 

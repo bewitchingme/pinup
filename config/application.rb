@@ -8,7 +8,6 @@ Bundler.require(*Rails.groups)
 
 module RadiantSands
   class Application < Rails::Application
-    config.serve_static_assets = true
     config.assets.initialize_on_precompile = false
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

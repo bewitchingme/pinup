@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   decent_configuration do
     strategy DecentExposure::StrongParametersStrategy
   end
+
+  before_action do
+    @ad = Admin::Ad.first
+  end
 end

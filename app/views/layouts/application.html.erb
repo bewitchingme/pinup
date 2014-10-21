@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>RadiantSands</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>RadiantSands</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= render 'layouts/navbar' %>
+  <body>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <section id="body">
-        <%= yield %>
-      </section>
+    <div id="page-content" class="container-fluid">
+      <%= render 'layouts/navbar' %>
+
+      <div class="col-md-8 col-md-offset-2">
+        <section id="page-body">
+          <%= yield %>
+        </section>
+      </div>
+
+      <div class="col-md-2">
+        <section id="advertisement">
+          <% # link_to( image_tag("http://localhost:3000#{@ad.image.url}"), '#',
+             # id: "ad-#{@ad.id}", class: 'ad',
+             #  data: { 'image-url' => @ad.image }
+             # ) unless @ad.nil?
+          %>
+        </section>
+      </div>
+
     </div>
-  </div>
-</div>
 
-</body>
+  </body>
 </html>

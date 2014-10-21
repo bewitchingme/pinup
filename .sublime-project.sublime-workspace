@@ -520,50 +520,35 @@
 	"buffers":
 	[
 		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 828,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/events/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 1201,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/ads.css.scss",
+			"settings":
+			{
+				"buffer_size": 189,
+				"line_ending": "Windows",
+				"name": "ads.css.scss"
+			}
+		},
+		{
 			"file": "app/assets/stylesheets/events.css.scss",
 			"settings":
 			{
 				"buffer_size": 1448,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/layout.css.scss",
-			"settings":
-			{
-				"buffer_size": 415,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/global.css.scss",
-			"settings":
-			{
-				"buffer_size": 218,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/layouts/_navbar.html.erb",
-			"settings":
-			{
-				"buffer_size": 1477,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/events/new.html.erb",
-			"settings":
-			{
-				"buffer_size": 1979,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".gitignore",
-			"settings":
-			{
-				"buffer_size": 492,
 				"line_ending": "Windows"
 			}
 		}
@@ -620,19 +605,24 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/application.html.erb",
+		"/C/Users/Coldfury/Desktop/iv.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/ads.js.coffee",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/application_controller.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/events.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/new.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/_navbar.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/global.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/layout.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/.gitignore",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/application.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/routes.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141015033137_create_admin_ads.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/admin/ad.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/events_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/events.js.coffee",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/application.js",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/events.css.scss",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/Gemfile",
-		"/C/Users/Coldfury/Documents/radiant-sands/.gitignore",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/event.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_form.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/environments/development.rb",
@@ -644,16 +634,13 @@
 		"/C/Users/Coldfury/Documents/radiant-sands/config/initializers/devise.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/application.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/bootstrap_and_overrides.css.scss",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/global.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/application.css",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/new.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/users.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/scaffolds.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/show.json.jbuilder",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/show.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.json.jbuilder",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/edit.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/application_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141011053414_add_devise_to_users.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141006170818_create_events.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141011053345_create_users.rb",
@@ -745,9 +732,7 @@
 		"/C/Users/Coldfury/Documents/demoriat/test/mailers/previews/person_mailer_preview.rb",
 		"/C/Users/Coldfury/Documents/demoriat/test/mailers/previews/contact_mailer_preview.rb",
 		"/C/Users/Coldfury/Documents/demoriat/test/mailers/previews/enterprise_mailer_preview.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/mailers/enterprise_mailer.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/models/enterprise.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/enterprise_mailer/verify_email.html.erb"
+		"/C/Users/Coldfury/Documents/demoriat/app/mailers/enterprise_mailer.rb"
 	],
 	"find":
 	{
@@ -766,6 +751,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"height",
 			"#ff0",
 			"#000",
 			"container",
@@ -892,8 +878,7 @@
 			"li",
 			" class=\"col-md-3\"",
 			"li",
-			"li class=\"col-md-3\"",
-			" style=\"display: inline-block; width: 19%;\""
+			"li class=\"col-md-3\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -911,28 +896,28 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/assets/stylesheets/events.css.scss",
+					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 1448,
+						"buffer_size": 828,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1203,
-								1203
+								719,
+								719
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -944,23 +929,23 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/assets/stylesheets/layout.css.scss",
+					"file": "app/views/events/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 415,
+						"buffer_size": 1201,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								166,
-								166
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -972,22 +957,23 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/assets/stylesheets/global.css.scss",
+					"file": "app/assets/stylesheets/ads.css.scss",
 					"settings":
 					{
-						"buffer_size": 218,
+						"buffer_size": 189,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								199,
-								199
+								65,
+								65
 							]
 						],
 						"settings":
 						{
+							"auto_name": "ads.css.scss",
 							"syntax": "Packages/SCSS/SCSS.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -998,79 +984,25 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/views/layouts/_navbar.html.erb",
+					"file": "app/assets/stylesheets/events.css.scss",
 					"settings":
 					{
-						"buffer_size": 1477,
+						"buffer_size": 1448,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								488,
-								488
+								591,
+								783
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/events/new.html.erb",
-					"settings":
-					{
-						"buffer_size": 1979,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1537,
-								1537
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 566.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": ".gitignore",
-					"settings":
-					{
-						"buffer_size": 492,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								492,
-								492
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

@@ -8,11 +8,11 @@ namespace :csv do
     CSV.foreach(args.filename, { headers: :first_row }) do |row|
 
       event = Event.create(
-        title:  row[1],
-        venue: Venue.find_or_create(row[2]),
-        content:  row[5],
-        date_begin:  ( Date.parse(row[0]) + Time.parse(row[3]).seconds_since_midnight.seconds ).to_datetime,
-        price:  row[4]
+        title:      row[1],
+        venue:      Venue.find_or_create(name: row[2]),
+        content:    row[5],
+        date_begin: ( Date.parse(row[0]) + Time.parse(row[3]).seconds_since_midnight.seconds ).to_datetime,
+        price:      row[4]
       )
 
       puts "Created event #{event.title}\n#{event.content}\n#{date_begin}"

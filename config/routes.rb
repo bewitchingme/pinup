@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :venues
+
   root to: 'events#index'
 
   namespace :admin do

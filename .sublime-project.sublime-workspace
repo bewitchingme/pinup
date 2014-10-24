@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"ad",
+				"admin_ad"
+			],
+			[
 				"lin",
 				"link_to"
 			],
@@ -30,10 +34,6 @@
 			[
 				"nav",
 				"navbar-toggle"
-			],
-			[
-				"ad",
-				"admin_ads"
 			],
 			[
 				"margi",
@@ -523,15 +523,7 @@
 			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 828,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/events/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 1201,
+				"buffer_size": 866,
 				"line_ending": "Windows"
 			}
 		},
@@ -539,17 +531,49 @@
 			"file": "app/assets/stylesheets/ads.css.scss",
 			"settings":
 			{
-				"buffer_size": 189,
+				"buffer_size": 104,
 				"line_ending": "Windows",
 				"name": "ads.css.scss"
 			}
 		},
 		{
-			"file": "app/assets/stylesheets/events.css.scss",
+			"file": "app/views/admin/ads/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 1448,
+				"buffer_size": 172,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/admin/ads.js.coffee",
+			"settings":
+			{
+				"buffer_size": 310,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 1154,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/models/admin/ad.rb",
+			"settings":
+			{
+				"buffer_size": 324,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "config/secrets.yml",
+			"settings":
+			{
+				"buffer_size": 981,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -605,34 +629,37 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Coldfury/Desktop/iv.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/config/application.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/events.js.coffee",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/ads.js.coffee",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/application_controller.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/events.css.scss",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/new.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/_navbar.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/global.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141015033137_create_admin_ads.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/layout.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/_navbar.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/admin/ads/show.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/config/environments/development.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/events.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/admin/ads/_form.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/application.js",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/admin/ads_controller.rb",
+		"/C/Users/Coldfury/Desktop/iv.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/application_controller.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/new.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/global.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/.gitignore",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/application.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/routes.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141015033137_create_admin_ads.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/admin/ad.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/events_controller.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/events.js.coffee",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/application.js",
 		"/C/Users/Coldfury/Documents/radiant-sands/Gemfile",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/event.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_form.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/config/environments/development.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/initializers/paperclip.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/environments/production.rb",
 		"/C/Users/Coldfury/Downloads/credentials.csv",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141014180241_add_cover_to_events.rb",
 		"/C/Users/Coldfury/Downloads/Pinup Data - Aug 31-Sept 6 - Sheet1.csv",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/initializers/devise.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/config/application.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/bootstrap_and_overrides.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/application.css",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/users.css.scss",
@@ -729,10 +756,7 @@
 		"/C/Users/Coldfury/Documents/demoriat/app/views/projects/form/_name.html.erb",
 		"/C/Users/Coldfury/Documents/demoriat/app/views/shared/_messages.html.erb",
 		"/C/Users/Coldfury/Documents/demoriat/app/models/person.rb",
-		"/C/Users/Coldfury/Documents/demoriat/test/mailers/previews/person_mailer_preview.rb",
-		"/C/Users/Coldfury/Documents/demoriat/test/mailers/previews/contact_mailer_preview.rb",
-		"/C/Users/Coldfury/Documents/demoriat/test/mailers/previews/enterprise_mailer_preview.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/mailers/enterprise_mailer.rb"
+		"/C/Users/Coldfury/Documents/demoriat/test/mailers/previews/person_mailer_preview.rb"
 	],
 	"find":
 	{
@@ -751,6 +775,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cover",
+			"event",
+			"static",
+			"serve_static",
 			"height",
 			"#ff0",
 			"#000",
@@ -874,11 +902,7 @@
 			"csv_file_path",
 			"resource",
 			"keywords",
-			"search",
-			"li",
-			" class=\"col-md-3\"",
-			"li",
-			"li class=\"col-md-3\""
+			"search"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -896,7 +920,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -904,15 +928,15 @@
 					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 828,
+						"buffer_size": 866,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								719,
-								719
+								800,
+								800
 							]
 						],
 						"settings":
@@ -922,53 +946,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 105.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/events/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 1201,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "app/assets/stylesheets/ads.css.scss",
 					"settings":
 					{
-						"buffer_size": 189,
+						"buffer_size": 104,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								65,
-								65
+								104,
+								104
 							]
 						],
 						"settings":
@@ -983,26 +979,128 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/assets/stylesheets/events.css.scss",
+					"buffer": 2,
+					"file": "app/views/admin/ads/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 1448,
+						"buffer_size": 172,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								591,
-								783
+								27,
+								27
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/javascripts/admin/ads.js.coffee",
+					"settings":
+					{
+						"buffer_size": 310,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								310,
+								310
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/javascripts/application.js",
+					"settings":
+					{
+						"buffer_size": 1154,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								958,
+								958
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/models/admin/ad.rb",
+					"settings":
+					{
+						"buffer_size": 324,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								220,
+								220
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "config/secrets.yml",
+					"settings":
+					{
+						"buffer_size": 981,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								978,
+								978
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

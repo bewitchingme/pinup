@@ -11,16 +11,16 @@
               </div>
               
               <div class="row">
-                <div class="col-md-6 col-md-offset-6">
-                  <strong>
-                    <%= event.location %><br>
+                <div class="col-md-12">
+                  <strong><%= event.venue %></strong><br>
+                  <strong><%= event.location %></strong><br>
                     <span>
                       <time datetime="<%= event.date_begin %>"><%= event.date_begin.strftime('%F %R') %></time>
                       <% unless event.date_end.nil? %>
                       - <time datetime="<%= event.date_end %>"><%= event.date_end.strftime('%F %R') %></time>
                       <% end %>
                     </span>
-                  </strong>
+                  
                   <p><%= truncate(event.content, length: 100, separator: ' ') %></p>
                 </div>
               </div>

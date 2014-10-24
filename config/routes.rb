@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :venues
-
   root to: 'events#index'
 
   namespace :admin do
@@ -10,5 +8,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, except: [ :new, :create, :destroy ]
 
+  resources :venues
   resources :events, path: '/'
 end

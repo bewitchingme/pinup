@@ -4,60 +4,51 @@
 
 @import "global";
 
-@mixin outline() {
-  text-shadow: -1px -1px 0 darken(lighten(yellow, 10%), 75%),
-                0px -1px 0 darken(lighten(yellow, 10%), 75%),
-                1px -1px 0 darken(lighten(yellow, 10%), 75%),
-               -1px  1px 0 darken(lighten(yellow, 10%), 75%),
-                0px  1px 0 darken(lighten(yellow, 10%), 75%),
-                1px  1px 0 darken(lighten(yellow, 10%), 75%);
-}
+// .event a > div[class*='col-'] {
+//   overflow: hidden;
+//   height: 200px;
 
-.event a > div[class*='col-'] {
-  overflow: hidden;
-  height: 200px;
+//   background-size: cover;
+//   background-repeat: no-repeat;
 
-  background-size: cover;
-  background-repeat: no-repeat;
+//   margin-bottom: 0;
 
-  margin-bottom: 0;
+//   &:hover, &:active, &:focus {
+//     ;
+//   }
+// }
 
-  &:hover, &:active, &:focus {
-    ;
-  }
-}
+// .event legend {
+//   overflow: hidden;
+//   font-family: 'Open Sans', sans-serif;
+//   font-size: 1.1 * ($font-size + 8px);
+//   font-weight: bold;
+//   color: yellow;
+//   @include outline();
+//   border: 0;
+// }
 
-.event legend {
-  overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.1 * ($font-size + 8px);
-  font-weight: bold;
-  color: yellow;
-  @include outline();
-  border: 0;
-}
+// .event strong {
+//   overflow: hidden;
+//   font-family: 'Open Sans', sans-serif;
+//   font-size: 1.2 * ($font-size + 4px);
+//   color: yellow;
+//   @include outline();
+// }
 
-.event strong {
-  overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2 * ($font-size + 4px);
-  color: yellow;
-  @include outline();
-}
+// .event p {
+//   overflow: hidden;
+//   font-family: 'Open Sans', sans-serif;
+//   font-size: 1.2 * ($font-size + 2px);
+//   color: lighten(yellow, 10%);
+//   @include outline();
+// }
 
-.event p {
-  overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2 * ($font-size + 2px);
-  color: lighten(yellow, 10%);
-  @include outline();
-}
-
-.event a {
-  outline: 0;
-  color: lighten(black, 5%);
-  &:hover, &:active, &:focus {
-    color: lighten(black, 5%);
-    text-decoration: none;
-  } 
-}
+// .event a {
+//   outline: 0;
+//   color: lighten(black, 5%);
+//   &:hover, &:active, &:focus {
+//     color: lighten(black, 5%);
+//     text-decoration: none;
+//   } 
+// }

@@ -10,11 +10,12 @@ textarea {
 
 body {
   padding-top: 50px;
+  background-color: lighten(black, 33.3%);
+
+  font-size: $font-size;
+  line-height: 18px;
 }
 
-body {
-  background-color: lighten(black, 33.3%);
-}
 
 #logo {
   font-size: $font-size + 4px;
@@ -27,4 +28,9 @@ body {
   &:hover, &:focus, &:active {
     color: darken(white, 15%);
   }
+}
+
+p, ol, ul, td, pre {
+  font-size: $font-size;
+  line-height: 18px;
 }

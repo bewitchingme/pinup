@@ -6,9 +6,11 @@ namespace :csv do
   task :import_events, [ :filename ] => :environment do |t, args|
     raise "No input CSV file specified" if args.filename.nil?
 
+    Rails.logger.info "Importing events..."
+
     CSV.foreach(args.filename, { headers: :first_row }) do |col|
       
-      event = Event.create(
+      event = Event.create!(
         title:      col[1],
         venue:      ( col[2].nil? ? nil : Venue.find_or_create_by(name: col[2]) ),
         content:    col[5],
@@ -18,7 +20,7 @@ namespace :csv do
         referrer:   col[7]
       )
 
-      puts "Created event:\n\t#{event.title}\n\t#{event.venue}\n\t#{event.content}\n\t#{event.date_begin}\n\t#{event.price}\n\t#{event.url}\n\t#{event.referrer}"
+      Rails.logger.info "Created event:\n\ttitle:\t\t#{event.title}\n\tvenue:\t\t#{event.venue}\n\tcontent:\t#{event.content}\n\tdate_begin:\t#{event.date_begin}\n\tprice:\t\t#{event.price}\n\turl:\t\t#{event.url}\n\treferrer:\t#{event.referrer}\n\n"
     end
   end
 end

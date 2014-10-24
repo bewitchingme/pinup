@@ -1,0 +1,1 @@
+EVENTS_CONFIG = YAML.load_file("#{Rails.root}/config/events.yml")[Rails.env]

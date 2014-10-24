@@ -1,11 +1,13 @@
 class Event < ActiveRecord::Base
   
-  MINIMUM_TITLE_LENGTH = 3
-  MAXIMUM_TITLE_LENGTH = 100
+  MINIMUM_TITLE_LENGTH    = EVENTS_CONFIG['title']['length']['minimum']
+  MAXIMUM_TITLE_LENGTH    = EVENTS_CONFIG['title']['length']['maximum']
 
-  MINIMUM_CONTENT_LENGTH = 10
-  MAXIMUM_CONTENT_LENGTH = 100
+  MINIMUM_CONTENT_LENGTH  = EVENTS_CONFIG['content']['length']['minimum']
+  MAXIMUM_CONTENT_LENGTH  = EVENTS_CONFIG['content']['length']['maximum']
 
+  belongs_to :artist
+  
   belongs_to :venue
 
   belongs_to :type, class_name: 'EventType', foreign_key: 'event_type_id'
@@ -30,10 +32,12 @@ class Event < ActiveRecord::Base
     end
 
     def longer_than_max_title_length?
+      return false if self.title.nil?
       self.title.length > MAXIMUM_TITLE_LENGTH
     end
 
     def longer_than_max_content_length?
+      return false if self.content.nil?
       self.content.length > MAXIMUM_CONTENT_LENGTH
     end
 end

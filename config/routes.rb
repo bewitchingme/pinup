@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, except: [ :new, :create, :destroy ]
 
+  resources :artists
   resources :venues
   resources :events, path: '/'
 end

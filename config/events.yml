@@ -1,0 +1,19 @@
+defaults: &defaults
+  title:
+    length:
+      minimum:  3
+      maximum:  100
+
+  content:
+    length:
+      minimum: 10
+      maximum: 100
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

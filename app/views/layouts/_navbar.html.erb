@@ -19,19 +19,19 @@
       <div class="navbar-collapse collapse" style="margin-left: -15px;">
         
         <ul class="nav navbar-nav">
-          <li class="active"><%= link_to 'Calendar', events_path %></li>
-          <li><a href="#artists">Artists</a></li>
-          <li><%= link_to 'Venues', venues_path %></li>
+          <li class="<%= current_page?(events_path) ? 'active' : nil %>"><%= link_to 'Calendar', events_path %></li>
+          <li class="<%= controller.controller_name == 'artists' ? 'active' : nil %>"><a href="#artists">Artists</a></li>
+          <li class="<%= controller.controller_name == 'venues' ? 'active' : nil %>"><%= link_to 'Venues', venues_path %></li>
         </ul>
       
         <ul class="nav navbar-nav navbar-right">
-          <li>
+          <li class="<%= current_page?(new_event_path) ? 'active' : nil %>">
             <form class="navbar-form">
-              <%= link_to 'Post an event', new_event_path, class: 'btn btn-primary' %>
+              <%= link_to 'Post an event', new_event_path, class: "btn btn-primary#{current_page?(new_event_path) ? ' active' : nil}" %>
             </form>
           </li>
-          <li><%= link_to 'Sign in', new_user_session_path %></li>
-          <li><%= link_to 'Sign up', new_user_registration_path %></li>
+          <li class="<%= current_page?(new_user_session_path) ? 'active' : nil %>"><%= link_to 'Sign in', new_user_session_path %></li>
+          <li class="<%= current_page?(new_user_registration_path) ? 'active' : nil %>"><%= link_to 'Sign up', new_user_registration_path %></li>
         </ul>      
 
       </div>

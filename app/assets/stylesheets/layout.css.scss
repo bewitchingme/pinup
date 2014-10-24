@@ -1,6 +1,7 @@
 @import "global";
 
-body, html {
+body, html, #page-content {
+  height: 100%;
   min-height: 100%;
 }
 
@@ -33,4 +34,9 @@ body {
 p, ol, ul, td, pre {
   font-size: $font-size;
   line-height: 18px;
+}
+
+#page-body {
+  min-height: 100%;
+  margin-bottom: -15px;
 }

@@ -6,11 +6,9 @@ textarea { resize: none; }
 // Offset navbar-fixed-top by padding
 body { padding-top: $navbar-height; }
 
-body, html { background-color: $green-deep; }
+body, html { background-color: lighten(black, 33.3%); }
 
-#sidebar, #page-body, #advertisement {
-  @include well-color($purple-dark);
-}
+#sidebar, #page-body, #advertisement { @include well-color(white); }
 
 #logo {
   font-size: $font-size + 4px;

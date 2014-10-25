@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module RadiantSands
   class Application < Rails::Application
+    config.autoload_paths << Rails.root.join('lib')
     
     config.assets.initialize_on_precompile = false
     

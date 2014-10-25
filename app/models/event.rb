@@ -1,10 +1,10 @@
 class Event < ActiveRecord::Base
   
-  MINIMUM_TITLE_LENGTH    = EVENTS_CONFIG['title']['length']['minimum']
-  MAXIMUM_TITLE_LENGTH    = EVENTS_CONFIG['title']['length']['maximum']
+  MINIMUM_TITLE_LENGTH    = EVENTS_CONFIG['title.length.minimum']
+  MAXIMUM_TITLE_LENGTH    = EVENTS_CONFIG['title.length.maximum']
 
-  MINIMUM_CONTENT_LENGTH  = EVENTS_CONFIG['content']['length']['minimum']
-  MAXIMUM_CONTENT_LENGTH  = EVENTS_CONFIG['content']['length']['maximum']
+  MINIMUM_CONTENT_LENGTH  = EVENTS_CONFIG['content.length.minimum']
+  MAXIMUM_CONTENT_LENGTH  = EVENTS_CONFIG['content.length.maximum']
 
   belongs_to :artist
   

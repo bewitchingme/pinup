@@ -1,34 +1,16 @@
 <% events.each_slice(1) do |slice| %>
   <div class="row">
     <% slice.each do |event| %>
-      <div id="event-<%= event.id %>" class="event" data-cover-url="<%= event.cover %>">
-        <%= link_to event do %>
-          <div class="col-md-12">
-            
-            <div class="container-fluid">
-              <div class="row">
-                <legend><%= event.title %></legend>
-              </div>
-              
-              <div class="row">
-                <div class="col-md-12">
-                  <strong><%= event.venue %></strong><br>
-                  <strong><%= event.location %></strong><br>
-                    <span>
-                      <time datetime="<%= event.date_begin %>"><%= event.date_begin.strftime('%F %R') %></time>
-                      <% unless event.date_end.nil? %>
-                      - <time datetime="<%= event.date_end %>"><%= event.date_end.strftime('%F %R') %></time>
-                      <% end %>
-                    </span>
-                  
-                  <p><%= truncate(event.content, length: 100, separator: ' ') %></p>
-                </div>
-              </div>
-            </div>
+      
+      <%= link_to event, id: "event-#{event.id}", class: 'event' do %>
+        
+        <legend><%= event.title %></legend><br>
+        <p><%= event.venue %><p>
+        <time datetime="<%= event.date_begin %>"><%= event.date_begin.strftime('%F %R') %></time>    
+        <p><%= event.content %></p>
+        
+      <% end %>
 
-          </div>
-        <% end %>
-      </div>
     <% end %>
   </div>
 <% end %>

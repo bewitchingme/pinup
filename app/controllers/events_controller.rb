@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  expose(:events) { Event.where('date_begin > ?', Time.now).order('date_begin ASC') }
+  expose(:events) { Event.where('begin_at > ?', Time.now).order('begin_at ASC') }
   expose(:event, attributes: :event_params) do
     unless params[:id].nil?
       Event.find(params[:id])
@@ -45,6 +45,6 @@ class EventsController < ApplicationController
 
   private
     def event_params
-      params.require(:event).permit(:title, :content, :date_begin, :date_end, :price, :url, :referrer, :venue, :type)
+      params.require(:event).permit(:name, :description, :begin_at, :price, :referrer, :artist, :venue, :type)
     end
 end

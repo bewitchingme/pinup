@@ -1,43 +1,84 @@
 class Event < ActiveRecord::Base
-  
-  MINIMUM_TITLE_LENGTH    = EVENTS_CONFIG['title.length.minimum']
-  MAXIMUM_TITLE_LENGTH    = EVENTS_CONFIG['title.length.maximum']
 
-  MINIMUM_CONTENT_LENGTH  = EVENTS_CONFIG['content.length.minimum']
-  MAXIMUM_CONTENT_LENGTH  = EVENTS_CONFIG['content.length.maximum']
+
+
+  ### ARTIST
 
   belongs_to :artist
+
+  def artist=(artist)
+    if artist.is_a? Artist
+      super
+    else
+      self.artist = Artist.find_or_create_by name: artist
+    end
+  end
+
+  ### VENUE
   
   belongs_to :venue
 
+
+
+  ### TYPE
+
   belongs_to :type, class_name: 'EventType', foreign_key: 'event_type_id'
 
-  validates :title, presence: true, allow_blank: true, length: { minimum: MINIMUM_TITLE_LENGTH,
-                                                                 maximum: MAXIMUM_TITLE_LENGTH }
 
-  validates :content, presence: true, allow_blank: true, length: { minimum: MINIMUM_CONTENT_LENGTH,
-                                                                   maximum: MAXIMUM_CONTENT_LENGTH }
 
-  before_validation :truncate_title, if: :longer_than_max_title_length?
+  ### REFERRER
 
-  before_validation :truncate_content, if: :longer_than_max_content_length?
+  belongs_to :referrer
+
+
+
+  ### NAME
+
+  MINIMUM_NAME_LENGTH = EVENTS_CONFIG['name.length.minimum']
+  MAXIMUM_NAME_LENGTH = EVENTS_CONFIG['name.length.maximum']
+
+  validates :name,        presence: true,
+                          allow_blank: true,
+                          length: { minimum: MINIMUM_NAME_LENGTH,
+                                    maximum: MAXIMUM_NAME_LENGTH }
+
+  before_validation :truncate_name, if: :longer_than_max_name_length?
+
+
+
+  ### DESCRIPTION
+
+  MINIMUM_DESCRIPTION_LENGTH = EVENTS_CONFIG['description.length.minimum']
+  MAXIMUM_DESCRIPTION_LENGTH = EVENTS_CONFIG['description.length.maximum']
+
+  validates :description, presence: true,
+                          allow_blank: true,
+                          length: { minimum: MINIMUM_DESCRIPTION_LENGTH,
+                                    maximum: MAXIMUM_DESCRIPTION_LENGTH }
+  
+  before_validation :truncate_description, if: :longer_than_max_description_length?
 
   private
-    def truncate_title
-      self.title = title.truncate MAXIMUM_TITLE_LENGTH, separator: ' '
+
+    ### NAME
+
+    def truncate_name
+      self.name = name.truncate MAXIMUM_NAME_LENGTH, separator: ' '
     end
 
-    def truncate_content
-      self.content = content.truncate MAXIMUM_CONTENT_LENGTH, separator: ' '
+    def longer_than_max_name_length?
+      return false if name.nil?
+      name.length > MAXIMUM_NAME_LENGTH
     end
 
-    def longer_than_max_title_length?
-      return false if self.title.nil?
-      self.title.length > MAXIMUM_TITLE_LENGTH
+    ### DESCRIPTION
+
+    def truncate_description
+      self.description = description.truncate MAXIMUM_DESCRIPTION_LENGTH, separator: ' '
     end
 
-    def longer_than_max_content_length?
-      return false if self.content.nil?
-      self.content.length > MAXIMUM_CONTENT_LENGTH
+    def longer_than_max_description_length?
+      return false if description.nil?
+      description.length > MAXIMUM_DESCRIPTION_LENGTH
     end
 end

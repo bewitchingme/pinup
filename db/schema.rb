@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141024190003) do
+ActiveRecord::Schema.define(version: 20141025224755) do
 
   create_table "admin_ads", force: true do |t|
     t.datetime "created_at"
@@ -35,23 +35,23 @@ ActiveRecord::Schema.define(version: 20141024190003) do
   end
 
   create_table "events", force: true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.datetime "date_begin"
-    t.datetime "date_end"
-    t.string   "location"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "begin_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "cover_file_name"
-    t.string   "cover_content_type"
-    t.integer  "cover_file_size"
-    t.datetime "cover_updated_at"
     t.integer  "price"
-    t.string   "url"
-    t.string   "referrer"
     t.integer  "venue_id"
     t.integer  "event_type_id"
     t.integer  "artist_id"
+    t.integer  "referrer_id"
+  end
+
+  create_table "referrers", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

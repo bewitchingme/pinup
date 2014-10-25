@@ -1,10 +1,10 @@
 defaults: &defaults
-  title:
+  name:
     length:
       minimum:  3
       maximum:  100
 
-  content:
+  description:
     length:
       minimum: 10
       maximum: 100

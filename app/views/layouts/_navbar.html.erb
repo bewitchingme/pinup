@@ -20,7 +20,7 @@
         
         <ul class="nav navbar-nav">
           <li class="<%= current_page?(events_path) ? 'active' : nil %>"><%= link_to 'Calendar', events_path %></li>
-          <li class="<%= controller.controller_name == 'artists' ? 'active' : nil %>"><a href="#artists">Artists</a></li>
+          <li class="<%= controller.controller_name == 'artists' ? 'active' : nil %>"><%= link_to 'Artists', artists_path %></li>
           <li class="<%= controller.controller_name == 'venues' ? 'active' : nil %>"><%= link_to 'Venues', venues_path %></li>
         </ul>
       

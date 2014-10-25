@@ -1,4 +1,29 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,400italic|Noticia+Text:400,400italic,700|Chivo:400,400italic);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800);
 
+$purple-dark: darken(#6f5f6f, 2%);
+$green-deep: #3c4c3c;
+
 $font-size: 16px;
+
+$navbar-height: 50px;
+
+@mixin offset-and-pad($offset, $padding) {
+  margin-left: $offset;
+  margin-right: $padding;
+}
+
+@mixin fill-vertical() {
+  height: 100%;
+  min-height: 100%;
+}
+
+@mixin maximize-and-offset() {
+  min-height: 100%;
+  margin-bottom: -15px;
+}
+
+@mixin well-color($color) {
+  background-color: $color;
+  border: 1px solid darken($color, 10%);
+}

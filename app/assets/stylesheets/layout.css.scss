@@ -1,22 +1,16 @@
 @import "global";
 
-body, html, #page-content {
-  height: 100%;
-  min-height: 100%;
+// Do not allow textarea fields to be resized manually
+textarea { resize: none; }
+
+// Offset navbar-fixed-top by padding
+body { padding-top: $navbar-height; }
+
+body, html { background-color: $green-deep; }
+
+#sidebar, #page-body, #advertisement {
+  @include well-color($purple-dark);
 }
-
-textarea {
-  resize: vertical;
-}
-
-body {
-  padding-top: 50px;
-  background-color: lighten(black, 33.3%);
-
-  font-size: $font-size;
-  line-height: 18px;
-}
-
 
 #logo {
   font-size: $font-size + 4px;
@@ -31,12 +25,16 @@ body {
   }
 }
 
-p, ol, ul, td, pre {
+p, ol, ul, td, pre, body {
   font-size: $font-size;
   line-height: 18px;
 }
 
-#page-body {
-  min-height: 100%;
-  margin-bottom: -15px;
+@media (max-width: 480px), (max-width: 768px) {;}
+
+@media (min-width: 768px) and (max-width: 980px), (min-width: 1200px) {
+  body, html, #page-content { @include fill-vertical(); }
+  #page-body, #sidebar, #advertisement { @include maximize-and-offset(); }
+  #sidebar { @include offset-and-pad(-15px, 15px); }
+  #advertisement { @include offset-and-pad(15px, -15px); }
 }

@@ -2,5 +2,9 @@
 
 $font-size-base: $font-size;
 
+$border-radius-base: 0;
+$border-radius-small: 0;
+$border-radius-large: 0;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";

@@ -7,11 +7,8 @@ class Event < ActiveRecord::Base
   belongs_to :artist
 
   def artist=(artist)
-    if artist.is_a? Artist
-      super
-    else
-      self.artist = Artist.find_or_create_by name: artist
-    end
+    return super if artist.is_a? Artist
+    self.artist = Artist.find_or_create_by name: artist
   end
 
   ### VENUE
@@ -60,6 +57,8 @@ class Event < ActiveRecord::Base
 
   private
 
+
+
     ### NAME
 
     def truncate_name
@@ -70,6 +69,8 @@ class Event < ActiveRecord::Base
       return false if name.nil?
       name.length > MAXIMUM_NAME_LENGTH
     end
+
+
 
     ### DESCRIPTION
 

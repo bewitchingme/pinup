@@ -11,15 +11,27 @@ class Event < ActiveRecord::Base
     self.artist = Artist.find_or_create_by name: artist
   end
 
+
+
   ### VENUE
   
   belongs_to :venue
+
+  def venue=(venue)
+    return super if venue.is_a? Venue
+    self.venue = Venue.find_or_create_by name: venue
+  end
 
 
 
   ### TYPE
 
   belongs_to :type, class_name: 'EventType', foreign_key: 'event_type_id'
+
+  def type=(type)
+    return super if type.is_a? EventType
+    self.type = EventType.find_or_create_by name: type
+  end
 
 
 
@@ -34,10 +46,10 @@ class Event < ActiveRecord::Base
   MINIMUM_NAME_LENGTH = EVENTS_CONFIG['name.length.minimum']
   MAXIMUM_NAME_LENGTH = EVENTS_CONFIG['name.length.maximum']
 
-  validates :name,        presence: true,
-                          allow_blank: true,
-                          length: { minimum: MINIMUM_NAME_LENGTH,
-                                    maximum: MAXIMUM_NAME_LENGTH }
+  validates :name,  presence: true,
+                    allow_blank: true,
+                    length: { minimum: MINIMUM_NAME_LENGTH,
+                              maximum: MAXIMUM_NAME_LENGTH }
 
   before_validation :truncate_name, if: :longer_than_max_name_length?
 

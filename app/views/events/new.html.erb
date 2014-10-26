@@ -1,12 +1,14 @@
-<div class="row">
-  <div class="col-md-8 col-md-offset-2">
+<div class="panel panel-primary">
 
+  <div class="panel-heading"><strong>Post an event</strong></div>
+
+  <div class="panel-body">
     <%= form_for event, html: { multipart: true } do |f| %>
       <div class="row">
         <div class="col-md-12">
           <div class="form-group">
-            <%= f.label :title %>
-            <%= f.text_field :title, class: 'form-control' %>
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form-control' %>
           </div>
         </div>
       </div>
@@ -14,18 +16,31 @@
       <div class="row">
         <div class="col-md-12">
           <div class="form-group">
-            <%= f.label :content %>
-            <%= f.text_area :content, rows: 2, class: 'form-control' %>
+            <%= f.label :description %>
+            <%= f.text_area :description, rows: 2, class: 'form-control' %>
           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-5">
           <div class="form-group">
-            <%= f.label :cover %>
-            <%= f.file_field :cover, id: 'cover-upload', style: 'display: none;' %>
-            <%= link_to 'Upload cover', '#', onclick: 'uploadCoverClicked(event);', class: 'form-control' %>
+            <%= f.label :venue %>
+            <%= f.text_field :venue, class: 'form-control' %>
+          </div>
+        </div>
+    
+        <div class="col-md-5">
+          <div class="form-group">
+            <%= f.label :artist %>
+            <%= f.text_field :artist, class: 'form-control' %>
+          </div>
+        </div>
+      
+        <div class="col-md-2">
+          <div class="form-group">
+            <%= f.label :type %>
+            <%= f.text_field :type, class: 'form-control' %>
           </div>
         </div>
       </div>
@@ -33,24 +48,19 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :date_begin %>
-            <%= f.text_field :date_begin, class: 'datepicker form-control' %>
+            <%= f.label :begin_at %>
+            <%= f.text_field :begin_at, class: 'datepicker form-control' %>
           </div>
         </div>
       
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :date_end %>
-            <%= f.text_field :date_end, class: 'datepicker form-control' %>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <%= f.label :location %>
-            <%= f.text_field :location, class: 'form-control' %>
+            <%= f.label :price %>
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <%= f.text_field :price, class: 'form-control' %>
+              <span class="input-group-addon">.00</span>
+            </div>
           </div>
         </div>
       </div>
@@ -63,6 +73,6 @@
         </div>
       </div>
     <% end %>
-
   </div>
+
 </div>

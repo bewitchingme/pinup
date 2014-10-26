@@ -1,29 +1,5 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= event.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= event.content %>
-</p>
-
-<p>
-  <strong>Date begin:</strong>
-  <%= event.date_begin %>
-</p>
-
-<p>
-  <strong>Date end:</strong>
-  <%= event.date_end %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= event.location %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(event) %> |
-<%= link_to 'Back', events_path %>
+<legend><%= event.name %></legend>
+<p><%= event.description %></p>
+<p><%= link_to_unless event.venue.nil?, event.venue, event.venue %></p>
+<p><%= link_to_unless event.artist.nil?, event.artist, event.artist %></p>
+<time datetime="<%= event.begin_at %>"><%= event.begin_at.strftime('%F %R') %></time>

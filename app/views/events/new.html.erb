@@ -1,78 +1,7 @@
 <div class="panel panel-primary">
-
   <div class="panel-heading"><strong>Post an event</strong></div>
 
   <div class="panel-body">
-    <%= form_for event, html: { multipart: true } do |f| %>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <%= f.label :name %>
-            <%= f.text_field :name, class: 'form-control' %>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <%= f.label :description %>
-            <%= f.text_area :description, rows: 2, class: 'form-control' %>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-5">
-          <div class="form-group">
-            <%= f.label :venue %>
-            <%= f.text_field :venue, class: 'form-control' %>
-          </div>
-        </div>
-    
-        <div class="col-md-5">
-          <div class="form-group">
-            <%= f.label :artist %>
-            <%= f.text_field :artist, class: 'form-control' %>
-          </div>
-        </div>
-      
-        <div class="col-md-2">
-          <div class="form-group">
-            <%= f.label :type %>
-            <%= f.text_field :type, class: 'form-control' %>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <%= f.label :begin_at %>
-            <%= f.text_field :begin_at, class: 'datepicker form-control' %>
-          </div>
-        </div>
-      
-        <div class="col-md-6">
-          <div class="form-group">
-            <%= f.label :price %>
-            <div class="input-group">
-              <span class="input-group-addon">$</span>
-              <%= f.text_field :price, class: 'form-control' %>
-              <span class="input-group-addon">.00</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <div class="form-group">
-            <%= f.submit :submit, class: 'btn btn-primary form-control' %>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    <%= render 'events/form' %>
   </div>
-
 </div>

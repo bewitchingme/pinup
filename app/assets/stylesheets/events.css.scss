@@ -4,51 +4,15 @@
 
 @import "global";
 
-// .event a > div[class*='col-'] {
-//   overflow: hidden;
-//   height: 200px;
+.event {
+  color: $text-color;
 
-//   background-size: cover;
-//   background-repeat: no-repeat;
+  legend {
+    color: $brand-primary;
+  }
 
-//   margin-bottom: 0;
-
-//   &:hover, &:active, &:focus {
-//     ;
-//   }
-// }
-
-// .event legend {
-//   overflow: hidden;
-//   font-family: 'Open Sans', sans-serif;
-//   font-size: 1.1 * ($font-size + 8px);
-//   font-weight: bold;
-//   color: yellow;
-//   @include outline();
-//   border: 0;
-// }
-
-// .event strong {
-//   overflow: hidden;
-//   font-family: 'Open Sans', sans-serif;
-//   font-size: 1.2 * ($font-size + 4px);
-//   color: yellow;
-//   @include outline();
-// }
-
-// .event p {
-//   overflow: hidden;
-//   font-family: 'Open Sans', sans-serif;
-//   font-size: 1.2 * ($font-size + 2px);
-//   color: lighten(yellow, 10%);
-//   @include outline();
-// }
-
-// .event a {
-//   outline: 0;
-//   color: lighten(black, 5%);
-//   &:hover, &:active, &:focus {
-//     color: lighten(black, 5%);
-//     text-decoration: none;
-//   } 
-// }
+  &:hover, &:active, &:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+}

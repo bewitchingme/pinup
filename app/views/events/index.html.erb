@@ -2,12 +2,16 @@
   <div class="row">
     <% slice.each do |event| %>
       
-      <%= link_to event, id: "event-#{event.id}", class: 'event' do %>
+      <%= link_to event, id: "event-#{event.id}", class: 'event col-md-12' do %>
         
-        <legend><%= event.title %></legend><br>
-        <p><%= event.venue %><p>
-        <time datetime="<%= event.date_begin %>"><%= event.date_begin.strftime('%F %R') %></time>    
-        <p><%= event.content %></p>
+        <legend><%= event.name %></legend>
+        <p><%= event.description %></p> 
+        <p>
+          <span id="artist"><%= event.artist %></span>
+          <span id="at">@</span>
+          <span id="venue"><%= event.venue %></span>
+          <time id="begin_at" datetime="<%= event.begin_at %>"><%= event.begin_at.strftime('%F %R') %></time>
+        <p>
         
       <% end %>
 

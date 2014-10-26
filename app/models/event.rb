@@ -2,45 +2,6 @@ class Event < ActiveRecord::Base
 
 
 
-  ### ARTIST
-
-  belongs_to :artist
-
-  def artist=(artist)
-    return super if artist.is_a? Artist
-    self.artist = Artist.find_or_create_by name: artist
-  end
-
-
-
-  ### VENUE
-  
-  belongs_to :venue
-
-  def venue=(venue)
-    return super if venue.is_a? Venue
-    self.venue = Venue.find_or_create_by name: venue
-  end
-
-
-
-  ### TYPE
-
-  belongs_to :type, class_name: 'EventType', foreign_key: 'event_type_id'
-
-  def type=(type)
-    return super if type.is_a? EventType
-    self.type = EventType.find_or_create_by name: type
-  end
-
-
-
-  ### REFERRER
-
-  belongs_to :referrer
-
-
-
   ### NAME
 
   MINIMUM_NAME_LENGTH = EVENTS_CONFIG['name.length.minimum']
@@ -66,6 +27,54 @@ class Event < ActiveRecord::Base
                                     maximum: MAXIMUM_DESCRIPTION_LENGTH }
   
   before_validation :truncate_description, if: :longer_than_max_description_length?
+
+
+
+  ### ARTIST
+
+  belongs_to :artist
+
+  def artist=(artist)
+    return super if artist.is_a? Artist
+    self.artist = Artist.find_or_create_by name: artist
+  end
+
+
+
+  ### VENUE
+  
+  belongs_to :venue
+
+  def venue=(venue)
+    return super if venue.is_a? Venue
+    self.venue = Venue.find_or_create_by name: venue
+  end
+
+
+
+  ### BEGIN AT
+
+  def begin_at=(begin_at)
+    return super if begin_at.is_a? DateTime
+    self.begin_at = DateTime.parse(begin_at)
+  end
+
+
+
+  ### TYPE
+
+  belongs_to :type, class_name: 'EventType', foreign_key: 'event_type_id'
+
+  def type=(type)
+    return super if type.is_a? EventType
+    self.type = EventType.find_or_create_by name: type
+  end
+
+
+
+  ### REFERRER
+
+  belongs_to :referrer
 
   private
 

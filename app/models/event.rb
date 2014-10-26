@@ -1,5 +1,18 @@
 class Event < ActiveRecord::Base
 
+  ##############################
+  ### Event                  ###
+  ##############################
+  ### name:        string    ###
+  ### description: string    ###
+  ### price:       integer   ###
+  ### begin_at:    datetime  ###
+  ### artist:      Artist    ###
+  ### venue:       Venue     ###
+  ### referrer:    Referrer  ###
+  ### type:        EventType ###
+  ##############################
+
 
 
   ### NAME
@@ -56,7 +69,7 @@ class Event < ActiveRecord::Base
 
   def begin_at=(begin_at)
     return super if begin_at.is_a? DateTime
-    self.begin_at = DateTime.parse(begin_at)
+    self.begin_at = begin_at.nil? || begin_at.empty? ? DateTime.now : DateTime.parse(begin_at)
   end
 
 

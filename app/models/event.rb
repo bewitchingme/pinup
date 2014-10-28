@@ -89,6 +89,16 @@ class Event < ActiveRecord::Base
 
   belongs_to :referrer
 
+
+
+  ### MISC AND UTILITY
+
+  def to_s
+    "#{name}"
+  end
+
+
+
   private
 
 

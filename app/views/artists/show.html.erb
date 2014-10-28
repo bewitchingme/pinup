@@ -1,9 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="artist">
 
-<p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
-</p>
+  <legend><%= @artist.name %></legend>
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+  <strong>Shows</strong>
+  <ol>
+    <% @artist.events.each do |event| %>
+      <li><%= link_to event, event %></li>
+    <% end %>
+  </ol>
+
+  <br>
+  
+  <strong>Played at</strong>
+  <ol>
+    <% @artist.venues.each do |venue| %>
+      <li><%= link_to venue, venue %></li>
+    <% end %>
+  </ol>
+</div>

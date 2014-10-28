@@ -1,5 +1,11 @@
-<legend><%= event.name %></legend>
-<p><%= event.description %></p>
-<p><%= link_to_unless event.venue.nil?, event.venue, event.venue %></p>
-<p><%= link_to_unless event.artist.nil?, event.artist, event.artist %></p>
-<time datetime="<%= event.begin_at %>"><%= event.begin_at.strftime('%F %R') %></time>
+<div class="event">
+
+  <legend><%= event.name %></legend>
+  <p><%= event.description %></p>
+  <p>
+    <span id="artist"><%= link_to_unless event.artist.nil?, event.artist, event.artist %></span>
+    <span id="at">@</span>
+    <span id="venue"><%= link_to_unless event.venue.nil?, event.venue, event.venue %></span>
+    <time id="begin_at" datetime="<%= event.begin_at %>"><%= event.begin_at.strftime('%F %R') %></time>
+  </p>
+</div>

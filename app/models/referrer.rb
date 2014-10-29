@@ -2,7 +2,7 @@ class Referrer < ActiveRecord::Base
   before_save :to_lower_case
 
   def to_s
-    "#{name.humanize}"
+    "#{name.titleize}"
   end
 
   private

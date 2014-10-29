@@ -2,7 +2,7 @@ class Venue < ActiveRecord::Base
 
   has_many :events
 
-  has_many :artists, through: :events, uniq: true
+  has_many :artists, -> { uniq }, through: :events
 
   before_save :to_lower_case
 

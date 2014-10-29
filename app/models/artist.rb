@@ -3,7 +3,7 @@ class Artist < ActiveRecord::Base
 
   has_many :events
 
-  has_many :venues, through: :events, uniq: true
+  has_many :venues, -> { uniq }, through: :events
 
   def to_s
     "#{name.titleize}"

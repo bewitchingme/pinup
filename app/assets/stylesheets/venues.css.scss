@@ -1,3 +1,17 @@
 // Place all the styles related to the venues controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "global";
+
+.venue {
+  padding-bottom: 15px;
+
+  legend {
+    color: $brand-primary;
+  }
+
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+  }
+}

@@ -1,19 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="venue">
 
-<p>
-  <strong>Name:</strong>
-  <%= @venue.name %>
-</p>
+  <legend><%= venue.name %></legend>
 
-<p>
-  <strong>Address:</strong>
-  <%= @venue.address %>
-</p>
+  <strong>Shows</strong>
+  <ol>
+    <% venue.events.each do |event| %>
+      <li><%= link_to event, event %></li>
+    <% end %>
+  </ol>
 
-<p>
-  <strong>City:</strong>
-  <%= @venue.city %>
-</p>
-
-<%= link_to 'Edit', edit_venue_path(@venue) %> |
-<%= link_to 'Back', venues_path %>
+  <br>
+  
+  <strong>Artists who played here</strong>
+  <ol>
+    <% venue.artists.each do |artist| %>
+      <li><%= link_to artist, artist %></li>
+    <% end %>
+  </ol>
+</div>

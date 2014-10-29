@@ -1,11 +1,20 @@
-<% @venues.each_slice(1) do |slice| %>
+<% venues.each_slice(1) do |slice| %>
   <div class="row">
     <% slice.each do |venue| %>
-      <%= link_to venue do %>
+      <% next if venue.name.nil? || venue.name.empty? %>
+      
+      <%= link_to venue, class: 'venue col-md-12' do %>
         <strong><%= venue.name %></strong>
-        <p><%= venue.address %></p>
-        <p><%= venue.city %></p>
+        
+        <% unless venue.address.nil? %>
+          <p><%= venue.address %></p>
+        <% end %>
+        
+        <% unless venue.city.nil? %>
+          <p><%= venue.city %></p>
+        <% end %>
       <% end %>
+
     <% end %>
   </div>
 <% end %>

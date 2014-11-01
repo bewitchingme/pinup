@@ -89,6 +89,11 @@ class Event < ActiveRecord::Base
 
   belongs_to :referrer
 
+  def referrer=(referrer)
+    return super if referrer.is_a? Referrer
+    self.type = Referrer.find_or_create_by name: referrer
+  end
+
 
 
   ### MISC AND UTILITY

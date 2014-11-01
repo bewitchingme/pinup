@@ -11,16 +11,18 @@ namespace :csv do
     CSV.foreach(args.filename, { headers: :first_row }) do |col|
       
       event = Event.create!(
-        title:      col[1],
-        venue:      ( col[2].nil? ? nil : Venue.find_or_create_by(name: col[2]) ),
-        content:    col[5],
-        date_begin: ( Date.parse(col[0]) + Time.parse(col[3]).seconds_since_midnight.seconds ).to_datetime,
-        price:      col[4].to_i,
-        url:        col[6],
-        referrer:   col[7]
+        name:         col[1],
+        venue:        col[2].nil? ? nil : col[2],
+        description:  col[5],
+        begin_at:     ( Date.parse(col[0]) + Time.parse(col[3]).seconds_since_midnight.seconds ).to_datetime,
+        price:        col[4].to_i,
+        referrer: {
+          name:       col[7],
+          url:        col[6]
+        } 
       )
 
-      Rails.logger.info "Created event:\n\ttitle:\t\t#{event.title}\n\tvenue:\t\t#{event.venue}\n\tcontent:\t#{event.content}\n\tdate_begin:\t#{event.date_begin}\n\tprice:\t\t#{event.price}\n\turl:\t\t#{event.url}\n\treferrer:\t#{event.referrer}\n\n"
+      Rails.logger.info "Created event:\n\tname:\t\t#{event.name}\n\tvenue:\t\t#{event.venue}\n\tdescription:\t#{event.description}\n\tbegin_at:\t#{event.begin_at}\n\tprice:\t\t#{event.price}\n\turl:\t\t#{event.referrer.url}\n\treferrer:\t#{event.referrer}\n\n"
     end
   end
 end

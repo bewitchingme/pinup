@@ -16,10 +16,7 @@ namespace :csv do
         description:  col[5],
         begin_at:     ( Date.parse(col[0]) + Time.parse(col[3]).seconds_since_midnight.seconds ).to_datetime,
         price:        col[4].to_i,
-        referrer: {
-          name:       col[7],
-          url:        col[6]
-        } 
+        referrer:     Referrer.find_or_create_by( name: col[7], url: col[6] )
       )
 
       Rails.logger.info "Created event:\n\tname:\t\t#{event.name}\n\tvenue:\t\t#{event.venue}\n\tdescription:\t#{event.description}\n\tbegin_at:\t#{event.begin_at}\n\tprice:\t\t#{event.price}\n\turl:\t\t#{event.referrer.url}\n\treferrer:\t#{event.referrer}\n\n"

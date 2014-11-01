@@ -6,11 +6,11 @@ class Artist < ActiveRecord::Base
   has_many :venues, -> { uniq }, through: :events
 
   def to_s
-    "#{name.titleize}"
+    "#{name.titleize unless name.nil? }"
   end
 
   private
     def to_lower_case
-      self.name = name.downcase
+      self.name = name.downcase unless name.nil?
     end
 end

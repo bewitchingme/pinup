@@ -48,7 +48,7 @@ class Event < ActiveRecord::Base
   belongs_to :artist
 
   def artist=(artist)
-    return super if artist.is_a? Artist
+    return super if artist.is_a? Artist || artist.nil?
     self.artist = Artist.find_or_create_by name: artist
   end
 
@@ -59,7 +59,7 @@ class Event < ActiveRecord::Base
   belongs_to :venue
 
   def venue=(venue)
-    return super if venue.is_a? Venue
+    return super if venue.is_a? Venue || venue.nil?
     self.venue = Venue.find_or_create_by name: venue
   end
 
@@ -79,7 +79,7 @@ class Event < ActiveRecord::Base
   belongs_to :type, class_name: 'EventType', foreign_key: 'event_type_id'
 
   def type=(type)
-    return super if type.is_a? EventType
+    return super if type.is_a? EventType || type.nil?
     self.type = EventType.find_or_create_by name: type
   end
 
@@ -90,8 +90,8 @@ class Event < ActiveRecord::Base
   belongs_to :referrer
 
   def referrer=(referrer)
-    return super if referrer.is_a? Referrer
-    self.type = Referrer.find_or_create_by name: referrer
+    return super if referrer.is_a? Referrer || referrer.nil?
+    self.referrer = Referrer.find_or_create_by name: referrer
   end
 
 

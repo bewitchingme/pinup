@@ -16,10 +16,17 @@
     <% events_beginning_at_time.each do |event| %>
       <div class="row">
         <%= link_to event, id: "event-#{event.id}", class: 'event col-md-12' do %>
-          <strong><%= event.name %></strong>
+          <p><strong><%= event.name %></strong></p>
+
+          <% unless event.venue.nil? %>
+            <p id="venue"><%= event.venue %></p>
+          <% end %>
+          
           <p><%= event.description %></p> 
-          <p id="artist"><%= event.artist %></p>
-          <p id="venue"><%= event.venue %></p>
+          
+          <% unless event.artist.nil? %>
+            <p id="artist"><%= event.artist %></p>
+          <% end %>
         <% end %>
       </div>
     <% end %>

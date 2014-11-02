@@ -72,6 +72,14 @@ class Event < ActiveRecord::Base
     self.begin_at = begin_at.nil? || begin_at.empty? ? DateTime.now : DateTime.parse(begin_at)
   end
 
+  def begin_at_date
+    begin_at.to_date
+  end
+
+  def begin_at_time
+    begin_at.to_time
+  end
+
 
 
   ### TYPE

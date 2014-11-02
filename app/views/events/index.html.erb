@@ -1,20 +1,29 @@
-<% events.each_slice(1) do |slice| %>
+<% events.group_by(&:begin_at_date).each do |begin_at_date, events_beginning_at_date| %>
   <div class="row">
-    <% slice.each do |event| %>
-      
-      <%= link_to event, id: "event-#{event.id}", class: 'event col-md-12' do %>
-        
-        <legend><%= event.name %></legend>
-        <p><%= event.description %></p> 
-        <p>
-          <span id="artist"><%= event.artist %></span>
-          <span id="at">@</span>
-          <span id="venue"><%= event.venue %></span>
-          <time id="begin_at" datetime="<%= event.begin_at %>"><%= event.begin_at.strftime('%F %R') %></time>
-        <p>
-        
-      <% end %>
-
-    <% end %>
+    <time id="begin_at_date" class="col-md-12" datetime="<%= begin_at_date %>">
+      <legend><%= begin_at_date.to_s(:long_ordinal) %></legend>
+    </time>
   </div>
+
+  <% events_beginning_at_date.group_by(&:begin_at_time).each do | begin_at_time, events_beginning_at_time| %>
+
+    <div class="row">
+      <time id="begin_at_time" class="col-md-12" datetime="<%= begin_at_time %>">
+        <legend><small><%= begin_at_time.to_s(:time) %></small></legend>
+      </time>
+    </div>
+
+    <% events_beginning_at_time.each do |event| %>
+      <div class="row">
+        <%= link_to event, id: "event-#{event.id}", class: 'event col-md-12' do %>
+          <strong><%= event.name %></strong>
+          <p><%= event.description %></p> 
+          <p id="artist"><%= event.artist %></p>
+          <p id="venue"><%= event.venue %></p>
+        <% end %>
+      </div>
+    <% end %>
+
+  <% end %>
+
 <% end %>

@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   expose(:events) { 
-    Event.where('begin_at > ?', Time.now).order('begin_at ASC') 
-    # Event.all.order('begin_at ASC')
+    # Event.where('begin_at > ?', Time.now).order('begin_at ASC') 
+    Event.all.order('begin_at ASC')
   }
   expose(:event, attributes: :event_params) do
     unless params[:id].nil?

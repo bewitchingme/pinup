@@ -16,6 +16,7 @@
     <% events_beginning_at_time.each do |event| %>
       <div class="row">
         <%= link_to event, id: "event-#{event.id}", class: 'event col-md-12' do %>
+          <%= image_tag event.type_icon, class: 'type-icon pull-right', width: 40, height: 40 %>
           <p><strong><%= event.name %></strong></p>
 
           <% unless event.venue.nil? %>

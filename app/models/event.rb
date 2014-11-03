@@ -91,6 +91,18 @@ class Event < ActiveRecord::Base
     self.type = EventType.find_or_create_by name: type
   end
 
+  def type_icon
+    return 'misc.png' if type.nil?
+    case type.name
+    when 'jazz'
+      'jazz.png'
+    when 'rock'
+      'rock.png'
+    else
+      'misc.png'
+    end
+  end
+
 
 
   ### REFERRER

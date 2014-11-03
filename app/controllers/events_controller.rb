@@ -11,6 +11,10 @@ class EventsController < ApplicationController
     end
   end
 
+  def index
+    render stream: true
+  end
+
   def create
     self.event = Event.new(event_params)
 

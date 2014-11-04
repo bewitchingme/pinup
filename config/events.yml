@@ -1,4 +1,7 @@
 defaults: &defaults
+  pagination:
+    per: 16
+
   name:
     length:
       minimum:  3

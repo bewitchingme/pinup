@@ -15,6 +15,14 @@ class Event < ActiveRecord::Base
 
 
 
+  ### PAGINATION
+
+  PAGINATES_PER = EVENTS_CONFIG['pagination.per']
+
+  paginates_per PAGINATES_PER
+
+
+
   ### NAME
 
   MINIMUM_NAME_LENGTH = EVENTS_CONFIG['name.length.minimum']

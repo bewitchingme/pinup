@@ -1,18 +1,16 @@
 class EventsController < ApplicationController
+  
   expose(:events) { 
-    # Event.where('begin_at > ?', Time.now).order('begin_at ASC') 
-    Event.all.order('begin_at ASC')
+    # Event.where('begin_at > ?', Time.now).order('begin_at ASC').page params[:page]
+    Event.all.order('begin_at ASC').page params[:page]
   }
+
   expose(:event, attributes: :event_params) do
     unless params[:id].nil?
       Event.find(params[:id])
     else
       Event.new
     end
-  end
-
-  def index
-    render stream: true
   end
 
   def create

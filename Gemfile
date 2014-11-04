@@ -44,6 +44,9 @@ gem 'paperclip', '~> 4.2'
 
 gem 'aws-sdk', '~> 1.5.7'
 
+# Pagination and infinite scrolling
+gem 'kaminari'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

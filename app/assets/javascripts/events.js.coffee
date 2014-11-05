@@ -7,7 +7,7 @@
 #     cover_url = $(this).data('cover-url')
 #     $("a div[class*='col-']", this).first().css('background-image', 'url("' + cover_url + '")')
 
-jQuery ->
+$(document).ready ->
   if $('#infinite-scrolling').size() > 0
     $(window).on 'scroll', ->
       more_posts_url = $('.pagination .next a').attr('href')

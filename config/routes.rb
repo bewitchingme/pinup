@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
   root to: 'events#index'
 
-  namespace :admin do
-    resources :ads
-  end
-
   scope '/admin' do
     resources :events
+    resources :ads, module: :admin
   end
 
   devise_for :users

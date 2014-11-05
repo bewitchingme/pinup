@@ -1,4 +1,4 @@
-<h1>Listing admin_ads</h1>
+<h1>Listing Ads</h1>
 
 <table>
   <thead>
@@ -8,11 +8,11 @@
   </thead>
 
   <tbody>
-    <% @admin_ads.each do |admin_ad| %>
+    <% @admin_ads.each do |ad| %>
       <tr>
-        <td><%= link_to 'Show', admin_ad %></td>
-        <td><%= link_to 'Edit', edit_admin_ad_path(admin_ad) %></td>
-        <td><%= link_to 'Destroy', admin_ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', ad %></td>
+        <td><%= link_to 'Edit', edit_ad_path(ad) %></td>
+        <td><%= link_to 'Destroy', ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -20,4 +20,4 @@
 
 <br>
 
-<%= link_to 'New Ad', new_admin_ad_path %>
+<%= link_to 'New Ad', new_ad_path %>

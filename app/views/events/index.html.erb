@@ -1,39 +1,7 @@
-<% events.group_by(&:begin_at_date).each do |begin_at_date, events_beginning_at_date| %>
-  <div class="row">
-    <time id="begin_at_date" class="col-md-12" datetime="<%= begin_at_date %>">
-      <legend><%= begin_at_date.to_s(:long_ordinal) %></legend>
-    </time>
-  </div>
+<div id="events">
+  <%= render 'events/event' %>
+</div>
 
-  <% events_beginning_at_date.group_by(&:begin_at_time).each do | begin_at_time, events_beginning_at_time| %>
-
-    <div class="row">
-      <time id="begin_at_time" class="col-md-12" datetime="<%= begin_at_time %>">
-        <legend><small><%= begin_at_time.to_s(:time) %></small></legend>
-      </time>
-    </div>
-
-    <% events_beginning_at_time.each do |event| %>
-      <div class="row">
-        <%= link_to event, id: "event-#{event.id}", class: 'event col-md-12' do %>
-          <%= image_tag event.type_icon, class: 'type-icon pull-right', width: 40, height: 40 %>
-          <p><strong><%= event.name %></strong></p>
-
-          <% unless event.venue.nil? %>
-            <p id="venue"><%= event.venue %></p>
-          <% end %>
-          
-          <p><%= event.description %></p> 
-          
-          <% unless event.artist.nil? %>
-            <p id="artist"><%= event.artist %></p>
-          <% end %>
-        <% end %>
-      </div>
-    <% end %>
-
-  <% end %>
-
-<% end %>
-
-<%= paginate events %>
+<div id="infinite-scrolling">
+  <%= paginate events %>
+</div>

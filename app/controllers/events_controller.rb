@@ -1,8 +1,9 @@
 class EventsController < ApplicationController
+  protect_from_forgery except: :index
   
   expose(:events) { 
-    # Event.where('begin_at > ?', Time.now).order('begin_at ASC').page params[:page]
-    Event.all.order('begin_at ASC').page params[:page]
+    # Event.where('begin_at > ?', Time.now).order('begin_at ASC').page(params[:page])
+    Event.all.order('begin_at ASC').page(params[:page])
   }
 
   expose(:event, attributes: :event_params) do

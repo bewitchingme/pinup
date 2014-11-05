@@ -6,3 +6,13 @@
 #   $('.event').each ->
 #     cover_url = $(this).data('cover-url')
 #     $("a div[class*='col-']", this).first().css('background-image', 'url("' + cover_url + '")')
+
+jQuery ->
+  if $('#infinite-scrolling').size() > 0
+    $(window).on 'scroll', ->
+      more_posts_url = $('.pagination .next a').attr('href')
+      if more_posts_url && $(window).scrollTop() > $(document).height() - $(window).height() - 60
+        $('.pagination').html('<img src="/assets/loading.gif" alt="Loading..." title="Loading..." />')
+        $.getScript more_posts_url
+      return
+    return

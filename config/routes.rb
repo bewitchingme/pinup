@@ -5,10 +5,14 @@ Rails.application.routes.draw do
     resources :ads
   end
 
+  scope '/admin' do
+    resources :events
+  end
+
   devise_for :users
   resources :users, except: [ :new, :create, :destroy ]
 
   resources :artists
   resources :venues
-  resources :events, path: '/'
+  resources :events, path: '/', except: [ :edit, :destroy ]
 end

@@ -1,12 +1,14 @@
 class EventsController < ApplicationController
   protect_from_forgery except: :index
 
+  before_action :authenticate_user!, only: [ :edit, :destroy ]
+
   expose(:types) { EventType.all }
   
   expose(:events) do
     unless filter_param.nil?
       Event.where(
-        'begin_at = ? AND event_type_id = ?', Time.now, EventType.find_by(name: filter_param)
+        'begin_at > ? AND event_type_id = ?', Time.now, EventType.find_by(name: filter_param)
         ).order('begin_at ASC').page(page_param)
     else
       Event.where('begin_at > ?', Time.now).order('begin_at ASC').page(page_param)

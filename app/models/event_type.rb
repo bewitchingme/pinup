@@ -2,7 +2,7 @@ class EventType < ActiveRecord::Base
   before_save :to_lower_case
 
   def to_s
-    "#{ name.humanize unless name.nil? }"
+    "#{ name.titleize unless name.nil? }"
   end
 
   private

@@ -1,3 +1,11 @@
+<% content_for :filters do %>
+  <ul style="list-style-type: none; padding-left: 0;">
+    <% types.all.each do |event| %>
+      <li><%= link_to event, events_path( filter: event.name ) %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <div id="events">
   <%= render 'events/event' %>
 </div>

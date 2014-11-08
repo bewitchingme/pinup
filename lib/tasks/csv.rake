@@ -12,7 +12,7 @@ namespace :csv do
       
       event = Event.create!(
         name:         col[1],
-        venue:        col[2].nil? ? nil : col[2],
+        venue:        col[2],
         description:  col[5],
         begin_at:     ( Date.parse(col[0]) + Time.parse(col[3]).seconds_since_midnight.seconds ).to_datetime,
         price:        col[4].to_i,

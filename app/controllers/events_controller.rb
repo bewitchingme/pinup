@@ -1,14 +1,21 @@
 class EventsController < ApplicationController
   protect_from_forgery except: :index
+
+  expose(:types) { EventType.all }
   
-  expose(:events) { 
-    # Event.where('begin_at > ?', Time.now).order('begin_at ASC').page(params[:page])
-    Event.all.order('begin_at ASC').page(params[:page])
-  }
+  expose(:events) do
+    unless filter_param.nil?
+      Event.where(
+        'begin_at = ? AND event_type_id = ?', Time.now, EventType.find_by(name: filter_param)
+        ).order('begin_at ASC').page(page_param)
+    else
+      Event.where('begin_at > ?', Time.now).order('begin_at ASC').page(page_param)
+    end
+  end
 
   expose(:event, attributes: :event_params) do
-    unless params[:id].nil?
-      Event.find(params[:id])
+    unless id_param.nil?
+      Event.find(id_param)
     else
       Event.new
     end
@@ -52,5 +59,17 @@ class EventsController < ApplicationController
   private
     def event_params
       params.require(:event).permit(:name, :description, :begin_at, :price, :referrer, :artist, :venue, :type)
+    end
+
+    def id_param
+      params[:id]
+    end
+
+    def page_param
+      params[:page]
+    end
+
+    def filter_param
+      params[:filter]
     end
 end

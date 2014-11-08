@@ -1,7 +1,7 @@
 <% events.group_by(&:begin_at_date).each do |begin_at_date, events_beginning_at_date| %>
   <div class="row">
     <time id="begin_at_date" class="col-md-12" datetime="<%= begin_at_date %>">
-      <legend><%= begin_at_date.to_s(:long_ordinal) %></legend>
+      <legend><%= begin_at_date.to_s() %></legend>
     </time>
   </div>
 
@@ -27,6 +27,10 @@
           
           <% unless event.artist.nil? %>
             <p id="artist"><%= event.artist %></p>
+          <% end %>
+
+          <% unless event.price.nil? || event.price == 0 %>
+            <p id="price"><%= event.price %></p>
           <% end %>
         <% end %>
       </div>

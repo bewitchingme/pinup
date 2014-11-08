@@ -1,5 +1,7 @@
 class VenuesController < ApplicationController
+  
   expose(:venues) { Venue.order('name ASC') }
+
   expose(:venue, attributes: :venue_params) do 
     unless params[:id].nil?
       Venue.find(params[:id])

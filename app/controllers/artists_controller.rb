@@ -1,8 +1,14 @@
 class ArtistsController < ApplicationController
   
-  expose(:artists) { Artist.all.order('name ASC') }
+  expose(:artists) { Artist.order('name ASC') }
 
-  expose(:artist) { Artist.find(params[:id]) }
+  expose(:artist) do
+    unless params[:id].nil?
+      Artist.find(params[:id])
+    else
+      Artist.new
+    end
+  end
 
   def create
     artist = Artist.new(artist_params)

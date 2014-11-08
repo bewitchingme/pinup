@@ -4,7 +4,7 @@
       <% next if venue.name.nil? || venue.name.empty? %>
       
       <%= link_to venue, class: 'venue col-md-12' do %>
-        <strong><%= venue.name %></strong>
+        <strong><%= venue %></strong>
         
         <% unless venue.address.nil? %>
           <p><%= venue.address %></p>

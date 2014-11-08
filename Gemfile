@@ -47,6 +47,9 @@ gem 'aws-sdk', '~> 1.5.7'
 # Pagination and infinite scrolling
 gem 'kaminari'
 
+# For test and development data
+gem 'forgery', '0.6.0', group: 'development'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

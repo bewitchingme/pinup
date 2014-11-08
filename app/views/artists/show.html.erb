@@ -1,10 +1,10 @@
 <div class="artist">
 
-  <legend><%= @artist.name %></legend>
+  <legend><%= artist.name %></legend>
 
   <strong>Shows</strong>
   <ol>
-    <% @artist.events.each do |event| %>
+    <% artist.events.each do |event| %>
       <li><%= link_to event, event %></li>
     <% end %>
   </ol>
@@ -13,7 +13,7 @@
   
   <strong>Played at</strong>
   <ol>
-    <% @artist.venues.each do |venue| %>
+    <% artist.venues.each do |venue| %>
       <li><%= link_to venue, venue %></li>
     <% end %>
   </ol>

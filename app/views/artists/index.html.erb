@@ -1,9 +1,9 @@
-<% @artists.each_slice(1) do |slice| %>
+<% artists.each_slice(1) do |slice| %>
   <div class="row">
     <% slice.each do |artist| %>
       
       <%= link_to artist, class: 'artist col-md-12' do %>
-        <strong><%= artist.name %></strong>
+        <strong><%= artist %></strong>
       <% end %>
 
     <% end %>

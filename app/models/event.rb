@@ -57,7 +57,7 @@ class Event < ActiveRecord::Base
 
   def artist=(artist)
     return super if artist.is_a? Artist || artist.nil?
-    self.artist = Artist.find_or_create_by name: artist
+    self.artist = Artist.find_or_create_by name: artist.downcase
   end
 
 
@@ -68,7 +68,7 @@ class Event < ActiveRecord::Base
 
   def venue=(venue)
     return super if venue.is_a? Venue || venue.nil?
-    self.venue = Venue.find_or_create_by name: venue
+    self.venue = Venue.find_or_create_by name: venue.downcase
   end
 
 
@@ -96,7 +96,7 @@ class Event < ActiveRecord::Base
 
   def type=(type)
     return super if type.is_a? EventType || type.nil?
-    self.type = EventType.find_or_create_by name: type
+    self.type = EventType.find_or_create_by name: type.downcase
   end
 
   def type_icon
@@ -119,7 +119,7 @@ class Event < ActiveRecord::Base
 
   def referrer=(referrer)
     return super if referrer.is_a? Referrer || referrer.nil?
-    self.referrer = Referrer.find_or_create_by name: referrer
+    self.referrer = Referrer.find_or_create_by name: referrer.downcase
   end
 
 

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   expose(:users) { User.order('name ASC') }
 
-  expose(:user) do
+  expose(:user, attributes: :user_params) do
     unless params[:id].nil?
       User.find(params[:id])
     else

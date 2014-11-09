@@ -8,12 +8,13 @@
   legend {
     padding: 0;
     margin: 0;
-    margin-top: 16px;
   }
 }
 
 .event {
   padding-top: 10px;
+  margin-bottom: 16px;
+  
   color: $text-color;
 
   strong {

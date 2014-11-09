@@ -8,6 +8,8 @@ body { padding-top: $navbar-height; }
 
 body, html { background-color: lighten(black, 33.3%); }
 
+#banner { margin-bottom: 16px; }
+
 #sidebar, #page-body, #advertisement { @include well-color(white); }
 
 #logo {

@@ -2,7 +2,7 @@ class ArtistsController < ApplicationController
   
   expose(:artists) { Artist.order('name ASC') }
 
-  expose(:artist) do
+  expose(:artist, attributes: :artist_params) do
     unless params[:id].nil?
       Artist.find(params[:id])
     else

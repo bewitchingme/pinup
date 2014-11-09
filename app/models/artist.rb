@@ -1,7 +1,7 @@
 class Artist < ActiveRecord::Base
   before_save :to_lower_case
 
-  has_many :events
+  has_many :events, -> { order 'begin_at ASC' }
 
   has_many :venues, -> { uniq }, through: :events
 

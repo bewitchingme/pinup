@@ -3,18 +3,18 @@
   <legend><%= artist.name %></legend>
 
   <strong>Shows</strong>
-  <ol>
+  <ul>
     <% artist.events.each do |event| %>
       <li><%= link_to event, event %></li>
     <% end %>
-  </ol>
+  </ul>
 
   <br>
   
   <strong>Played at</strong>
-  <ol>
+  <ul>
     <% artist.venues.each do |venue| %>
       <li><%= link_to venue, venue %></li>
     <% end %>
-  </ol>
+  </ul>
 </div>

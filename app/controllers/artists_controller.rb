@@ -11,7 +11,7 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    artist = Artist.new(artist_params)
+    self.artist = Artist.new(artist_params)
 
     respond_to do |format|
       if artist.save

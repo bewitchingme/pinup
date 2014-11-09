@@ -4,7 +4,16 @@
 
 @import "global";
 
+#events {
+  legend {
+    padding: 0;
+    margin: 0;
+    margin-top: 16px;
+  }
+}
+
 .event {
+  padding-top: 10px;
   color: $text-color;
 
   strong {
@@ -18,5 +27,10 @@
 }
 
 .type-icon {
-  margin: 15px;
+  margin-top: 3px;
+  margin-right: 10px;
+}
+
+#begin-at-time {
+  font-weight: bold;
 }

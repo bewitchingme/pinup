@@ -127,7 +127,7 @@ class Event < ActiveRecord::Base
   ### MISC AND UTILITY
 
   def to_s
-    "#{name}"
+    "#{ name.titleize unless name.nil? }"
   end
 
 

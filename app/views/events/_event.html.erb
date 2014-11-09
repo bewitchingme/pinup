@@ -1,6 +1,6 @@
 <% events.group_by(&:begin_at_date).each do |begin_at_date, events_beginning_at_date| %>
   <div class="row">
-    <time id="begin_at_date" class="col-md-12" datetime="<%= begin_at_date %>">
+    <time id="begin-at-date" class="col-md-12" datetime="<%= begin_at_date %>">
       <legend><%= begin_at_date %></legend>
     </time>
   </div>
@@ -8,29 +8,16 @@
   <% events_beginning_at_date.each do |event| %>
     <div class="row">
       <%= link_to event, id: "event-#{event.id}", class: 'event col-md-12' do %>
-        <%= image_tag event.type_icon, class: 'type-icon pull-right', width: 40, height: 40 %>
-        <p><strong><%= event.name %></strong></p>
-
+        <%= image_tag event.type_icon, class: 'type-icon pull-left', width: 42, height: 42 %>
         <p>
-          <span id="at"> @ </span>
-          <time id="begin_at_time" datetime="<%= event.begin_at_time %>">
+          <time id="begin-at-time" datetime="<%= event.begin_at_time %>">
             <%= event.begin_at_time.to_s(:time) %>
           </time>
+          <strong><%= event %></strong>
         </p>
-
-        <% unless event.venue.nil? %>
-          <p id="venue"><%= event.venue %></p>
-        <% end %>
-        
-        <p><%= event.description %></p> 
-        
-        <% unless event.artist.nil? %>
-          <p id="artist"><%= event.artist %></p>
-        <% end %>
-
-        <% unless event.price.nil? || event.price == 0 %>
-          <p id="price"><%= event.price %></p>
-        <% end %>
+        <p>
+          <%= event.artist %> @ <%= event.venue %> <%= number_to_currency(event.price) %>
+        </p>
       <% end %>
     </div>
   <% end %>

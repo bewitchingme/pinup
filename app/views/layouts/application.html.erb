@@ -18,6 +18,9 @@
       </section>
 
       <section id="page-body" class="col-md-6 well">
+        <% flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, class: name %>
+        <% end -%>
         <%= render 'layouts/banner' %>
         <%= yield %>
       </section>

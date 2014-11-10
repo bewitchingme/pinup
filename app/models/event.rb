@@ -102,12 +102,27 @@ class Event < ActiveRecord::Base
   def type_icon
     return 'misc.png' if type.nil?
     case type.name
-    when 'jazz'
-      'jazz.png'
-    when 'rock'
-      'rock.png'
+    when 'dance'; 'icons/dance.png'
+    when 'theatre'; 'icons/theatre.png'
+    when 'spoken word / literature'; 'icons/swl.png'
+    when 'visual arts'; 'icons/visual_arts.png'
+    when 'classical'; 'icons/classical.png'
+    when 'pop'; 'icons/pop.png'
+    when 'rock'; 'icons/rock.png'
+    when 'punk'; 'icons/punk.png'
+    when 'hip hop'; 'icons/hip_hop.png'
+    when 'r&b'; 'icons/rnb.png'
+    when 'reggae'; 'icons/reggae.png'
+    when 'blues'; 'icons/blues.png'
+    when 'jazz'; 'icons/jazz.png'
+    when 'electronic music'; 'icons/electronic_music.png'
+    when 'alternative'; 'icons/alternative.png'
+    when 'experimental'; 'icons/experimental.png'
+    when 'world'; 'icons/world.png'
+    when 'mixed media'; 'icons/mixed_media.png'
+    
     else
-      'misc.png'
+      'icons/misc.png'
     end
   end
 

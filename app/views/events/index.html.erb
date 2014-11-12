@@ -1,8 +1,8 @@
 <% content_for :filters do %>
   <strong>Filter events</strong>
   <ul style="list-style-type: none; padding-left: 0;">
-    <% types.all.each do |event| %>
-      <li><%= link_to event, events_path( filter: event.name ) %></li>
+    <% types.each do |type| %>
+      <li><%= link_to type, events_path( filter: type.name ) %></li>
     <% end %>
   </ul>
 <% end %>

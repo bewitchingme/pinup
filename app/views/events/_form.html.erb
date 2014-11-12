@@ -18,24 +18,26 @@
   </div>
 
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-6">
       <div class="form-group">
         <%= f.label :venue %>
         <%= f.text_field :venue, class: 'form-control' %>
       </div>
     </div>
 
-    <div class="col-md-5">
+    <div class="col-md-6">
       <div class="form-group">
         <%= f.label :artist %>
         <%= f.text_field :artist, class: 'form-control' %>
       </div>
     </div>
-  
-    <div class="col-md-2">
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
       <div class="form-group">
         <%= f.label :type %>
-        <%= f.text_field :type, class: 'form-control' %>
+        <%= f.select :type, types.map {|t| [t, t]}, {}, { class: 'form-control' } %>
       </div>
     </div>
   </div>

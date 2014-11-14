@@ -1,11 +1,4 @@
-<% content_for :filters do %>
-  <strong>Filter events</strong>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <% types.each do |type| %>
-      <li><%= link_to type, events_path( filter: type.name ) %></li>
-    <% end %>
-  </ul>
-<% end %>
+<%= render 'events/filters' %>
 
 <div id="events">
   <%= render 'events/event' %>

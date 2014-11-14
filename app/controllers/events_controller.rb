@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   before_action :authenticate_user!, only: [ :edit, :destroy ]
 
-  expose(:types) { EventType.all }
+  expose(:types) { EventType.order('name ASC') }
   
   expose(:events) do
     unless filter_param.nil?

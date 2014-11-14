@@ -5,7 +5,7 @@ defaults: &defaults
   name:
     length:
       minimum:  3
-      maximum:  100
+      maximum:  60
 
   description:
     length:

@@ -53,6 +53,9 @@ gem 'kaminari'
 # For test and development data
 gem 'forgery', '0.6.0'
 
+# Nokogiri XML and HTML parser
+gem 'nokogiri'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -67,3 +70,6 @@ gem 'forgery', '0.6.0'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [ :mingw, :mswin ]
+
+# Daemons
+gem 'daemons-rails'

@@ -71,5 +71,8 @@ gem 'nokogiri'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [ :mingw, :mswin ]
 
-# Daemons
-gem 'daemons-rails'
+# Sidekiq for process handling
+gem 'sidekiq'
+
+# Redis for sidekiq data storing
+gem 'redis'

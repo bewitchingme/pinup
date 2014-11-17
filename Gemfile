@@ -78,4 +78,4 @@ gem 'sidekiq'
 gem 'redis'
 
 # Unicorn web server
-gem 'unicorn'
+# gem 'unicorn'

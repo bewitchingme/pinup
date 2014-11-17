@@ -76,3 +76,6 @@ gem 'sidekiq'
 
 # Redis for sidekiq data storing
 gem 'redis'
+
+# Unicorn web server
+gem 'unicorn'

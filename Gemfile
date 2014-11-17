@@ -73,3 +73,5 @@ gem 'tzinfo-data', platforms: [ :mingw, :mswin ]
 
 # Daemons
 gem 'daemons-rails'
+
+gem 'unicorn'

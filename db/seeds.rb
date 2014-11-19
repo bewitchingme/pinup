@@ -26,3 +26,13 @@
     { name: "world" },
     { name: "mixed media" }
   ])
+
+  roles = Role.create([
+    { name: 'default' },
+    { name: 'admin' }
+  ])
+
+  user_groups = UserGroup.create([
+    { name: 'users', role: Role.find_by( name: 'default' )},
+    { name: 'administrators', role: Role.find_by( name: 'admin' )}
+  ])

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-  before_action :authenticate_user!, only: [ :index, :edit, :destroy ]
+  #before_action :authenticate_user!, only: [ :index, :edit, :destroy ]
 
   expose(:users) { User.order('name ASC') }
 

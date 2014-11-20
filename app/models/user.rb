@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  has_one :user_group
+  belongs_to :user_group
 
   has_one :role, through: :user_group
 
@@ -26,15 +26,11 @@ class User < ActiveRecord::Base
     end
   end
 
-  before_create :set_admin
-
   def to_s
     "#{ name.titleize unless name.nil? }"
   end
 
-  private
-
-    def set_admin
-      self.admin = false
-    end
+  def admin?
+    user_group.admin?
+  end
 end

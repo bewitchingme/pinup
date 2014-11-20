@@ -9,15 +9,7 @@ class ApplicationController < ActionController::Base
     strategy DecentExposure::StrongParametersStrategy
   end
 
-  def after_sign_in_path_for(resource)
-    request.env['omniauth.origin'] || stored_location_for(resource) || root_path
-  end
-
-
-
   private
-
-
 
     def ssl_configured?
       !Rails.env.development?

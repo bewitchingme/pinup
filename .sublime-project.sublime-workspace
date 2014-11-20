@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"user_group"
+			],
+			[
 				"eve",
 				"events_mutex"
 			],
@@ -510,36 +514,40 @@
 			[
 				"rec",
 				"received"
-			],
-			[
-				"rece",
-				"received"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "lib/crawler/engine.rb",
+			"file": "app/models/user_group.rb",
 			"settings":
 			{
-				"buffer_size": 1886,
+				"buffer_size": 142,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "config/unicorn.rb",
+			"file": "app/models/user.rb",
 			"settings":
 			{
-				"buffer_size": 575,
+				"buffer_size": 1141,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Gemfile",
+			"file": "db/seeds.rb",
 			"settings":
 			{
-				"buffer_size": 2065,
+				"buffer_size": 1099,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/models/role.rb",
+			"settings":
+			{
+				"buffer_size": 95,
 				"line_ending": "Windows"
 			}
 		}
@@ -596,10 +604,15 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Coldfury/Desktop/iv.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/Gemfile",
-		"/C/Users/Coldfury/Documents/radiant-sands/Procfile",
+		"/C/Users/Coldfury/Documents/radiant-sands/db/seeds.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/models/role.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/lib/crawler/engine.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/unicorn.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141119041102_add_groups_to_users.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141119040712_add_roles_and_users_to_user_groups.rb",
+		"/C/Users/Coldfury/Desktop/iv.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/Procfile",
 		"/C/Users/Coldfury/Documents/radiant-sands/lib/daemons/crawler.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/lib/tasks/crawler.rake",
 		"/E/cmdline.txt.direct",
@@ -651,7 +664,6 @@
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/artists/index.json.jbuilder",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/artists/show.json.jbuilder",
 		"/C/Users/Coldfury/Documents/radiant-sands/lib/tasks/csv.rake",
-		"/C/Users/Coldfury/Documents/radiant-sands/db/seeds.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/admin/ads/index.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/events.js.coffee",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.js.erb",
@@ -719,11 +731,7 @@
 		"/C/Users/Coldfury/Documents/demoriat/app/helpers/application_helper.rb",
 		"/C/Users/Coldfury/Documents/demoriat/app/controllers/application_controller.rb",
 		"/C/Users/Coldfury/Documents/demoriat/app/controllers/projects_controller.rb",
-		"/C/Users/Coldfury/Documents/demoriat/config/locales/en.yml",
-		"/C/Users/Coldfury/Documents/demoriat/config/locales/fr.yml",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/projects/_card.html.erb",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/projects/edit.html.erb",
-		"/C/Users/Coldfury/Documents/demoriat/app/views/projects/index.html.erb"
+		"/C/Users/Coldfury/Documents/demoriat/config/locales/en.yml"
 	],
 	"find":
 	{
@@ -887,51 +895,23 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "lib/crawler/engine.rb",
+					"file": "app/models/user_group.rb",
 					"settings":
 					{
-						"buffer_size": 1886,
+						"buffer_size": 142,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								987,
-								987
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 539.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "config/unicorn.rb",
-					"settings":
-					{
-						"buffer_size": 575,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								142,
+								142
 							]
 						],
 						"settings":
@@ -945,19 +925,75 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "Gemfile",
+					"buffer": 1,
+					"file": "app/models/user.rb",
 					"settings":
 					{
-						"buffer_size": 2065,
+						"buffer_size": 1141,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2063,
-								2063
+								93,
+								93
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "db/seeds.rb",
+					"settings":
+					{
+						"buffer_size": 1099,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1093,
+								1093
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 318.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/models/role.rb",
+					"settings":
+					{
+						"buffer_size": 95,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								64,
+								64
 							]
 						],
 						"settings":
@@ -965,7 +1001,7 @@
 							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1156.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

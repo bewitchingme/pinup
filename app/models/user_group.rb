@@ -7,4 +7,8 @@ class UserGroup < ActiveRecord::Base
   def to_s
     "#{ name.titleize unless name.nil? }"
   end
+
+  def admin?
+    role.admin?
+  end
 end

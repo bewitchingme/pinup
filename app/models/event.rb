@@ -95,11 +95,12 @@ class Event < ActiveRecord::Base
   belongs_to :type, class_name: 'EventType', foreign_key: 'event_type_id'
 
   def type=(type)
-    return super if type.is_a? EventType || type.nil?
+    return super if type.is_a?(EventType) or type.nil?
     self.type = EventType.find_or_create_by name: type.downcase
   end
 
   def type_icon
+    return 'icons/misc.png' if type.nil?
     type.icon
   end
 
@@ -110,7 +111,7 @@ class Event < ActiveRecord::Base
   belongs_to :referrer
 
   def referrer=(referrer)
-    return super if referrer.is_a? Referrer || referrer.nil?
+    return super if referrer.is_a?(Referrer) or referrer.nil?
     self.referrer = Referrer.find_or_create_by name: referrer.downcase
   end
 

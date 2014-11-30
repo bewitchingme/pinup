@@ -520,34 +520,75 @@
 	"buffers":
 	[
 		{
-			"file": "app/models/user_group.rb",
+			"file": "app/controllers/users_controller.rb",
 			"settings":
 			{
-				"buffer_size": 142,
+				"buffer_size": 1381,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/users/registrations_controller.rb",
+			"settings":
+			{
+				"buffer_size": 200,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/users/sessions_controller.rb",
+			"settings":
+			{
+				"buffer_size": 257,
+				"line_ending": "Windows",
+				"name": "class Users::SessionsController < Devise::Sessions"
 			}
 		},
 		{
 			"file": "app/models/user.rb",
 			"settings":
 			{
-				"buffer_size": 1141,
+				"buffer_size": 1095,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "db/seeds.rb",
+			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 1099,
+				"buffer_size": 536,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/models/role.rb",
+			"file": "app/views/dashboard/home.html.erb",
 			"settings":
 			{
-				"buffer_size": 95,
+				"buffer_size": 237,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/events/_filters.html.erb",
+			"settings":
+			{
+				"buffer_size": 651,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 1260,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/layouts/_navbar.html.erb",
+			"settings":
+			{
+				"buffer_size": 2104,
 				"line_ending": "Windows"
 			}
 		}
@@ -604,9 +645,20 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Coldfury/Documents/radiant-sands/Gemfile",
-		"/C/Users/Coldfury/Documents/radiant-sands/db/seeds.rb",
+		"/C/Users/Coldfury/Downloads/config.php",
+		"/C/Users/Coldfury/Downloads/index.php",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/models/user_group.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/role.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/models/user.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/db/seeds.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/config/routes.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/dashboard_controller.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/dashboard/home.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/users/registrations_controller.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/application_controller.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_filters.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/events_controller.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/Gemfile",
 		"/C/Users/Coldfury/Documents/radiant-sands/lib/crawler/engine.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/unicorn.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141119041102_add_groups_to_users.rb",
@@ -620,7 +672,6 @@
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/events.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_event.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_filters.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/event.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/event_type.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/new.html.erb",
@@ -628,20 +679,16 @@
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/edit.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/_advertisement.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/users_controller.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/config/routes.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_form.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/application.js",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/bootstrap_and_overrides.css.scss",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/events_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/events.yml",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/application.css",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/devise/registrations_controller.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/application_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/layout.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/lib/event.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/application.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/users/omniauth_callbacks_controller.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/models/user.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/artists/show.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/initializers/devise.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/_sidebar.html.erb",
@@ -725,13 +772,7 @@
 		"/C/Users/Coldfury/Documents/demoriat/app/controllers/root_controller.rb",
 		"/C/Users/Coldfury/Documents/demoriat/app/controllers/dashboards_controller.rb",
 		"/C/Users/Coldfury/Documents/demoriat/app/views/pages/api.html.erb",
-		"/C/Users/Coldfury/Documents/demoriat/app/controllers/pages_controller.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/controllers/locales_controller.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/controllers/api/enterprises_controller.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/helpers/application_helper.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/controllers/application_controller.rb",
-		"/C/Users/Coldfury/Documents/demoriat/app/controllers/projects_controller.rb",
-		"/C/Users/Coldfury/Documents/demoriat/config/locales/en.yml"
+		"/C/Users/Coldfury/Documents/demoriat/app/controllers/pages_controller.rb"
 	],
 	"find":
 	{
@@ -750,6 +791,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"script",
 			"TERM",
 			"12",
 			"@semaphore",
@@ -876,8 +918,7 @@
 			"country",
 			"countries",
 			"bestPictures",
-			"person",
-			"verify"
+			"person"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -895,28 +936,30 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/models/user_group.rb",
+					"file": "app/controllers/users_controller.rb",
 					"settings":
 					{
-						"buffer_size": 142,
+						"buffer_size": 1381,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								142,
-								142
+								52,
+								52
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -926,18 +969,71 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/models/user.rb",
+					"file": "app/controllers/users/registrations_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1141,
+						"buffer_size": 200,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								93,
-								93
+								200,
+								200
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/users/sessions_controller.rb",
+					"settings":
+					{
+						"buffer_size": 257,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								115,
+								115
+							]
+						],
+						"settings":
+						{
+							"auto_name": "class Users::SessionsController < Devise::Sessions",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/models/user.rb",
+					"settings":
+					{
+						"buffer_size": 1095,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
 							]
 						],
 						"settings":
@@ -953,19 +1049,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "db/seeds.rb",
+					"buffer": 4,
+					"file": "config/routes.rb",
 					"settings":
 					{
-						"buffer_size": 1099,
+						"buffer_size": 536,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1093,
-								1093
+								197,
+								197
 							]
 						],
 						"settings":
@@ -975,30 +1071,112 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 318.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/models/role.rb",
+					"buffer": 5,
+					"file": "app/views/dashboard/home.html.erb",
 					"settings":
 					{
-						"buffer_size": 95,
+						"buffer_size": 237,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								64,
-								64
+								197,
+								197
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/events/_filters.html.erb",
+					"settings":
+					{
+						"buffer_size": 651,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/assets/javascripts/application.js",
+					"settings":
+					{
+						"buffer_size": 1260,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								909,
+								909
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 284.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/views/layouts/_navbar.html.erb",
+					"settings":
+					{
+						"buffer_size": 2104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

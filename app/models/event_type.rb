@@ -6,7 +6,7 @@ class EventType < ActiveRecord::Base
   end
 
   def icon
-    return 'misc.png' if name.nil?
+    return 'icons/misc.png' if name.nil?
     case name
     when 'dance'; 'icons/dance.png'
     when 'theatre'; 'icons/theatre.png'

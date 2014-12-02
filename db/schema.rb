@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141130074323) do
+ActiveRecord::Schema.define(version: 20141202213040) do
 
   create_table "admin_ads", force: true do |t|
     t.datetime "created_at"
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 20141130074323) do
     t.integer  "artist_id"
     t.integer  "referrer_id"
     t.boolean  "recurring",     default: false
+    t.boolean  "gcal"
+    t.string   "gcal_id"
   end
 
   create_table "referrers", force: true do |t|

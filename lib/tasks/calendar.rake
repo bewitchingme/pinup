@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'digest/sha1'
 
 include ActionView::Helpers::SanitizeHelper
 
@@ -7,22 +8,24 @@ namespace :calendar do
   desc "generates events from calendars xml"
   task :load, [ :url ] => :environment do |t, args|
 
-    # Delete all events on development
-    Event.delete_all if Rails.env.development? 
-
     events_count = 0
     recurring_events_count = 0
     
     events = []
 
-    xml_urls = [ 'http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic',
-                 'http://www.google.com/calendar/feeds/jazzworkscanada.com_29lcl1pmtk661nr45rv5hckho8%40group.calendar.google.com/public/basic',
-                 'http://www.google.com/calendar/feeds/jazzworkscanada.com_g53tni1lq25vk1kt66ljin2sg4%40group.calendar.google.com/public/basic' ]
+    xml_urls = %w(
+      ottawajazzhappenings%40jazzworkscanada.com/public/basic
+      jazzworkscanada.com_29lcl1pmtk661nr45rv5hckho8%40group.calendar.google.com/public/basic
+      jazzworkscanada.com_g53tni1lq25vk1kt66ljin2sg4%40group.calendar.google.com/public/basic 
+    ).map { |url| "http://www.google.com/calendar/feeds/#{url}" }
 
     xml_urls.each do |xml_url|
       xml = Nokogiri::XML(open(xml_url))
 
       xml.css('entry').each do |entry|
+
+        # Event id
+        event_id = Digest::SHA1.hexdigest(strip_tags(entry.css('id').text))
 
         # Event location
         event_where = nil
@@ -89,48 +92,49 @@ namespace :calendar do
             when /Event Description: /
               line.slice!('Event Description: ')
               event_description = line if event_description.nil?
-            else
-              # puts line
             end
           end
         end
 
-        if event_recurring
-          events << {
-            name: event_name,
-            description: event_description,
-            begin_at: DateTime.parse(event_first_start),
-            price: 0,
-            type: nil,
-            referrer: nil,
-            artist: '',
-            venue: event_where,
-            recurring: true
-          }
+        unless Event.exists?(gcal_id: event_id)
+          if event_recurring
+              events << {
+                name: event_name,
+                description: event_description,
+                begin_at: DateTime.parse(event_first_start),
+                price: 0,
+                type: nil,
+                referrer: nil,
+                artist: '',
+                venue: event_where,
+                recurring: true,
+                gcal_id: event_id,
+                gcal: true
+              }
+            events_count += 1
 
-          events_count += 1
-
-        else
-          events << {
-            name: event_name,
-            description: event_description,
-            begin_at: DateTime.parse(event_when),
-            price: 0,
-            type: nil,
-            referrer: nil,
-            artist: '',
-            venue: event_where,
-            recurring: false
-          }
-
-          recurring_events_count += 1
-
+          else
+            events << {
+              name: event_name,
+              description: event_description,
+              begin_at: DateTime.parse(event_when),
+              price: 0,
+              type: nil,
+              referrer: nil,
+              artist: '',
+              venue: event_where,
+              recurring: false,
+              gcal_id: event_id,
+              gcal: true
+            }
+            recurring_events_count += 1
+          end
         end
+
       end
     end
 
     puts "Created #{events_count} events and #{recurring_events_count} recurring events."
-
     Event.create(events)
   end
 end

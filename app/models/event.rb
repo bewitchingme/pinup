@@ -36,7 +36,7 @@ class Event < ActiveRecord::Base
   MAXIMUM_NAME_LENGTH = EVENTS_CONFIG['name.length.maximum']
 
   validates :name,  presence: true,
-                    allow_blank: true,
+                    allow_blank: false,
                     length: { minimum: MINIMUM_NAME_LENGTH,
                               maximum: MAXIMUM_NAME_LENGTH }
 
@@ -50,7 +50,7 @@ class Event < ActiveRecord::Base
   MAXIMUM_DESCRIPTION_LENGTH = EVENTS_CONFIG['description.length.maximum']
 
   validates :description, presence: true,
-                          allow_blank: true,
+                          allow_blank: false,
                           length: { minimum: MINIMUM_DESCRIPTION_LENGTH,
                                     maximum: MAXIMUM_DESCRIPTION_LENGTH }
   

@@ -26,6 +26,7 @@ namespace :calendar do
 
         # Event id
         event_id = Digest::SHA1.hexdigest(strip_tags(entry.css('id').text))
+        next if Event.exists?(gcal_id: event_id)
 
         # Event location
         event_where = nil
@@ -96,39 +97,37 @@ namespace :calendar do
           end
         end
 
-        unless Event.exists?(gcal_id: event_id)
-          if event_recurring
-              events << {
-                name: event_name,
-                description: event_description,
-                begin_at: DateTime.parse(event_first_start),
-                price: 0,
-                type: nil,
-                referrer: nil,
-                artist: '',
-                venue: event_where,
-                recurring: true,
-                gcal_id: event_id,
-                gcal: true
-              }
-            events_count += 1
-
-          else
+        if event_recurring
             events << {
               name: event_name,
               description: event_description,
-              begin_at: DateTime.parse(event_when),
+              begin_at: DateTime.parse(event_first_start),
               price: 0,
               type: nil,
               referrer: nil,
               artist: '',
               venue: event_where,
-              recurring: false,
+              recurring: true,
               gcal_id: event_id,
               gcal: true
             }
-            recurring_events_count += 1
-          end
+          events_count += 1
+
+        else
+          events << {
+            name: event_name,
+            description: event_description,
+            begin_at: DateTime.parse(event_when),
+            price: 0,
+            type: nil,
+            referrer: nil,
+            artist: '',
+            venue: event_where,
+            recurring: false,
+            gcal_id: event_id,
+            gcal: true
+          }
+          recurring_events_count += 1
         end
 
       end

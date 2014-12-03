@@ -3,6 +3,7 @@ class Event < ActiveRecord::Base
   ##############################
   ### Event                  ###
   ##############################
+  ### id:          integer   ###
   ### name:        string    ###
   ### description: string    ###
   ### price:       integer   ###
@@ -12,6 +13,12 @@ class Event < ActiveRecord::Base
   ### referrer:    Referrer  ###
   ### type:        EventType ###
   ##############################
+
+
+
+  ### ID
+
+  obfuscate_id
 
 
 

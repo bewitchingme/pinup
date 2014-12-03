@@ -4,6 +4,7 @@
       <div class="form-group">
         <%= f.label :name %>
         <%= f.text_field :name, class: 'form-control' %>
+        <%= display_error_for(event, :name) %>
       </div>
     </div>
   </div>
@@ -13,6 +14,7 @@
       <div class="form-group">
         <%= f.label :description %>
         <%= f.text_area :description, rows: 2, class: 'form-control' %>
+        <%= display_error_for(event, :description) %>
       </div>
     </div>
   </div>
@@ -22,6 +24,7 @@
       <div class="form-group">
         <%= f.label :venue %>
         <%= f.text_field :venue, class: 'form-control' %>
+        <%= display_error_for(event, :venue) %>
       </div>
     </div>
 
@@ -29,6 +32,7 @@
       <div class="form-group">
         <%= f.label :artist %>
         <%= f.text_field :artist, class: 'form-control' %>
+        <%= display_error_for(event, :artist) %>
       </div>
     </div>
   </div>
@@ -38,6 +42,7 @@
       <div class="form-group">
         <%= f.label :type %>
         <%= f.select :type, types.map {|t| [t, t]}, {}, { class: 'form-control' } %>
+        <%= display_error_for(event, :type) %>
       </div>
     </div>
   </div>
@@ -47,6 +52,7 @@
       <div class="form-group">
         <%= f.label :begin_at %>
         <%= f.text_field :begin_at, class: 'datetimepicker form-control' %>
+        <%= display_error_for(event, :begin_at) %>
       </div>
     </div>
   
@@ -58,6 +64,7 @@
           <%= f.text_field :price, class: 'form-control' %>
           <span class="input-group-addon">.00</span>
         </div>
+        <%= display_error_for(event, :price) %>
       </div>
     </div>
   </div>

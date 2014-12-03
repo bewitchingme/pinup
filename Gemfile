@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
@@ -79,3 +78,5 @@ gem 'redis'
 
 # Unicorn web server
 # gem 'unicorn'
+
+gem 'obfuscate_id', git: 'https://github.com/namick/obfuscate_id.git'

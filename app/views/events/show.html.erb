@@ -2,7 +2,7 @@
 
 <div class="event">
 
-  <legend><%= event.name %></legend>
+  <legend><%= event %></legend>
   <p><%= event.description %></p>
   <p>
     <span id="artist"><%= link_to_unless event.artist.nil?, event.artist, event.artist %></span>

@@ -25,7 +25,7 @@ namespace :calendar do
       xml.css('entry').each do |entry|
 
         # Event id
-        event_id = Digest::SHA1.hexdigest(strip_tags(entry.css('id').text))
+        event_id = Digest::SHA1.hexdigest(strip_tags(entry.css('id').text.encode('UTF-8')).html_safe)
         next if Event.exists?(gcal_id: event_id)
 
         # Event location
@@ -41,11 +41,11 @@ namespace :calendar do
         event_first_start = nil
 
         # Event name ands description
-        event_name = strip_tags(entry.css('title').text)
+        event_name = strip_tags(entry.css('title').text.encode('UTF-8')).html_safe
         event_description = nil
 
         entry.css('summary').each do |summary|
-          strip_tags(summary.text).each_line do |line|
+          strip_tags(summary.text.encode('UTF-8')).html_safe.each_line do |line|
             case line
             when /Where: /
               line.slice!('Where: ')
@@ -70,7 +70,7 @@ namespace :calendar do
         end
 
         entry.css('content').each do |content|
-          strip_tags(content.text).each_line do |line|
+          strip_tags(content.text.encode('UTF-8')).html_safe.each_line do |line|
             case line
             when /Where: /
               line.slice!('Where: ')

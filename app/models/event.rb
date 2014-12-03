@@ -74,7 +74,7 @@ class Event < ActiveRecord::Base
   belongs_to :venue
 
   def venue=(venue)
-    return super if venue.is_a? Venue || venue.nil?
+    return super if venue.is_a?(Venue) || venue.nil?
     self.venue = Venue.find_or_create_by name: venue.downcase
   end
 
@@ -82,9 +82,11 @@ class Event < ActiveRecord::Base
 
   ### BEGIN AT
 
+  validates :begin_at, presence: true
+
   def begin_at=(begin_at)
-    return super if begin_at.is_a? DateTime
-    self.begin_at = begin_at.nil? || begin_at.empty? ? DateTime.now : DateTime.parse(begin_at)
+    return super if begin_at.is_a?(DateTime) || begin_at.nil?
+    self.begin_at = begin_at.empty? ? DateTime.now : DateTime.parse(begin_at)
   end
 
   def begin_at_date

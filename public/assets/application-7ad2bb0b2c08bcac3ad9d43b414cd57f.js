@@ -12891,19 +12891,18 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
   $document = $(document);
 
   $.turbo = {
-    version: '2.0.2',
+    version: '2.1.0',
     isReady: false,
     use: function(load, fetch) {
       return $document.off('.turbo').on("" + load + ".turbo", this.onLoad).on("" + fetch + ".turbo", this.onFetch);
     },
     addCallback: function(callback) {
       if ($.turbo.isReady) {
-        return callback($);
-      } else {
-        return $document.on('turbo:ready', function() {
-          return callback($);
-        });
+        callback($);
       }
+      return $document.on('turbo:ready', function() {
+        return callback($);
+      });
     },
     onLoad: function() {
       $.turbo.isReady = true;
@@ -19671,11 +19670,12 @@ THE SOFTWARE.
     };
 }));
 (function() {
-  var CSRFToken, Click, ComponentUrl, EVENTS, Link, browserCompatibleDocumentParser, browserIsntBuggy, browserSupportsCustomEvents, browserSupportsPushState, browserSupportsTurbolinks, bypassOnLoadPopstate, cacheCurrentPage, cacheSize, changePage, clone, constrainPageCacheTo, createDocument, currentState, enableTransitionCache, executeScriptTags, extractTitleAndBody, fetch, fetchHistory, fetchReplacement, historyStateIsDefined, initializeTurbolinks, installDocumentReadyPageEventTriggers, installHistoryChangeHandler, installJqueryAjaxSuccessPageUpdateTrigger, loadedAssets, manuallyTriggerHashChangeForFirefox, pageCache, pageChangePrevented, pagesCached, popCookie, processResponse, recallScrollPosition, referer, reflectNewUrl, reflectRedirectedUrl, rememberCurrentState, rememberCurrentUrl, rememberReferer, removeNoscriptTags, requestMethodIsSafe, resetScrollPosition, setAutofocusElement, transitionCacheEnabled, transitionCacheFor, triggerEvent, visit, xhr, _ref,
+  var CSRFToken, Click, ComponentUrl, EVENTS, Link, ProgressBar, browserIsntBuggy, browserSupportsCustomEvents, browserSupportsPushState, browserSupportsTurbolinks, bypassOnLoadPopstate, cacheCurrentPage, cacheSize, changePage, clone, constrainPageCacheTo, createDocument, crossOriginRedirect, currentState, enableProgressBar, enableTransitionCache, executeScriptTags, extractTitleAndBody, fetch, fetchHistory, fetchReplacement, historyStateIsDefined, initializeTurbolinks, installDocumentReadyPageEventTriggers, installHistoryChangeHandler, installJqueryAjaxSuccessPageUpdateTrigger, loadedAssets, manuallyTriggerHashChangeForFirefox, pageCache, pageChangePrevented, pagesCached, popCookie, processResponse, progressBar, recallScrollPosition, referer, reflectNewUrl, reflectRedirectedUrl, rememberCurrentState, rememberCurrentUrl, rememberReferer, removeNoscriptTags, requestMethodIsSafe, resetScrollPosition, setAutofocusElement, transitionCacheEnabled, transitionCacheFor, triggerEvent, visit, xhr, _ref,
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    __slice = [].slice;
+    __slice = [].slice,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   pageCache = {};
 
@@ -19683,13 +19683,13 @@ THE SOFTWARE.
 
   transitionCacheEnabled = false;
 
+  progressBar = null;
+
   currentState = null;
 
   loadedAssets = null;
 
   referer = null;
-
-  createDocument = null;
 
   xhr = null;
 
@@ -19710,9 +19710,12 @@ THE SOFTWARE.
     url = new ComponentUrl(url);
     rememberReferer();
     cacheCurrentPage();
+    if (progressBar != null) {
+      progressBar.start();
+    }
     if (transitionCacheEnabled && (cachedPage = transitionCacheFor(url.absolute))) {
       fetchHistory(cachedPage);
-      return fetchReplacement(url);
+      return fetchReplacement(url, null, false);
     } else {
       return fetchReplacement(url, resetScrollPosition);
     }
@@ -19733,11 +19736,26 @@ THE SOFTWARE.
     return transitionCacheEnabled = enable;
   };
 
-  fetchReplacement = function(url, onLoadFunction) {
-    if (onLoadFunction == null) {
-      onLoadFunction = (function(_this) {
-        return function() {};
-      })(this);
+  enableProgressBar = function(enable) {
+    if (enable == null) {
+      enable = true;
+    }
+    if (!browserSupportsTurbolinks) {
+      return;
+    }
+    if (enable) {
+      return progressBar != null ? progressBar : progressBar = new ProgressBar('html');
+    } else {
+      if (progressBar != null) {
+        progressBar.uninstall();
+      }
+      return progressBar = null;
+    }
+  };
+
+  fetchReplacement = function(url, onLoadFunction, showProgressBar) {
+    if (showProgressBar == null) {
+      showProgressBar = true;
     }
     triggerEvent(EVENTS.FETCH, {
       url: url.absolute
@@ -19756,15 +19774,26 @@ THE SOFTWARE.
       });
       if (doc = processResponse()) {
         reflectNewUrl(url);
+        reflectRedirectedUrl();
         changePage.apply(null, extractTitleAndBody(doc));
         manuallyTriggerHashChangeForFirefox();
-        reflectRedirectedUrl();
-        onLoadFunction();
+        if (typeof onLoadFunction === "function") {
+          onLoadFunction();
+        }
         return triggerEvent(EVENTS.LOAD);
       } else {
-        return document.location.href = url.absolute;
+        return document.location.href = crossOriginRedirect() || url.absolute;
       }
     };
+    if (progressBar && showProgressBar) {
+      xhr.onprogress = (function(_this) {
+        return function(event) {
+          var percent;
+          percent = event.lengthComputable ? event.loaded / event.total * 100 : progressBar.value + (100 - progressBar.value) / 10;
+          return progressBar.advanceTo(percent);
+        };
+      })(this);
+    }
     xhr.onloadend = function() {
       return xhr = null;
     };
@@ -19839,6 +19868,9 @@ THE SOFTWARE.
       executeScriptTags();
     }
     currentState = window.history.state;
+    if (progressBar != null) {
+      progressBar.done();
+    }
     triggerEvent(EVENTS.CHANGE);
     return triggerEvent(EVENTS.UPDATE);
   };
@@ -19894,7 +19926,14 @@ THE SOFTWARE.
     if (location = xhr.getResponseHeader('X-XHR-Redirected-To')) {
       location = new ComponentUrl(location);
       preservedHash = location.hasNoHash() ? document.location.hash : '';
-      return window.history.replaceState(currentState, '', location.href + preservedHash);
+      return window.history.replaceState(window.history.state, '', location.href + preservedHash);
+    }
+  };
+
+  crossOriginRedirect = function() {
+    var redirect;
+    if (((redirect = xhr.getResponseHeader('Location')) != null) && (new ComponentUrl(redirect)).crossOrigin()) {
+      return redirect;
     }
   };
 
@@ -20048,74 +20087,13 @@ THE SOFTWARE.
     }
   };
 
-  browserCompatibleDocumentParser = function() {
-    var buildTestsUsing, createDocumentUsingDOM, createDocumentUsingFragment, createDocumentUsingParser, createDocumentUsingWrite, docTest, docTests, e, _i, _len;
-    createDocumentUsingParser = function(html) {
-      return (new DOMParser).parseFromString(html, 'text/html');
-    };
-    createDocumentUsingDOM = function(html) {
-      var doc;
-      doc = document.implementation.createHTMLDocument('');
-      doc.documentElement.innerHTML = html;
-      return doc;
-    };
-    createDocumentUsingWrite = function(html) {
-      var doc;
-      doc = document.implementation.createHTMLDocument('');
-      doc.open('replace');
-      doc.write(html);
-      doc.close();
-      return doc;
-    };
-    createDocumentUsingFragment = function(html) {
-      var body, doc, head, htmlWrapper, _ref, _ref1;
-      head = ((_ref = html.match(/<head[^>]*>([\s\S.]*)<\/head>/i)) != null ? _ref[0] : void 0) || '<head></head>';
-      body = ((_ref1 = html.match(/<body[^>]*>([\s\S.]*)<\/body>/i)) != null ? _ref1[0] : void 0) || '<body></body>';
-      htmlWrapper = document.createElement('html');
-      htmlWrapper.innerHTML = head + body;
-      doc = document.createDocumentFragment();
-      doc.appendChild(htmlWrapper);
-      return doc;
-    };
-    buildTestsUsing = function(createMethod) {
-      var buildTest, formNestingTest, structureTest;
-      buildTest = function(fallback, passes) {
-        return {
-          passes: passes(),
-          fallback: fallback
-        };
-      };
-      structureTest = buildTest(createDocumentUsingWrite, (function(_this) {
-        return function() {
-          var _ref, _ref1;
-          return ((_ref = createMethod('<html><body><p>test')) != null ? (_ref1 = _ref.body) != null ? _ref1.childNodes.length : void 0 : void 0) === 1;
-        };
-      })(this));
-      formNestingTest = buildTest(createDocumentUsingFragment, (function(_this) {
-        return function() {
-          var _ref, _ref1;
-          return ((_ref = createMethod('<html><body><form></form><div></div></body></html>')) != null ? (_ref1 = _ref.body) != null ? _ref1.childNodes.length : void 0 : void 0) === 2;
-        };
-      })(this));
-      return [structureTest, formNestingTest];
-    };
-    try {
-      if (window.DOMParser) {
-        docTests = buildTestsUsing(createDocumentUsingParser);
-        return createDocumentUsingParser;
-      }
-    } catch (_error) {
-      e = _error;
-      docTests = buildTestsUsing(createDocumentUsingDOM);
-      return createDocumentUsingDOM;
-    } finally {
-      for (_i = 0, _len = docTests.length; _i < _len; _i++) {
-        docTest = docTests[_i];
-        if (!docTest.passes) {
-          return docTest.fallback;
-        }
-      }
-    }
+  createDocument = function(html) {
+    var doc;
+    doc = document.documentElement.cloneNode();
+    doc.innerHTML = html;
+    doc.head = doc.querySelector('head');
+    doc.body = doc.querySelector('body');
+    return doc;
   };
 
   ComponentUrl = (function() {
@@ -20137,6 +20115,10 @@ THE SOFTWARE.
 
     ComponentUrl.prototype.hasNoHash = function() {
       return this.hash.length === 0;
+    };
+
+    ComponentUrl.prototype.crossOrigin = function() {
+      return this.origin !== (new ComponentUrl).origin;
     };
 
     ComponentUrl.prototype._parse = function() {
@@ -20182,11 +20164,7 @@ THE SOFTWARE.
     }
 
     Link.prototype.shouldIgnore = function() {
-      return this._crossOrigin() || this._anchored() || this._nonHtml() || this._optOut() || this._target();
-    };
-
-    Link.prototype._crossOrigin = function() {
-      return this.origin !== (new ComponentUrl).origin;
+      return this.crossOrigin() || this._anchored() || this._nonHtml() || this._optOut() || this._target();
     };
 
     Link.prototype._anchored = function() {
@@ -20264,6 +20242,127 @@ THE SOFTWARE.
 
   })();
 
+  ProgressBar = (function() {
+    var className;
+
+    className = 'turbolinks-progress-bar';
+
+    function ProgressBar(elementSelector) {
+      this.elementSelector = elementSelector;
+      this._trickle = __bind(this._trickle, this);
+      this.value = 0;
+      this.opacity = 1;
+      this.content = '';
+      this.speed = 300;
+      this.install();
+    }
+
+    ProgressBar.prototype.install = function() {
+      this.element = document.querySelector(this.elementSelector);
+      this.element.classList.add(className);
+      this.styleElement = document.createElement('style');
+      document.head.appendChild(this.styleElement);
+      return this._updateStyle();
+    };
+
+    ProgressBar.prototype.uninstall = function() {
+      this.element.classList.remove(className);
+      return document.head.removeChild(this.styleElement);
+    };
+
+    ProgressBar.prototype.start = function() {
+      return this.advanceTo(5);
+    };
+
+    ProgressBar.prototype.advanceTo = function(value) {
+      var _ref;
+      if ((value > (_ref = this.value) && _ref <= 100)) {
+        this.value = value;
+        this._updateStyle();
+        if (this.value === 100) {
+          return this._stopTrickle();
+        } else if (this.value > 0) {
+          return this._startTrickle();
+        }
+      }
+    };
+
+    ProgressBar.prototype.done = function() {
+      if (this.value > 0) {
+        this.advanceTo(100);
+        return this._reset();
+      }
+    };
+
+    ProgressBar.prototype._reset = function() {
+      setTimeout((function(_this) {
+        return function() {
+          _this.opacity = 0;
+          return _this._updateStyle();
+        };
+      })(this), this.speed / 2);
+      return setTimeout((function(_this) {
+        return function() {
+          _this.value = 0;
+          _this.opacity = 1;
+          return _this._withSpeed(0, function() {
+            return _this._updateStyle(true);
+          });
+        };
+      })(this), this.speed);
+    };
+
+    ProgressBar.prototype._startTrickle = function() {
+      if (this.trickling) {
+        return;
+      }
+      this.trickling = true;
+      return setTimeout(this._trickle, this.speed);
+    };
+
+    ProgressBar.prototype._stopTrickle = function() {
+      return delete this.trickling;
+    };
+
+    ProgressBar.prototype._trickle = function() {
+      if (!this.trickling) {
+        return;
+      }
+      this.advanceTo(this.value + Math.random() / 2);
+      return setTimeout(this._trickle, this.speed);
+    };
+
+    ProgressBar.prototype._withSpeed = function(speed, fn) {
+      var originalSpeed, result;
+      originalSpeed = this.speed;
+      this.speed = speed;
+      result = fn();
+      this.speed = originalSpeed;
+      return result;
+    };
+
+    ProgressBar.prototype._updateStyle = function(forceRepaint) {
+      if (forceRepaint == null) {
+        forceRepaint = false;
+      }
+      if (forceRepaint) {
+        this._changeContentToForceRepaint();
+      }
+      return this.styleElement.textContent = this._createCSSRule();
+    };
+
+    ProgressBar.prototype._changeContentToForceRepaint = function() {
+      return this.content = this.content === '' ? ' ' : '';
+    };
+
+    ProgressBar.prototype._createCSSRule = function() {
+      return "" + this.elementSelector + "." + className + "::before {\n  content: '" + this.content + "';\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 2000;\n  background-color: #0076ff;\n  height: 3px;\n  opacity: " + this.opacity + ";\n  width: " + this.value + "%;\n  transition: width " + this.speed + "ms ease-out, opacity " + (this.speed / 2) + "ms ease-in;\n  transform: translate3d(0,0,0);\n}";
+    };
+
+    return ProgressBar;
+
+  })();
+
   bypassOnLoadPopstate = function(fn) {
     return setTimeout(fn, 500);
   };
@@ -20301,7 +20400,6 @@ THE SOFTWARE.
   initializeTurbolinks = function() {
     rememberCurrentUrl();
     rememberCurrentState();
-    createDocument = browserCompatibleDocumentParser();
     document.addEventListener('click', Click.installHandlerLast, true);
     window.addEventListener('hashchange', function(event) {
       rememberCurrentUrl();
@@ -20342,6 +20440,7 @@ THE SOFTWARE.
     visit: visit,
     pagesCached: pagesCached,
     enableTransitionCache: enableTransitionCache,
+    enableProgressBar: enableProgressBar,
     allowLinkExtensions: Link.allowExtensions,
     supported: browserSupportsTurbolinks,
     EVENTS: clone(EVENTS)
@@ -20352,6 +20451,10 @@ THE SOFTWARE.
   $(document).ready(function() {
     return $('#ad').css('background-image', 'url("' + $('#ad').data('img-url') + '")');
   });
+
+}).call(this);
+(function() {
+
 
 }).call(this);
 (function() {
@@ -20404,7 +20507,6 @@ THE SOFTWARE.
 
 
 $(document).ready(function(){
-  $('.datepicker').datepicker({format: 'yyyy-mm-dd'});
   $('.datetimepicker').datetimepicker();
 });
 

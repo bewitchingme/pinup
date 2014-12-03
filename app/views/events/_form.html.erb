@@ -51,7 +51,7 @@
     <div class="col-md-6">
       <div class="form-group">
         <%= f.label :begin_at %>
-        <%= f.text_field :begin_at, class: 'datetimepicker form-control' %>
+        <%= f.text_field :begin_at, class: 'datetimepicker form-control', value: Time.now.strftime('%Y-%m-%d %H:%M'), data: { "date-format" => 'YYYY-MM-DD HH:MM' } %>
         <%= display_error_for(event, :begin_at) %>
       </div>
     </div>

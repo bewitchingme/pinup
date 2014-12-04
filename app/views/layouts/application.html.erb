@@ -18,10 +18,15 @@
       </section>
 
       <section id="page-body" class="col-md-6 well">
-        <% flash.each do |name, msg| -%>
-          <%= content_tag :div, msg, class: name %>
-        <% end -%>
+        <% flash.each do |type, message| %>
+          <div class="alert <%= bootstrap_class_for(type) %> fade in">
+            <button class="close" data-dismiss="alert">×</button>
+            <%= message %>
+          </div>
+        <% end %> 
+
         <%= render 'layouts/banner' %>
+        
         <%= yield %>
       </section>
 

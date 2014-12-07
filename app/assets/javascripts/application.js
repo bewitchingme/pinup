@@ -37,3 +37,8 @@ function uploadImageClicked(event) {
   event.preventDefault();
   $('#image-upload').click();
 }
+
+function uploadClicked(event) {
+  event.preventDefault();
+  $('#upload-btn').click();
+}

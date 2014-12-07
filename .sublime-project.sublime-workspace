@@ -539,7 +539,39 @@
 			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 924,
+				"buffer_size": 1066,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/helpers/application_helper.rb",
+			"settings":
+			{
+				"buffer_size": 580,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/dashboard_controller.rb",
+			"settings":
+			{
+				"buffer_size": 114,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "db/migrate/20141207033658_add_authorized_to_events.rb",
+			"settings":
+			{
+				"buffer_size": 137,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/dashboard/home.html.erb",
+			"settings":
+			{
+				"buffer_size": 237,
 				"line_ending": "Windows"
 			}
 		}
@@ -596,6 +628,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/dashboard/home.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/lib/tasks/calendar.rake",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/application.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/_navbar.html.erb",
@@ -625,7 +658,6 @@
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/users/sessions_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/user.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/routes.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/dashboard/home.html.erb",
 		"/C/Users/Coldfury/Downloads/config.php",
 		"/C/Users/Coldfury/Downloads/index.php",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/user_group.rb",
@@ -887,7 +919,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -951,15 +983,15 @@
 					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 924,
+						"buffer_size": 1066,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								904,
-								904
+								15,
+								15
 							]
 						],
 						"settings":
@@ -969,7 +1001,113 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 288.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/helpers/application_helper.rb",
+					"settings":
+					{
+						"buffer_size": 580,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								548,
+								548
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/dashboard_controller.rb",
+					"settings":
+					{
+						"buffer_size": 114,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								102,
+								102
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "db/migrate/20141207033658_add_authorized_to_events.rb",
+					"settings":
+					{
+						"buffer_size": 137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								126,
+								126
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/dashboard/home.html.erb",
+					"settings":
+					{
+						"buffer_size": 237,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

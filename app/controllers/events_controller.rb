@@ -8,10 +8,10 @@ class EventsController < ApplicationController
   expose(:events) do
     unless filter_param.nil?
       Event.where(
-        'begin_at > ? AND event_type_id = ?', Time.now, EventType.find_by( name: filter_param )
+        'begin_at > ? AND event_type_id = ? AND authorized = ?', Time.now, EventType.find_by( name: filter_param ), true
       ).order( 'begin_at ASC' ).page( page_param )
     else
-      Event.where( 'begin_at > ?', Time.now ).order( 'begin_at ASC' ).page( page_param )
+      Event.where( 'begin_at > ? AND authorized = ?', Time.now, true ).order( 'begin_at ASC' ).page( page_param )
     end
   end
 
@@ -60,7 +60,7 @@ class EventsController < ApplicationController
 
   private
     def event_params
-      params.require(:event).permit(:name, :description, :begin_at, :price, :referrer, :artist, :venue, :type)
+      params.require(:event).permit(:name, :description, :begin_at, :price, :referrer, :artist, :venue, :type, :authorized)
     end
 
     def id_param

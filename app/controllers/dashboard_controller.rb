@@ -11,6 +11,7 @@ class DashboardController < ApplicationController
     @events = Event.where(authorized: nil)
     @csv_calendar = CsvCalendar.new
     @csv_calendars = CsvCalendar.all
+    @ad = Ad.new
   end
 
   def load_google_calendars

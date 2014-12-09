@@ -25,10 +25,17 @@ class CsvCalendarsController < ApplicationController
   end
 
   def create
-    @csv_calendar = CsvCalendar.new(csv_calendar_params)
-    @csv_calendar.save
-    import_events_from_calendar(open(@csv_calendar.file.path))
-    redirect_to dashboard_path
+    if params[:csv_calendar].nil?
+      redirect_to dashboard_path
+    else
+      @csv_calendar = CsvCalendar.new(csv_calendar_params)
+      if @csv_calendar.save
+        import_events_from_calendar(open(@csv_calendar.file.path))
+        redirect_to dashboard_path
+      else
+        redirect_to dashboard_path
+      end
+    end
   end
 
   def update

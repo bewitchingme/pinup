@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   scope '/admin' do
     get 'dashboard', to: 'dashboard#home'
+    get 'load_google_calendars', to: 'dashboard#load_google_calendars'
 
     resources :users
     resources :ads, module: :admin

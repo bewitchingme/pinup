@@ -1,4 +1,6 @@
 class VenuesController < ApplicationController
+
+  before_action :authenticate_user!, only: [ :edit, :update, :destroy ]
   
   expose(:venues) { Venue.order('name ASC') }
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :csv_calendars
+
   root to: 'events#index'
 
   devise_for :users, controllers: { registrations: 'users/registrations',

@@ -1,4 +1,5 @@
 class Admin::AdsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_admin_ad, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/ads

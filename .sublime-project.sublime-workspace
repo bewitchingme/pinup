@@ -520,10 +520,34 @@
 	"buffers":
 	[
 		{
-			"file": "app/models/user.rb",
+			"file": "app/views/dashboard/home.html.erb",
 			"settings":
 			{
-				"buffer_size": 983,
+				"buffer_size": 1118,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/csv_calendars/_csv_calendar.html.erb",
+			"settings":
+			{
+				"buffer_size": 107,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 1321,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/events_controller.rb",
+			"settings":
+			{
+				"buffer_size": 2051,
 				"line_ending": "Windows"
 			}
 		},
@@ -536,42 +560,42 @@
 			}
 		},
 		{
-			"file": "app/views/layouts/application.html.erb",
+			"file": "db/migrate/20141207194620_create_csv_calendars.rb",
 			"settings":
 			{
-				"buffer_size": 1066,
-				"line_ending": "Windows"
+				"buffer_size": 165,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/helpers/application_helper.rb",
+			"file": "app/models/csv_calendar.rb",
 			"settings":
 			{
-				"buffer_size": 580,
-				"line_ending": "Windows"
+				"buffer_size": 115,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/csv_calendars/_form.html.erb",
+			"settings":
+			{
+				"buffer_size": 291,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/csv_calendars_controller.rb",
+			"settings":
+			{
+				"buffer_size": 886,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "app/controllers/dashboard_controller.rb",
 			"settings":
 			{
-				"buffer_size": 114,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "db/migrate/20141207033658_add_authorized_to_events.rb",
-			"settings":
-			{
-				"buffer_size": 137,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/dashboard/home.html.erb",
-			"settings":
-			{
-				"buffer_size": 237,
+				"buffer_size": 187,
 				"line_ending": "Windows"
 			}
 		}
@@ -628,9 +652,19 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Coldfury/Documents/radiant-sands/app/models/admin/ad.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/application.css",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/models/user.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/users_controller.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/application.html.erb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/helpers/application_helper.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/dashboard_controller.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141207033658_add_authorized_to_events.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/events_controller.rb",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/artists.css.scss",
+		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/application.js",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/dashboard/home.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/lib/tasks/calendar.rake",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/application.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/_navbar.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/application_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/event.rb",
@@ -640,30 +674,23 @@
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_event.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/show.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_filters.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/helpers/application_helper.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/_form.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/Gemfile",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/application.css",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/bootstrap_and_overrides.css.scss",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/application.js",
 		"/C/Users/Coldfury/Documents/demoriat/app/helpers/application_helper.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141202213040_add_gcal_and_gcal_id_to_events.rb",
 		"/C/Users/Coldfury/Downloads/basic.ics",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/events_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141130074323_add_recurring_to_events.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/recurring_event.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/event_type.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/users_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/users/registrations_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/users/sessions_controller.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/models/user.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/routes.rb",
 		"/C/Users/Coldfury/Downloads/config.php",
 		"/C/Users/Coldfury/Downloads/index.php",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/user_group.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/role.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/seeds.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/dashboard_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/lib/crawler/engine.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/config/unicorn.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141119041102_add_groups_to_users.rb",
@@ -711,7 +738,6 @@
 		"/C/Users/Coldfury/Documents/radiant-sands/app/models/referrer.rb",
 		"/C/Users/Coldfury/Desktop/disp.txt",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/venues.css.scss",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/artists.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.json.jbuilder",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/devise/sessions/new.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/devise/shared/_links.erb",
@@ -732,7 +758,6 @@
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/ads.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/admin/ads/show.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/admin/ads.js.coffee",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/models/admin/ad.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141024120854_add_datatypes_to_events.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/ads.js.coffee",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141015033137_create_admin_ads.rb",
@@ -754,8 +779,7 @@
 		"/C/Users/Coldfury/Documents/demoriat/app/assets/stylesheets/global.css.scss",
 		"/C/Users/Coldfury/Documents/demoriat/app/assets/javascripts/application.js",
 		"/C/Users/Coldfury/Documents/demoriat/app/assets/stylesheets/layout.css.scss",
-		"/C/Users/Coldfury/Documents/demoriat/app/assets/stylesheets/bootstrap_and_overrides.css.scss",
-		"/C/Users/Coldfury/Documents/demoriat/lib/demoriat/alert.rb"
+		"/C/Users/Coldfury/Documents/demoriat/app/assets/stylesheets/bootstrap_and_overrides.css.scss"
 	],
 	"find":
 	{
@@ -919,79 +943,23 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/models/user.rb",
+					"file": "app/views/dashboard/home.html.erb",
 					"settings":
 					{
-						"buffer_size": 983,
+						"buffer_size": 1118,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								622,
-								622
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/controllers/users_controller.rb",
-					"settings":
-					{
-						"buffer_size": 1380,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								276,
-								276
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/layouts/application.html.erb",
-					"settings":
-					{
-						"buffer_size": 1066,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								15,
-								15
+								179,
+								179
 							]
 						],
 						"settings":
@@ -1007,19 +975,99 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/helpers/application_helper.rb",
+					"buffer": 1,
+					"file": "app/views/csv_calendars/_csv_calendar.html.erb",
 					"settings":
 					{
-						"buffer_size": 580,
+						"buffer_size": 107,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								548,
-								548
+								85,
+								85
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/javascripts/application.js",
+					"settings":
+					{
+						"buffer_size": 1321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1004,
+								1004
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 234.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/events_controller.rb",
+					"settings":
+					{
+						"buffer_size": 2051,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1269,
+								1269
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 576.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/users_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								319,
+								319
 							]
 						],
 						"settings":
@@ -1035,45 +1083,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/controllers/dashboard_controller.rb",
-					"settings":
-					{
-						"buffer_size": 114,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								102,
-								102
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 5,
-					"file": "db/migrate/20141207033658_add_authorized_to_events.rb",
+					"file": "db/migrate/20141207194620_create_csv_calendars.rb",
 					"settings":
 					{
-						"buffer_size": 137,
+						"buffer_size": 165,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								126,
-								126
+								127,
+								127
 							]
 						],
 						"settings":
@@ -1088,23 +1110,105 @@
 				},
 				{
 					"buffer": 6,
-					"file": "app/views/dashboard/home.html.erb",
+					"file": "app/models/csv_calendar.rb",
 					"settings":
 					{
-						"buffer_size": 237,
+						"buffer_size": 115,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								110,
+								110
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/csv_calendars/_form.html.erb",
+					"settings":
+					{
+						"buffer_size": 291,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/controllers/csv_calendars_controller.rb",
+					"settings":
+					{
+						"buffer_size": 886,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								872,
+								872
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/controllers/dashboard_controller.rb",
+					"settings":
+					{
+						"buffer_size": 187,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								176,
+								176
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

@@ -1,0 +1,16 @@
+<%= form_for(@csv_calendar) do |f| %>
+
+  <div class="form-group">
+    <%= f.label :file %>
+    <div class="input-group">
+      <%= link_to 'Browse...', '#', id: 'file-upload-btn', class: 'input-group-addon btn btn-default' %>
+      <span id="file-upload-label" class="form-control"></span>
+      <%= f.file_field :file, id: 'file-upload', style: 'display: none;' %>
+    </div>
+    <%= display_error_for @csv_calendar, :file %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'Upload CSV File', id: 'cal-upload-btn', class: 'btn btn-primary' %>
+  </div>
+<% end %>

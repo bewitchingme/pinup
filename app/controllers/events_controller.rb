@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   protect_from_forgery except: :index
 
-  before_action :authenticate_user!, only: [ :edit, :destroy ]
+  before_action :authenticate_user!, only: [ :edit, :update, :destroy ]
 
   expose(:types) { EventType.order('name ASC') }
   

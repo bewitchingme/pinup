@@ -1,31 +1,36 @@
 <div class="well">
-  <form>
-    <legend>CSV Upload</legend>
-    <div class="form-group">
-      <%= file_field_tag :csv, multipart: true, id: 'upload-btn' %>
-      <%= link_to 'Upload File', '#', class: 'form-control', onclick: 'uploadClicked(e)' %>
-      <%= submit_tag 'submit', class: 'btn btn-default form-control' %>
-    </div>
-  </form>
-</div>
+  <legend>CSV Upload</legend>
+  <%= render 'csv_calendars/form' %>
+  <hr>
 
-<table class="table table-striped">
-  <tr>
-    <th class="col-md-7">Name :</th>
-    <th class="col-md-5">Authorized :</th>
-  </tr>
-  
-  <% @events.each do |event| %>
+  <!-- <legend>CSV Calendars</legend>
+  <ul style="list-style-type: none; padding-left: 0;">
+    <% @csv_calendars.each do |csv_calendar| %>
+      <li><%= render csv_calendar %></li>
+    <% end %>
+  </ul>
+  <hr> -->
+
+  <legend>Events Authorization</legend>
+  <p><%= link_to 'Import Google Calendars', '#', class: 'btn btn-primary' %></p>
+  <table class="table table-striped">
     <tr>
-      <td><%= link_to event, event %></td>
-      <td>
-        <div class="btn-group btn-group-justified" role="group">
-          <%= link_to 'Authorized', event_path(event, :"event[authorized]" => true),
-              class: 'btn btn-primary btn-sm', method: :patch %>
-          <%= link_to 'Not Authorized', event_path(event, :"event[authorized]" => false),
-              class: 'btn btn-danger btn-sm', method: :patch %>
-        </div>
-      </td>
+      <th class="col-md-7">Name :</th>
+      <th class="col-md-5">Authorized :</th>
     </tr>
-  <% end %>
-</table>
+    
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= link_to event, event %></td>
+        <td>
+          <div class="btn-group btn-group-justified" role="group">
+            <%= link_to 'Authorized', event_path(event, :"event[authorized]" => true),
+                class: 'btn btn-primary btn-sm', method: :patch %>
+            <%= link_to 'Not Authorized', event_path(event, :"event[authorized]" => false),
+                class: 'btn btn-danger btn-sm', method: :patch %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

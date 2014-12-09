@@ -1,4 +1,6 @@
 class ArtistsController < ApplicationController
+
+  before_action :authenticate_user!, only: [ :edit, :update, :destroy ]
   
   expose(:artists) { Artist.order('name ASC') }
 

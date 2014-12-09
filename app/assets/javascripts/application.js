@@ -18,7 +18,7 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require turbolinks
-//= require spin
+//= require spin.min
 //= require_tree .
 
 $(document).ready(function() {

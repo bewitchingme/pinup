@@ -3,16 +3,8 @@
   <%= render 'csv_calendars/form' %>
   <hr>
 
-  <!-- <legend>CSV Calendars</legend>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <% @csv_calendars.each do |csv_calendar| %>
-      <li><%= render csv_calendar %></li>
-    <% end %>
-  </ul>
-  <hr> -->
-
   <legend>Events Authorization</legend>
-  <p><%= link_to 'Import Google Calendars', '#', class: 'btn btn-primary' %></p>
+  <p><%= link_to 'Import Google Calendars', load_google_calendars_path, id: 'google-cal-btn', class: 'btn btn-primary' %></p>
   <table class="table table-striped">
     <tr>
       <th class="col-md-7">Name :</th>

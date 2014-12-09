@@ -9,6 +9,7 @@ class UserGroup < ActiveRecord::Base
   end
 
   def admin?
+    return false if role.nil?
     role.admin?
   end
 end

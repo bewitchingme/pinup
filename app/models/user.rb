@@ -30,6 +30,7 @@ class User < ActiveRecord::Base
   end
 
   def admin?
+    return false if user_group.nil?
     user_group.admin?
   end
 end

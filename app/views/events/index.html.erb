@@ -1,9 +1,72 @@
 <%= render 'events/filters' %>
 
-<div id="events">
-  <%= render 'events/event' %>
-</div>
+<% if monday_events.count > 0 %>
+  <legend>Monday</legend>
+<% end %>
+<% monday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
+  <% events_beginning_at_hour.each do |event| %>
+    <%= render event %>
+  <% end %>
+<% end %>
 
-<div id="infinite-scrolling">
-  <%= paginate events %>
-</div>
+<% if tuesday_events.count > 0 %>
+  <legend>Tuesday</legend>
+<% end %>
+<% tuesday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
+  <% events_beginning_at_hour.each do |event| %>
+  <%= render event %>
+  <% end %>
+<% end %>
+
+<% if wednesday_events.count > 0 %>
+  <legend>Wednesday</legend>
+<% end %>
+<% wednesday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
+  <% events_beginning_at_hour.each do |event| %>
+    <%= render event %>
+  <% end %>
+<% end %>
+
+<% if thursday_events.count > 0 %>
+  <legend>Thursday</legend>
+<% end %>
+<% thursday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
+  <% events_beginning_at_hour.each do |event| %>
+    <%= render event %>
+  <% end %>
+<% end %>
+
+<% if friday_events.count > 0 %>
+  <legend>Friday</legend>
+<% end %>
+<% friday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
+  <% events_beginning_at_hour.each do |event| %>
+    <%= render event %>
+  <% end %>
+<% end %>
+
+<% if saturday_events.count > 0 %>
+  <legend>Saturday</legend>
+<% end %>
+<% saturday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
+  <% events_beginning_at_hour.each do |event| %>
+    <%= render event %>
+  <% end %>
+<% end %>
+
+<% if sunday_events.count > 0 %>
+  <legend>Sunday</legend>
+<% end %>
+<% sunday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
+  <% events_beginning_at_hour.each do |event| %>
+    <%= render event %>
+  <% end %>
+<% end %>
+
+<!-- <div id="events"> -->
+  <%# render 'events/event' %>
+<!-- </div> -->
+
+<!-- <div id="infinite-scrolling"> -->
+  <%# paginate events %>
+<!-- </div> -->

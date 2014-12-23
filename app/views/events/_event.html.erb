@@ -1,11 +1,11 @@
-<% events.group_by(&:begin_at_date).each do |begin_at_date, events_beginning_at_date| %>
-  <div class="row">
-    <time id="begin-at-date" class="col-md-12" datetime="<%= begin_at_date %>">
-      <legend><%= begin_at_date %></legend>
-    </time>
-  </div>
+<%# events.group_by(&:begin_at_date).each do |begin_at_date, events_beginning_at_date| %>
+  <!-- <div class="row"> -->
+    <!-- <time id="begin-at-date" class="col-md-12" datetime="<%# begin_at_date %>"> -->
+      <!-- <legend><%# begin_at_date %></legend> -->
+    <!-- </time> -->
+  <!-- </div> -->
 
-  <% events_beginning_at_date.each do |event| %>
+  <%# events_beginning_at_date.each do |event| %>
     <div class="row">
       <%= link_to event, id: "event-#{event.id}", class: 'event col-md-12' do %>
         <%= image_tag event.type_icon, class: 'type-icon pull-left', width: 42, height: 42 %>
@@ -23,6 +23,6 @@
         </p>
       <% end %>
     </div>
-  <% end %>
+  <%# end %>
 
-<% end %>
+<%# end %>

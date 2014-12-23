@@ -9,12 +9,18 @@
 
   <legend>Events Authorization</legend>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6">
       <div class="form-group">
         <%= link_to 'Import Google Calendars', load_google_calendars_path,
             id: 'google-cal-btn', class: 'btn btn-primary form-control' %>
       </div>
     </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= link_to 'Authorize All', authorize_all_path, class: 'btn btn-primary form-control' %>
+      </div>
+    </div>   
   </div>
   <table class="table table-striped">
     <tr>

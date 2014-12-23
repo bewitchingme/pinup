@@ -19,7 +19,18 @@ class DashboardController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def authorize_all
+    authorize_all_events
+    redirect_to dashboard_path
+  end
+
   private
+
+    def authorize_all_events
+      Event.where(authorized: nil).each do |event|
+        event.update_columns authorized: true
+      end
+    end
 
     def load_cals
       events_count = 0

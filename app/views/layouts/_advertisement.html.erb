@@ -1,4 +1,8 @@
-<section id="ad" style="background-color: black; height: 250px;"></section>
+<section id="ads">
+  <% Ad.all.each do |ad| %>
+    <%= image_tag ad.image %>
+  <% end %>
+</section>
 
 <div
   class="fb-like-box"

@@ -87,4 +87,17 @@ $(document).ready(function() {
         label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
     $('#file-upload-label').text(label);
   });
+
+  // Ad Upload Trigger
+  $('#image-upload-btn').click(function (event) {
+    event.preventDefault();
+    $('#image-upload').click();
+  });
+
+  // Ad Upload Text
+  $(document).on('change', '#image-upload', function() {
+    var input = $(this),
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    $('#image-upload-label').text(label);
+  });
 });

@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     get 'load_google_calendars', to: 'dashboard#load_google_calendars'
 
     resources :users
-    resources :ads, module: :admin
+    resources :ads
     resources :events
   end
 end

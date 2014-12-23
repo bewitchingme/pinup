@@ -16,164 +16,164 @@ class Event < ActiveRecord::Base
 
 
   scope :monday, -> {
-    where(
+    Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  - 21).beginning_of_day,
        (Date.today.beginning_of_week  - 21).end_of_day,
        true
-    ) | where(
+    ).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  - 14).beginning_of_day,
        (Date.today.beginning_of_week  - 14).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  -  7).beginning_of_day,
        (Date.today.beginning_of_week  -  7).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ?',
        (Date.today.beginning_of_week  +  0).beginning_of_day,
        (Date.today.beginning_of_week  +  0).end_of_day
-    )
+    )).authorized
   }
 
   scope :tuesday, -> {
-    where(
+    Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  - 20).beginning_of_day,
        (Date.today.beginning_of_week  - 20).end_of_day,
        true
-    ) | where(
+    ).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  - 13).beginning_of_day,
        (Date.today.beginning_of_week  - 13).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  -  6).beginning_of_day,
        (Date.today.beginning_of_week  -  6).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ?',
        (Date.today.beginning_of_week  +  1).beginning_of_day,
        (Date.today.beginning_of_week  +  1).end_of_day
-    )
+    )).authorized
   }
 
   scope :wednesday, -> {
-    where(
+    Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  - 19).beginning_of_day,
        (Date.today.beginning_of_week  - 19).end_of_day,
        true
-    ) | where(
+    ).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  - 12).beginning_of_day,
        (Date.today.beginning_of_week  - 12).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  -  5).beginning_of_day,
        (Date.today.beginning_of_week  -  5).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ?',
        (Date.today.beginning_of_week  +  2).beginning_of_day,
        (Date.today.beginning_of_week  +  2).end_of_day
-    )
+    )).authorized
   }
 
   scope :thursday, -> {
-    where(
+    Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  - 18).beginning_of_day,
        (Date.today.beginning_of_week  - 18).end_of_day,
        true
-    ) | where(
+    ).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  - 11).beginning_of_day,
        (Date.today.beginning_of_week  - 11).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  -  4).beginning_of_day,
        (Date.today.beginning_of_week  -  4).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ?',
        (Date.today.beginning_of_week  +  3).beginning_of_day,
        (Date.today.beginning_of_week  +  3).end_of_day
-    )
+    )).authorized
   }
 
   scope :friday, -> {
-    where(
+    Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  - 17).beginning_of_day,
        (Date.today.beginning_of_week  - 17).end_of_day,
        true
-    ) | where(
+    ).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  - 10).beginning_of_day,
        (Date.today.beginning_of_week  - 10).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  -  3).beginning_of_day,
        (Date.today.beginning_of_week  -  3).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ?',
        (Date.today.beginning_of_week  +  4).beginning_of_day,
        (Date.today.beginning_of_week  +  4).end_of_day
-    )
+    )).authorized
   }
 
   scope :saturday, -> {
-    where(
+    Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  -  16).beginning_of_day,
        (Date.today.beginning_of_week  -  16).end_of_day,
        true
-    ) | where(
+    ).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  -  9).beginning_of_day,
        (Date.today.beginning_of_week  -  9).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  -  2).beginning_of_day,
        (Date.today.beginning_of_week  -  2).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ?',
        (Date.today.beginning_of_week  +  5).beginning_of_day,
        (Date.today.beginning_of_week  +  5).end_of_day
-    )
+    )).authorized
   }
 
   scope :sunday, -> {
-    where(
+    Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  -  15).beginning_of_day,
        (Date.today.beginning_of_week  -  15).end_of_day,
        true
-    ) | where(
+    ).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  -  8).beginning_of_day,
        (Date.today.beginning_of_week  -  8).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ? AND recurring = ?',
        (Date.today.beginning_of_week  -  1).beginning_of_day,
        (Date.today.beginning_of_week  -  1).end_of_day,
        true
-    ) | where(
+    )).merge(Event.where(
       'begin_at > ? AND begin_at < ?',
        (Date.today.beginning_of_week  +  6).beginning_of_day,
        (Date.today.beginning_of_week  +  6).end_of_day
-    )
+    )).authorized
   }
 
   scope :authorized, -> {

@@ -15,170 +15,39 @@ class Event < ActiveRecord::Base
   ##############################
 
 
-  scope :monday, -> {
-    Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  - 21).beginning_of_day,
-       (Date.today.beginning_of_week  - 21).end_of_day,
-       true
-    ).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  - 14).beginning_of_day,
-       (Date.today.beginning_of_week  - 14).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  -  7).beginning_of_day,
-       (Date.today.beginning_of_week  -  7).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ?',
-       (Date.today.beginning_of_week  +  0).beginning_of_day,
-       (Date.today.beginning_of_week  +  0).end_of_day
-    )).authorized
-  }
+  RECURSIVE_DEPTH = 104
 
-  scope :tuesday, -> {
-    Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  - 20).beginning_of_day,
-       (Date.today.beginning_of_week  - 20).end_of_day,
-       true
-    ).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  - 13).beginning_of_day,
-       (Date.today.beginning_of_week  - 13).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  -  6).beginning_of_day,
-       (Date.today.beginning_of_week  -  6).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ?',
-       (Date.today.beginning_of_week  +  1).beginning_of_day,
-       (Date.today.beginning_of_week  +  1).end_of_day
-    )).authorized
-  }
+  def self.monday
+    self.find_recurring_events_for :monday, depth: RECURSIVE_DEPTH
+  end
 
-  scope :wednesday, -> {
-    Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  - 19).beginning_of_day,
-       (Date.today.beginning_of_week  - 19).end_of_day,
-       true
-    ).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  - 12).beginning_of_day,
-       (Date.today.beginning_of_week  - 12).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  -  5).beginning_of_day,
-       (Date.today.beginning_of_week  -  5).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ?',
-       (Date.today.beginning_of_week  +  2).beginning_of_day,
-       (Date.today.beginning_of_week  +  2).end_of_day
-    )).authorized
-  }
+  def self.tuesday
+    self.find_recurring_events_for :tuesday, depth: RECURSIVE_DEPTH
+  end
 
-  scope :thursday, -> {
-    Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  - 18).beginning_of_day,
-       (Date.today.beginning_of_week  - 18).end_of_day,
-       true
-    ).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  - 11).beginning_of_day,
-       (Date.today.beginning_of_week  - 11).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  -  4).beginning_of_day,
-       (Date.today.beginning_of_week  -  4).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ?',
-       (Date.today.beginning_of_week  +  3).beginning_of_day,
-       (Date.today.beginning_of_week  +  3).end_of_day
-    )).authorized
-  }
+  def self.wednesday
+    self.find_recurring_events_for :wednesday, depth: RECURSIVE_DEPTH
+  end
 
-  scope :friday, -> {
-    Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  - 17).beginning_of_day,
-       (Date.today.beginning_of_week  - 17).end_of_day,
-       true
-    ).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  - 10).beginning_of_day,
-       (Date.today.beginning_of_week  - 10).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  -  3).beginning_of_day,
-       (Date.today.beginning_of_week  -  3).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ?',
-       (Date.today.beginning_of_week  +  4).beginning_of_day,
-       (Date.today.beginning_of_week  +  4).end_of_day
-    )).authorized
-  }
+  def self.thursday
+    self.find_recurring_events_for :thursday, depth: RECURSIVE_DEPTH
+  end
 
-  scope :saturday, -> {
-    Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  -  16).beginning_of_day,
-       (Date.today.beginning_of_week  -  16).end_of_day,
-       true
-    ).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  -  9).beginning_of_day,
-       (Date.today.beginning_of_week  -  9).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  -  2).beginning_of_day,
-       (Date.today.beginning_of_week  -  2).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ?',
-       (Date.today.beginning_of_week  +  5).beginning_of_day,
-       (Date.today.beginning_of_week  +  5).end_of_day
-    )).authorized
-  }
+  def self.friday
+    self.find_recurring_events_for :friday, depth: RECURSIVE_DEPTH
+  end
+  
+  def self.saturday
+    self.find_recurring_events_for :saturday, depth: RECURSIVE_DEPTH
+  end
+  
+  def self.sunday
+    self.find_recurring_events_for :sunday, depth: RECURSIVE_DEPTH
+  end
 
-  scope :sunday, -> {
-    Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  -  15).beginning_of_day,
-       (Date.today.beginning_of_week  -  15).end_of_day,
-       true
-    ).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  -  8).beginning_of_day,
-       (Date.today.beginning_of_week  -  8).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ? AND recurring = ?',
-       (Date.today.beginning_of_week  -  1).beginning_of_day,
-       (Date.today.beginning_of_week  -  1).end_of_day,
-       true
-    )).merge(Event.where(
-      'begin_at > ? AND begin_at < ?',
-       (Date.today.beginning_of_week  +  6).beginning_of_day,
-       (Date.today.beginning_of_week  +  6).end_of_day
-    )).authorized
-  }
+  scope :authorized, -> {where('authorized = ?', true)}
 
-  scope :authorized, -> {
-    where('authorized = ?', true)
-  }
+
 
   ### ID
 
@@ -328,5 +197,64 @@ class Event < ActiveRecord::Base
     def longer_than_max_description_length?
       return false if description.nil?
       description.length > MAXIMUM_DESCRIPTION_LENGTH
+    end
+
+
+
+    ### EVENTS
+
+    def self.find_recurring_events_for(day, opts)
+      depth = opts[:depth]
+      case day
+      when :monday
+        find_recursively_recurring_events_by_index(0, depth)
+
+      when :tuesday
+        find_recursively_recurring_events_by_index(1, depth)
+
+      when :wednesday
+        find_recursively_recurring_events_by_index(2, depth)
+
+      when :thursday
+        find_recursively_recurring_events_by_index(3, depth)
+
+      when :friday
+        find_recursively_recurring_events_by_index(4, depth)
+
+      when :saturday
+        find_recursively_recurring_events_by_index(5, depth)
+
+      when :sunday
+        find_recursively_recurring_events_by_index(6, depth)
+
+      end
+    end
+
+    def self.find_recursively_recurring_events_by_index(index, depth)
+      events = []
+      (1..depth).each do |i|
+        events += find_recurring_events_between(
+          (Date.today.beginning_of_week  -  (7 * i - index)).beginning_of_day,
+          (Date.today.beginning_of_week  -  (7 * i - index)).end_of_day
+        )
+      end
+      events += find_events_between(
+        (Date.today.beginning_of_week + index).beginning_of_day,
+        (Date.today.beginning_of_week + index).end_of_day
+      )
+      return events.uniq
+    end
+
+    def self.find_recurring_events_between(time_begin, time_end)
+      where(
+        begin_at: time_begin..time_end,
+        recurring: true
+      )
+    end
+
+    def self.find_events_between(time_begin, time_end)
+      where(
+        begin_at: time_begin..time_end
+      )
     end
 end

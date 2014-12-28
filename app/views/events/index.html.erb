@@ -1,6 +1,6 @@
 <%= render 'events/filters' %>
 
-<% if monday_events.count > 0 %>
+<% if monday_events.size > 0 %>
   <legend>Monday</legend>
 <% end %>
 <% monday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
@@ -9,7 +9,7 @@
   <% end %>
 <% end %>
 
-<% if tuesday_events.count > 0 %>
+<% if tuesday_events.size > 0 %>
   <legend>Tuesday</legend>
 <% end %>
 <% tuesday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
@@ -18,7 +18,7 @@
   <% end %>
 <% end %>
 
-<% if wednesday_events.count > 0 %>
+<% if wednesday_events.size > 0 %>
   <legend>Wednesday</legend>
 <% end %>
 <% wednesday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
@@ -27,7 +27,7 @@
   <% end %>
 <% end %>
 
-<% if thursday_events.count > 0 %>
+<% if thursday_events.size > 0 %>
   <legend>Thursday</legend>
 <% end %>
 <% thursday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
@@ -36,7 +36,7 @@
   <% end %>
 <% end %>
 
-<% if friday_events.count > 0 %>
+<% if friday_events.size > 0 %>
   <legend>Friday</legend>
 <% end %>
 <% friday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
@@ -45,7 +45,7 @@
   <% end %>
 <% end %>
 
-<% if saturday_events.count > 0 %>
+<% if saturday_events.size > 0 %>
   <legend>Saturday</legend>
 <% end %>
 <% saturday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
@@ -54,7 +54,7 @@
   <% end %>
 <% end %>
 
-<% if sunday_events.count > 0 %>
+<% if sunday_events.size > 0 %>
   <legend>Sunday</legend>
 <% end %>
 <% sunday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>

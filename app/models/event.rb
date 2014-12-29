@@ -248,13 +248,15 @@ class Event < ActiveRecord::Base
     def self.find_recurring_events_between(time_begin, time_end)
       where(
         begin_at: time_begin..time_end,
-        recurring: true
+        recurring: true,
+        authorized: true
       )
     end
 
     def self.find_events_between(time_begin, time_end)
       where(
-        begin_at: time_begin..time_end
+        begin_at: time_begin..time_end,
+        authorized: true
       )
     end
 end

@@ -1,45 +1,27 @@
-<div class="well">
-  <legend>Ad Upload</legend>
-  <%= render 'ads/form' %>
-  <hr>
+<div role="tabpanel">
+  <ul id="dashboard-tabs" class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <%= link_to 'Event Authorization', '#event-authorization', role: 'tab', data: { toggle: 'tab' } %>
+    </li>
+    <li role="presentation">
+      <%= link_to 'Ad Upload', '#ad-upload', role: 'tab', data: { toggle: 'tab' } %>
+    </li>
+    <li role="presentation">
+      <%= link_to 'CSV Upload', '#csv-upload', role: 'tab', data: { toggle: 'tab' } %>
+    </li>
+  </ul>
 
-  <legend>CSV Upload</legend>
-  <%= render 'csv_calendars/form' %>
-  <hr>
-
-  <legend>Events Authorization</legend>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="form-group">
-        <%= link_to 'Import Google Calendars', load_google_calendars_path,
-            id: 'google-cal-btn', class: 'btn btn-primary form-control' %>
-      </div>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane" id="ad-upload">
+      <%= render 'dashboard/ad_upload' %>
     </div>
 
-    <div class="col-md-6">
-      <div class="form-group">
-        <%= link_to 'Authorize All', authorize_all_path, class: 'btn btn-primary form-control' %>
-      </div>
-    </div>   
+    <div role="tabpanel" class="tab-pane" id="csv-upload">
+      <%= render 'dashboard/csv_upload' %>
+    </div>
+
+    <div role="tabpanel" class="tab-pane active" id="event-authorization">
+      <%= render 'dashboard/event_authorization' %>
+    </div>
   </div>
-  <table class="table table-striped">
-    <tr>
-      <th class="col-md-7">Name :</th>
-      <th class="col-md-5">Authorized :</th>
-    </tr>
-    
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= link_to event, event %></td>
-        <td>
-          <div class="btn-group btn-group-justified" role="group">
-            <%= link_to 'Authorized', event_path(event, :"event[authorized]" => true),
-                class: 'btn btn-primary btn-sm', method: :patch %>
-            <%= link_to 'Not Authorized', event_path(event, :"event[authorized]" => false),
-                class: 'btn btn-danger btn-sm', method: :patch %>
-          </div>
-        </td>
-      </tr>
-    <% end %>
-  </table>
 </div>

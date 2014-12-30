@@ -1,6 +1,6 @@
 class AdsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_ad, only: [:show, :edit, :update, :destroy]
+  before_action :set_ad, only: [ :show, :edit, :update, :destroy ]
 
   def index
     @ads = Ad.all
@@ -18,11 +18,14 @@ class AdsController < ApplicationController
 
   def create
     if params[:image].nil?
-      redirect_to dashboard_path
+      redirect_to dashboard_path, alert: 'Ad empty'
     else
       @ad = Ad.new(ad_params)
-      @ad.save
-      redirect_to dashboard_path
+      if @ad.save
+        redirect_to dashboard_path, notice: 'Ad successfully created'
+      else
+        redirect_to dashboard_path, alert: 'Problem while creating ad'
+      end
     end
   end
 

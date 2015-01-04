@@ -17,15 +17,11 @@ class AdsController < ApplicationController
   end
 
   def create
-    if params[:image].nil?
-      redirect_to dashboard_path, alert: 'Ad empty'
+    @ad = Ad.new(ad_params)
+    if @ad.save
+      redirect_to dashboard_path, notice: 'Ad successfully created'
     else
-      @ad = Ad.new(ad_params)
-      if @ad.save
-        redirect_to dashboard_path, notice: 'Ad successfully created'
-      else
-        redirect_to dashboard_path, alert: 'Problem while creating ad'
-      end
+      redirect_to dashboard_path, alert: 'Problem while creating ad'
     end
   end
 

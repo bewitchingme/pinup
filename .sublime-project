@@ -2,7 +2,9 @@
 	"folders":
 	[
 		{
-			"path": "/C/Users/Coldfury/Documents/radiant-sands"
+			"path": "/C/Users/Maxime/Documents/radiant-sands",
+      "folder_exclude_patterns": [".*"],
+      "file_exclude_patterns": [".*"]
 		}
 	]
 }

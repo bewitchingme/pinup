@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :banners
+
   root to: 'root#home'
 
   resources :csv_calendars

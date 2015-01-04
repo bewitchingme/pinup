@@ -1,6 +1,6 @@
 <section id="ads">
   <% Ad.all.each do |ad| %>
-    <%= image_tag ad.image %>
+    <%= image_tag ad.image(:medium), size: '300x300', alt: :advertisement, class: 'ad' %>
   <% end %>
 </section>
 

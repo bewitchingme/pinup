@@ -100,4 +100,17 @@ $(document).ready(function() {
         label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
     $('#image-upload-label').text(label);
   });
+
+  // Banner Upload Trigger
+  $('#ban-upload-btn').click(function (event) {
+    event.preventDefault();
+    $('#ban-upload').click();
+  });
+
+  // Ad Upload Text
+  $(document).on('change', '#ban-upload', function() {
+    var input = $(this),
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    $('#ban-upload-label').text(label);
+  });
 });

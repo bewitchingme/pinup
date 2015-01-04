@@ -12,6 +12,7 @@ class DashboardController < ApplicationController
     @csv_calendar = CsvCalendar.new
     @csv_calendars = CsvCalendar.all
     @ad = Ad.new
+    @banner = Banner.new
   end
 
   def load_google_calendars

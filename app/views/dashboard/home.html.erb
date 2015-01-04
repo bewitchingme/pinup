@@ -4,6 +4,9 @@
       <%= link_to 'Event Authorization', '#event-authorization', role: 'tab', data: { toggle: 'tab' } %>
     </li>
     <li role="presentation">
+      <%= link_to 'Banner Upload', '#banner-upload', role: 'tab', data: { toggle: 'tab' } %>
+    </li>
+    <li role="presentation">
       <%= link_to 'Ad Upload', '#ad-upload', role: 'tab', data: { toggle: 'tab' } %>
     </li>
     <li role="presentation">
@@ -12,6 +15,10 @@
   </ul>
 
   <div class="tab-content">
+    <div role="tabpanel" class="tab-pane" id="banner-upload">
+      <%= render 'dashboard/banner_upload' %>
+    </div>
+
     <div role="tabpanel" class="tab-pane" id="ad-upload">
       <%= render 'dashboard/ad_upload' %>
     </div>

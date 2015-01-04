@@ -1,29 +1,13 @@
-<p id="notice"><%= notice %></p>
+<%= render 'events/filters' %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+<div class="event">
 
-<p>
-  <strong>Content:</strong>
-  <%= @event.content %>
-</p>
-
-<p>
-  <strong>Date begin:</strong>
-  <%= @event.date_begin %>
-</p>
-
-<p>
-  <strong>Date end:</strong>
-  <%= @event.date_end %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+  <legend><%= event %></legend>
+  <p><%= event.description %></p>
+  <p>
+    <span id="artist"><%= link_to_unless event.artist.nil?, event.artist, event.artist %></span>
+    <span id="at">@</span>
+    <span id="venue"><%= link_to_unless event.venue.nil?, event.venue, event.venue %></span>
+    <time id="begin_at" datetime="<%= event.begin_at %>"><%= event.begin_at.strftime('%F %R') %></time>
+  </p>
+</div>

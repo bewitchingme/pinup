@@ -1,37 +1,79 @@
-<%= form_for(@event) do |f| %>
-  <% if @event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
-      <ul>
-      <% @event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for event, html: { multipart: true } do |f| %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <%= display_error_for(event, :name) %>
+      </div>
     </div>
-  <% end %>
+  </div>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, rows: 2, class: 'form-control' %>
+        <%= display_error_for(event, :description) %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :venue %>
+        <%= f.text_field :venue, class: 'form-control' %>
+        <%= display_error_for(event, :venue) %>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :artist %>
+        <%= f.text_field :artist, class: 'form-control' %>
+        <%= display_error_for(event, :artist) %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :date_begin %><br>
-    <%= f.datetime_select :date_begin %>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :type %>
+        <%= f.select :type, types.map {|t| [t, t]}, {}, { class: 'form-control' } %>
+        <%= display_error_for(event, :type) %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :date_end %><br>
-    <%= f.datetime_select :date_end %>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :begin_at %>
+        <%= f.text_field :begin_at, class: 'datetimepicker form-control', value: Time.now.strftime('%Y-%m-%d %H:%M'), data: { "date-format" => 'YYYY-MM-DD HH:MM' } %>
+        <%= display_error_for(event, :begin_at) %>
+      </div>
+    </div>
+  
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :price %>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <%= f.text_field :price, class: 'form-control' %>
+          <span class="input-group-addon">.00</span>
+        </div>
+        <%= display_error_for(event, :price) %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="form-group">
+        <%= f.submit :submit, class: 'btn btn-primary form-control' %>
+      </div>
+    </div>
   </div>
 <% end %>

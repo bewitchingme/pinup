@@ -1,0 +1,44 @@
+@import "global";
+
+// Do not allow textarea fields to be resized manually
+textarea { resize: none; }
+
+// Offset navbar-fixed-top by padding
+body { padding-top: $navbar-height; }
+
+body, html { background-color: lighten(black, 33.3%); }
+
+#banner { margin-bottom: 16px; }
+
+#ad { margin-bottom: 16px; }
+
+#sidebar, #page-body, #advertisement { @include well-color(white); }
+
+#logo {
+  font-size: $font-size + 4px;
+  font-weight: bolder;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px darken(white, 75%);
+  
+  &:hover, &:focus, &:active {
+    color: darken(white, 15%);
+  }
+}
+
+p, ol, ul, td, pre, body {
+  font-size: $font-size;
+  line-height: 18px;
+}
+
+@media (max-width: 480px), (max-width: 768px) {
+  #sidebar, #advertisement { display: none; }
+}
+
+@media (min-width: 768px) and (max-width: 980px), (min-width: 1200px) {
+  body, html, #page-content { @include fill-vertical(); }
+  #page-body, #sidebar, #advertisement { @include maximize-and-offset(); }
+  #sidebar { @include offset-and-pad(-15px, 15px); }
+  #advertisement { @include offset-and-pad(15px, -15px); }
+}

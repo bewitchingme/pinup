@@ -5,3 +5,34 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+  event_types = EventType.create([
+    { name: "dance" },
+    { name: "theatre" },
+    { name: "spoken word / literature" },
+    { name: "visual arts" },
+    { name: "classical" },
+    { name: "pop" },
+    { name: "rock" },
+    { name: "punk" },
+    { name: "hip hop" },
+    { name: "R&B" },
+    { name: "reggae" },
+    { name: "blues" },
+    { name: "jazz" },
+    { name: "electronic music" },
+    { name: "alternative" },
+    { name: "experimental" },
+    { name: "world" },
+    { name: "mixed media" }
+  ])
+
+  roles = Role.create([
+    { name: 'default' },
+    { name: 'admin' }
+  ])
+
+  user_groups = UserGroup.create([
+    { name: 'users', role: Role.find_by( name: 'default' )},
+    { name: 'administrators', role: Role.find_by( name: 'admin' )}
+  ])

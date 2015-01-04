@@ -1,0 +1,17 @@
+<section id="ads">
+  <% Ad.all.each do |ad| %>
+    <%= image_tag ad.image(:medium), size: '300x300', alt: :advertisement, class: 'ad' %>
+  <% end %>
+</section>
+
+<div
+  class="fb-like-box"
+  data-href="https://www.facebook.com/PinUpGattawa"
+  data-width="100%"
+  data-height="250px"
+  data-colorscheme="light"
+  data-show-faces="true"
+  data-header="false"
+  data-stream="false"
+  data-show-border="false">
+</div>

@@ -1,0 +1,35 @@
+<h3>Events Authorization</h3>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= link_to 'Import Google Calendars', load_google_calendars_path,
+          id: 'google-cal-btn', class: 'btn btn-primary form-control' %>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= link_to 'Authorize All', authorize_all_path, class: 'btn btn-primary form-control' %>
+    </div>
+  </div>   
+</div>
+<table class="table table-striped">
+  <tr>
+    <th class="col-md-7">Name :</th>
+    <th class="col-md-5">Authorized :</th>
+  </tr>
+  
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= link_to event, event %></td>
+      <td>
+        <div class="btn-group btn-group-justified" role="group">
+          <%= link_to 'Authorized', event_path(event, :"event[authorized]" => true),
+              class: 'btn btn-primary btn-sm', method: :patch %>
+          <%= link_to 'Not Authorized', event_path(event, :"event[authorized]" => false),
+              class: 'btn btn-danger btn-sm', method: :patch %>
+        </div>
+      </td>
+    </tr>
+  <% end %>
+</table>

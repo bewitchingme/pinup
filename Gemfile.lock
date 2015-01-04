@@ -43,6 +43,7 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
+    bcrypt (3.1.9-x64-mingw32)
     bcrypt (3.1.9-x86-mingw32)
     bootstrap-datepicker-rails (1.3.0.2)
       railties (>= 3.0)
@@ -109,6 +110,8 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    nokogiri (1.6.4.1-x64-mingw32)
+      mini_portile (~> 0.6.0)
     nokogiri (1.6.4.1-x86-mingw32)
       mini_portile (~> 0.6.0)
     oauth2 (1.0.0)
@@ -133,6 +136,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    pg (0.17.1-x64-mingw32)
     pg (0.17.1-x86-mingw32)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -190,6 +194,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
+    sqlite3 (1.3.10-x64-mingw32)
     sqlite3 (1.3.10-x86-mingw32)
     thor (0.19.1)
     thread_safe (0.3.4)
@@ -210,6 +215,7 @@ GEM
       rack (>= 1.0)
 
 PLATFORMS
+  x64-mingw32
   x86-mingw32
 
 DEPENDENCIES
@@ -240,6 +246,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   sidekiq
   sqlite3
+  therubyracer
   turbolinks
   tzinfo-data
   uglifier (>= 1.3.0)

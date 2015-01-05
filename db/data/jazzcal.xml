@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:openSearch="http://a9.com/-/spec/opensearchrss/1.0/" xmlns:gCal="http://schemas.google.com/gCal/2005">
+<id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic</id>
+<updated>2015-01-05T01:00:00.000Z</updated>
+<category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+<title type="text">Ottawa Jazz Happenings</title>
+<subtitle type="text">A listing of gigs in the Ottawa area submitted by area musicians</subtitle>
+<link rel="alternate" type="text/html" href="http://www.google.com/calendar/embed?src=ottawajazzhappenings%40jazzworkscanada.com"/>
+<link rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic"/>
+<link rel="http://schemas.google.com/g/2005#batch" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/batch"/>
+<link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic?max-results=25"/>
+<link rel="next" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic?start-index=26&amp;max-results=25"/>
+<author>
+    <name>ottawajazzhappenings@jazzworkscanada.com</name>
+    <email>ottawajazzhappenings@jazzworkscanada.com</email>
+</author>
+<generator version="1.0" uri="http://www.google.com/calendar">Google Calendar</generator>
+<openSearch:totalResults>1796</openSearch:totalResults>
+<openSearch:startIndex>1</openSearch:startIndex>
+<openSearch:itemsPerPage>25</openSearch:itemsPerPage>
+<gCal:timezone value="America/Toronto"/>
+<gCal:timesCleaned value="1"/>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/432qas8hckm7ldvlprohjcejsg</id>
+    <published>2014-10-01T01:17:15.000Z</published>
+    <updated>2015-01-05T01:00:00.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Glebop Jazz Trio Vocal Jazz Series, with Christine Fagan</title>
+    <summary type="html">When: Sun Jan 4, 2015 6pm to Sun Jan 4, 2015 8pm&amp;nbsp;
+    EST&lt;br&gt;
+    
+    &lt;br&gt;Where: The Arrow and the Loon Pub, 99 Fifth Ave (at Bank), Ottawa ON, 613-237-0448
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: The first Sunday of every month, the Arrow and the Loon Pub features some of Ottawa's finest jazz vocalists backed by the Glebop Jazz Trio:
+    
+    John Haysom (trumpet),
+    Howard Tweddle (bass),
+    Bert Waslander (piano).
+    
+    more info613-563-7044</summary>
+    <content type="html">When: Sun Jan 4, 2015 6pm to Sun Jan 4, 2015 8pm 
+    EST&lt;br /&gt;
+    
+    &lt;br /&gt;Where: The Arrow and the Loon Pub, 99 Fifth Ave (at Bank), Ottawa ON, 613-237-0448
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: The first Sunday of every month, the Arrow and the Loon Pub features some of Ottawa&amp;#39;s finest jazz vocalists backed by the Glebop Jazz Trio:
+    
+    John Haysom (trumpet),
+    Howard Tweddle (bass),
+    Bert Waslander (piano).
+    
+    more info613-563-7044</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=NDMycWFzOGhja203bGR2bHByb2hqY2Vqc2cgb3R0YXdhamF6emhhcHBlbmluZ3NAamF6endvcmtzY2FuYWRhLmNvbQ" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/432qas8hckm7ldvlprohjcejsg"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/nd4u56uhp5ubk7gdcujocsl1m0</id>
+    <published>2014-10-23T01:23:39.000Z</published>
+    <updated>2015-01-04T20:09:14.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Rainbow Jam</title>
+    <summary type="html">Recurring Event&lt;br&gt;
+    First start: 2014-10-26 16:00:00 EDT
+    &lt;br&gt;
+    Duration: 10800
+    
+    
+    &lt;br&gt;Where: Rainbow Bistro, 76 Murray Street, Ottawa, ON, Canada
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: All styles. Everything is there for playing. $3 cover for non-jammers.
+    
+    http://www.therainbow.ca</summary>
+    <content type="html">Recurring Event&lt;br /&gt;
+    First start: 2014-10-26 16:00:00 EDT
+    &lt;br /&gt;
+    Duration: 10800
+    
+    
+    &lt;br /&gt;Where: Rainbow Bistro, 76 Murray Street, Ottawa, ON, Canada
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: All styles. Everything is there for playing. $3 cover for non-jammers.
+    
+    http://www.therainbow.ca</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=bmQ0dTU2dWhwNXViazdnZGN1am9jc2wxbTBfMjAxNDEwMjZUMjAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/nd4u56uhp5ubk7gdcujocsl1m0"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/lr88snpvde4imrbce4dmg9385c</id>
+    <published>2014-10-29T01:42:57.000Z</published>
+    <updated>2015-01-04T20:09:13.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Hugh O&amp;#39;Connor Duo</title>
+    <summary type="html">Recurring Event&lt;br&gt;
+    First start: 2014-11-02 16:00:00 EST
+    &lt;br&gt;
+    Duration: 10800
+    
+    
+    &lt;br&gt;Where: Chez Lucien, 137 Murray Street, Ottawa, ON, 613-241-3533
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Hugh O'Connor - sax
+    J.P. Allain - piano
+    
+    Hugh has played his sax with everyone important in the jazz scene – and many visiting musicians – for decades. In 2010, at age 81, he released his first CD, For the First Time. Read OttawaJazzScene.ca's coverage of the CD Release concert: http://ottawajazzscene.ca/news/940-full-house-celebrates-hugh-oconnors-cd-release-qfor-the-first-timeq</summary>
+    <content type="html">Recurring Event&lt;br /&gt;
+    First start: 2014-11-02 16:00:00 EST
+    &lt;br /&gt;
+    Duration: 10800
+    
+    
+    &lt;br /&gt;Where: Chez Lucien, 137 Murray Street, Ottawa, ON, 613-241-3533
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Hugh O&amp;#39;Connor - sax
+    J.P. Allain - piano
+    
+    Hugh has played his sax with everyone important in the jazz scene – and many visiting musicians – for decades. In 2010, at age 81, he released his first CD, For the First Time. Read OttawaJazzScene.ca&amp;#39;s coverage of the CD Release concert: http://ottawajazzscene.ca/news/940-full-house-celebrates-hugh-oconnors-cd-release-qfor-the-first-timeq</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=bHI4OHNucHZkZTRpbXJiY2U0ZG1nOTM4NWNfMjAxNDExMDJUMjEwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/lr88snpvde4imrbce4dmg9385c"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130324T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Tom McMahon Trio</title>
+    <summary type="html">When: Sat Mar 23, 2013 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Sat Mar 23, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Sat Mar 23, 2013 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Sat Mar 23, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzAzMjRUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130324T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140419T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: The Worst Pop Band Ever</title>
+    <summary type="html">When: Fri Apr 18, 2014 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Fri Apr 18, 2014 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: The acclaimed Toronto Jazz group, the Worst Pop Band Ever, featuring Juno Winners Adrean Farrugia and Chris Gale, along with Remi Jean LeBlanc and Tim Shia will be visiting Ottawa again.
+    
+    The Group has played in Ottawa 3 times already, including at the NAC, Confed Park for Canada Day as part of the  Ottawa Jazz Festival, and at the late Cafe Paradiso, shortly before it closed. 
+    
+    From Tim: I've been to Ottawa numerous times playing with Peter Hum and Pete Liu and am a regular member of Kevin Barrett and Julie Michels groups. Anyways, hope to see and meet some other Jazzwork folks this time out. 
+    
+    "The music's fresh, may appeal to pop lovers but assuredly to jazzers keen on a kind of 
+    driven luency as genre stylings are examined, discarded and reworked."  (G.Chapman,Toronto Star)
+    
+    “…music for people, whether they dig jazz or not…a tight band playing with substance and feeling for an appreciative audience.” (Mark Turner, Allaboutjazz.com July 2012).
+    
+    ~~
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Fri Apr 18, 2014 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Fri Apr 18, 2014 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: The acclaimed Toronto Jazz group, the Worst Pop Band Ever, featuring Juno Winners Adrean Farrugia and Chris Gale, along with Remi Jean LeBlanc and Tim Shia will be visiting Ottawa again.
+    
+    The Group has played in Ottawa 3 times already, including at the NAC, Confed Park for Canada Day as part of the  Ottawa Jazz Festival, and at the late Cafe Paradiso, shortly before it closed. 
+    
+    From Tim: I&amp;#39;ve been to Ottawa numerous times playing with Peter Hum and Pete Liu and am a regular member of Kevin Barrett and Julie Michels groups. Anyways, hope to see and meet some other Jazzwork folks this time out. 
+    
+    &amp;quot;The music&amp;#39;s fresh, may appeal to pop lovers but assuredly to jazzers keen on a kind of 
+    driven luency as genre stylings are examined, discarded and reworked.&amp;quot;  (G.Chapman,Toronto Star)
+    
+    “…music for people, whether they dig jazz or not…a tight band playing with substance and feeling for an appreciative audience.” (Mark Turner, Allaboutjazz.com July 2012).
+    
+    ~~
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxNDA0MTlUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140419T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130908T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Steve Berndt &amp;amp; Robin Pitre</title>
+    <summary type="html">When: Sat Sep 7, 2013 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Sat Sep 7, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Join Ottawa jazz singer &amp;amp; composer Steve Berndt for an evening of jazz standards with New York jazz pianist Robin Pitre.  An Ottawa native, Robin has worked with Engelbert Humperdink, Marvin Hamlish and as an arranger for Harry Connick Jr. 
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Sat Sep 7, 2013 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Sat Sep 7, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Join Ottawa jazz singer &amp;amp; composer Steve Berndt for an evening of jazz standards with New York jazz pianist Robin Pitre.  An Ottawa native, Robin has worked with Engelbert Humperdink, Marvin Hamlish and as an arranger for Harry Connick Jr. 
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzA5MDhUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130908T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130714T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Steve Berndt &amp;amp; Robin Pitre</title>
+    <summary type="html">When: Sat Jul 13, 2013 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Sat Jul 13, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Vocal/Trombone: Steve Berndt,
+    Keyboard: Robin Pitre.
+    
+    Ottawa jazz singer &amp;amp; composer Steve Berndt comes in to The Options Bar at the Brookstreet Hotel for an evening of jazz standards with New York jazz pianist Robin Pitre. An Ottawa native, Robin has worked with Engelbert Humperdink, Marvin Hamlish and as an arranger for Harry Connick Jr. For more information please contact Steve at: www.steveberndt.com
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Sat Jul 13, 2013 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Sat Jul 13, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Vocal/Trombone: Steve Berndt,
+    Keyboard: Robin Pitre.
+    
+    Ottawa jazz singer &amp;amp; composer Steve Berndt comes in to The Options Bar at the Brookstreet Hotel for an evening of jazz standards with New York jazz pianist Robin Pitre. An Ottawa native, Robin has worked with Engelbert Humperdink, Marvin Hamlish and as an arranger for Harry Connick Jr. For more information please contact Steve at: www.steveberndt.com
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzA3MTRUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130714T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140112T010000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Steve Berndt</title>
+    <summary type="html">When: Sat Jan 11, 2014 8pm to 11:59pm&amp;nbsp;
+    EST&lt;br&gt;Replaces event originally scheduled for: Sat Jan 11, 2014 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Ottawa jazz singer/trombonist Steve Berndt performs his first club date for 2014! Joining Steve is J.P. Allain, one of the region's best jazz pianists.
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Sat Jan 11, 2014 8pm to 11:59pm 
+    EST&lt;br /&gt;Replaces event originally scheduled for: Sat Jan 11, 2014 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Ottawa jazz singer/trombonist Steve Berndt performs his first club date for 2014! Joining Steve is J.P. Allain, one of the region&amp;#39;s best jazz pianists.
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxNDAxMTJUMDEwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140112T010000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140215T010000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Mark Ferguson Quartet</title>
+    <summary type="html">When: Fri Feb 14, 2014 8pm to 11:59pm&amp;nbsp;
+    EST&lt;br&gt;Replaces event originally scheduled for: Fri Feb 14, 2014 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Mark Ferguson Quartet, a presentation of the Winter Jazz Festival:
+    Mark Ferguson – piano and trombone;
+    Mike Tremblay – saxophone;
+    Ben Heard – bass;
+    Charles Gay – drums.
+    
+    Mark Ferguson is an Ottawa based pianist, trombonist, composer, arranger, producer, and music educator.
+    
+    He has performed with many of the world’s great artists including Ella Fitzgerald, Tony Bennett, Gil Evans, Nelson Riddle, Dionne Warwick, Natalie Cole, Tom Jones, Engelbert Humperdink, Rosemary Clooney, Carol Channing, Rob McConnell &amp;amp; the Boss Brass, Holly Cole, Manteca, The Funk Brothers and the National Arts Centre Orchestra.
+    
+    Mark is a professor at Carleton University’s department of music and directs the Carleton Jazz Ensemble. He has served as a jazz clinician at high schools and universities across Canada.
+    
+    http://ottawajazzfestival.com/index.php/artists/mark-ferguson/
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Fri Feb 14, 2014 8pm to 11:59pm 
+    EST&lt;br /&gt;Replaces event originally scheduled for: Fri Feb 14, 2014 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Mark Ferguson Quartet, a presentation of the Winter Jazz Festival:
+    Mark Ferguson – piano and trombone;
+    Mike Tremblay – saxophone;
+    Ben Heard – bass;
+    Charles Gay – drums.
+    
+    Mark Ferguson is an Ottawa based pianist, trombonist, composer, arranger, producer, and music educator.
+    
+    He has performed with many of the world’s great artists including Ella Fitzgerald, Tony Bennett, Gil Evans, Nelson Riddle, Dionne Warwick, Natalie Cole, Tom Jones, Engelbert Humperdink, Rosemary Clooney, Carol Channing, Rob McConnell &amp;amp; the Boss Brass, Holly Cole, Manteca, The Funk Brothers and the National Arts Centre Orchestra.
+    
+    Mark is a professor at Carleton University’s department of music and directs the Carleton Jazz Ensemble. He has served as a jazz clinician at high schools and universities across Canada.
+    
+    http://ottawajazzfestival.com/index.php/artists/mark-ferguson/
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxNDAyMTVUMDEwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140215T010000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130331T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Marc Decho Trio</title>
+    <summary type="html">When: Sat Mar 30, 2013 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Sat Mar 30, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Sat Mar 30, 2013 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Sat Mar 30, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzAzMzFUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130331T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20150104T010000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Jazz&amp;#39;n Time</title>
+    <summary type="html">When: Sat Jan 3, 2015 8pm to 11:59pm&amp;nbsp;
+    EST&lt;br&gt;Replaces event originally scheduled for: Sat Jan 3, 2015 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: You might want to come &amp;amp; continue to celebrate the new year with Jazz&amp;#39;n Time.
+    
+    Jazz &amp;#39;n Time is:
+    Derek Ireland - piano;
+    Adrian Steeves - bass;
+    Christian Raquin - drums.
+    
+    
+    ~~
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Sat Jan 3, 2015 8pm to 11:59pm 
+    EST&lt;br /&gt;Replaces event originally scheduled for: Sat Jan 3, 2015 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: You might want to come &amp;amp; continue to celebrate the new year with Jazz&amp;#39;n Time.
+    
+    Jazz &amp;#39;n Time is:
+    Derek Ireland - piano;
+    Adrian Steeves - bass;
+    Christian Raquin - drums.
+    
+    
+    ~~
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxNTAxMDRUMDEwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20150104T010000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20131019T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Harley Card Hedgerow CD Release</title>
+    <summary type="html">When: Fri Oct 18, 2013 9pm to 12:59am&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Fri Oct 18, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Harley Card- guitar;
+    David French- saxophone;
+    Matt Newton- piano;
+    Jon Maharaj- bass;
+    Fabio Ragnelli- drums.
+    
+    "Card’s musical sensibility is fully formed and urbane. His writing reflects a sense of history and is therefore worldly wise." - Raul d’Gama Rose- All About Jazz
+    
+    www.harleycard.ca
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Fri Oct 18, 2013 9pm to 12:59am 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Fri Oct 18, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Harley Card- guitar;
+    David French- saxophone;
+    Matt Newton- piano;
+    Jon Maharaj- bass;
+    Fabio Ragnelli- drums.
+    
+    &amp;quot;Card’s musical sensibility is fully formed and urbane. His writing reflects a sense of history and is therefore worldly wise.&amp;quot; - Raul d’Gama Rose- All About Jazz
+    
+    www.harleycard.ca
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzEwMTlUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20131019T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130317T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Groove 2</title>
+    <summary type="html">When: Sat Mar 16, 2013 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Sat Mar 16, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Sat Mar 16, 2013 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Sat Mar 16, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzAzMTdUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130317T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130316T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Diane White</title>
+    <summary type="html">When: Fri Mar 15, 2013 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Fri Mar 15, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Fri Mar 15, 2013 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Fri Mar 15, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzAzMTZUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130316T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130323T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Bethan Nodwell &amp;amp; Greg Stone</title>
+    <summary type="html">When: Fri Mar 22, 2013 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Fri Mar 22, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Fri Mar 22, 2013 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Fri Mar 22, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzAzMjNUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130323T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20150117T010000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Anne Lewis Quartet</title>
+    <summary type="html">When: Fri Jan 16, 2015 8pm to 11:59pm&amp;nbsp;
+    EST&lt;br&gt;Replaces event originally scheduled for: Fri Jan 16, 2015 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Anne Lewis Quartet featuring Anne Lewis vocals, Art Lawless on piano, Martin Newman bass and Andy Frechette saxophone.  An evening of jazz classics. annelewismusic.ca
+    
+    ~~~
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Fri Jan 16, 2015 8pm to 11:59pm 
+    EST&lt;br /&gt;Replaces event originally scheduled for: Fri Jan 16, 2015 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Anne Lewis Quartet featuring Anne Lewis vocals, Art Lawless on piano, Martin Newman bass and Andy Frechette saxophone.  An evening of jazz classics. annelewismusic.ca
+    
+    ~~~
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxNTAxMTdUMDEwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20150117T010000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140824T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz: Allison Au Quartet</title>
+    <summary type="html">When: Sat Aug 23, 2014 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Sat Aug 23, 2014 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Allison Au Quartet Mini-Tour!
+    https://www.facebook.com/events/1430036263923494
+    
+    Personnel:
+    Allison Au - alto saxophone
+    Amanda Tosoff - piano/keyboard
+    Jon Maharaj - bass
+    Fabio Ragnelli - drums
+    ~~
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Sat Aug 23, 2014 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Sat Aug 23, 2014 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Allison Au Quartet Mini-Tour!
+    https://www.facebook.com/events/1430036263923494
+    
+    Personnel:
+    Allison Au - alto saxophone
+    Amanda Tosoff - piano/keyboard
+    Jon Maharaj - bass
+    Fabio Ragnelli - drums
+    ~~
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxNDA4MjRUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140824T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140406T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz - Steve Berndt Trio</title>
+    <summary type="html">When: Sat Apr 5, 2014 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Sat Apr 5, 2014 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Vocal: Steve Berndt;
+    Piano: Mark Ferguson;
+    Bass: Ken Kanwisher.
+    
+    Ottawa jazz singer Steve Berndt, bassist Ken Kanwisher and pianist Mark Ferguson return for an evening of jazz standards and ballads in the sophisticated setting of the Brookstreet Hotel's Options Lounge.
+    
+    Steve has just released his second jazz album called “All Over Again”, the follow up to 2012's "Déjà Vu" which has enjoyed regular airplay nationally on CBC.
+    
+    For more information please contact: steveberndtjazz@yahoo.com or 613 563 7080
+    
+    
+    ~~
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Sat Apr 5, 2014 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Sat Apr 5, 2014 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Vocal: Steve Berndt;
+    Piano: Mark Ferguson;
+    Bass: Ken Kanwisher.
+    
+    Ottawa jazz singer Steve Berndt, bassist Ken Kanwisher and pianist Mark Ferguson return for an evening of jazz standards and ballads in the sophisticated setting of the Brookstreet Hotel&amp;#39;s Options Lounge.
+    
+    Steve has just released his second jazz album called “All Over Again”, the follow up to 2012&amp;#39;s &amp;quot;Déjà Vu&amp;quot; which has enjoyed regular airplay nationally on CBC.
+    
+    For more information please contact: steveberndtjazz@yahoo.com or 613 563 7080
+    
+    
+    ~~
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxNDA0MDZUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140406T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130804T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz - Steve Berndt</title>
+    <summary type="html">When: Sat Aug 3, 2013 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Sat Aug 3, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Vocal/Trombone: Steve Berndt
+    Piano: J.P. Allain
+    
+    Steve is joined by Ottawa jazz pianist J.P. Allain for an evening of jazz standards in the beautiful setting of the Brookstreet Hotel's Options Bar. For more information call 613 563 7080 or visit www.steveberndt.com
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Sat Aug 3, 2013 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Sat Aug 3, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Vocal/Trombone: Steve Berndt
+    Piano: J.P. Allain
+    
+    Steve is joined by Ottawa jazz pianist J.P. Allain for an evening of jazz standards in the beautiful setting of the Brookstreet Hotel&amp;#39;s Options Bar. For more information call 613 563 7080 or visit www.steveberndt.com
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzA4MDRUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130804T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20131222T010000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz - roddy ellias trio</title>
+    <summary type="html">When: Sat Dec 21, 2013 8pm to 11:59pm&amp;nbsp;
+    EST&lt;br&gt;Replaces event originally scheduled for: Sat Dec 21, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: roddy ellias - guitar;
+    adrian vedady - bass;
+    thom gossage - drums.
+    
+    no cover charge! 
+    you can also pre-order the recording on CD or vinyl!
+    come on down and hear this trio. i love playing with adrian and thom and i think you'll enjoy it too!
+    
+    happy holidays to all!
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Sat Dec 21, 2013 8pm to 11:59pm 
+    EST&lt;br /&gt;Replaces event originally scheduled for: Sat Dec 21, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: roddy ellias - guitar;
+    adrian vedady - bass;
+    thom gossage - drums.
+    
+    no cover charge! 
+    you can also pre-order the recording on CD or vinyl!
+    come on down and hear this trio. i love playing with adrian and thom and i think you&amp;#39;ll enjoy it too!
+    
+    happy holidays to all!
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzEyMjJUMDEwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20131222T010000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20131221T010000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz - roddy ellias trio</title>
+    <summary type="html">When: Fri Dec 20, 2013 8pm to 11:59pm&amp;nbsp;
+    EST&lt;br&gt;Replaces event originally scheduled for: Fri Dec 20, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: roddy ellias - guitar;
+    adrian vedady - bass;
+    thom gossage - drums.
+    
+    no cover charge! 
+    you can also pre-order the recording on CD or vinyl!
+    come on down and hear this trio. i love playing with adrian and thom and i think you'll enjoy it too!
+    
+    happy holidays to all!
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Fri Dec 20, 2013 8pm to 11:59pm 
+    EST&lt;br /&gt;Replaces event originally scheduled for: Fri Dec 20, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: roddy ellias - guitar;
+    adrian vedady - bass;
+    thom gossage - drums.
+    
+    no cover charge! 
+    you can also pre-order the recording on CD or vinyl!
+    come on down and hear this trio. i love playing with adrian and thom and i think you&amp;#39;ll enjoy it too!
+    
+    happy holidays to all!
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzEyMjFUMDEwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20131221T010000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140104T010000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz - Richard Page, Terry Wright, Michel Delage, Lucas Haneman</title>
+    <summary type="html">When: Fri Jan 3, 2014 8pm to 11:59pm&amp;nbsp;
+    EST&lt;br&gt;Replaces event originally scheduled for: Fri Jan 3, 2014 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Fri Jan 3, 2014 8pm to 11:59pm 
+    EST&lt;br /&gt;Replaces event originally scheduled for: Fri Jan 3, 2014 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxNDAxMDRUMDEwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140104T010000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130505T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz - Nicole Ratté</title>
+    <summary type="html">When: Sat May 4, 2013 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Sat May 4, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: May 4:
+    Nicole Ratté - Vocal;
+    Jean-Pierre Allain - Piano.
+    
+    A musician and singer since childhood, Nicole evolved in different styles before developing a true passion for jazz. At home on the stage, she is known for her warm and effervescent presence and her light and sensual voice. Her performances include herfavourite jazz standards, with some special arrangements of well known French songs. She also sings in Spanish and Portuguese. Always, Nicole warms up the atmosphere and offers you a relaxed and delightful evening of jazz.
+    
+    www.nicoleratte.com
+    
+    Come and join us at Options Jazz Lounge for Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air.
+    
+    Jazz:
+    Sunday, Monday &amp;amp; Tuesday: 6 pm - 10 pm
+    Wednesday: 6:30 pm - 10:30 pm
+    Thursday JAM SESSIONS: 7 pm - 11 pm
+    Friday &amp;amp; Saturday: 8 pm - midnight
+    
+    View the upcoming music lineup here: http://www.brookstreet.ca/options_music.php
+    
+    The warm, sophisticated Options Jazz Lounge is an integral part of the Brookstreet boutique hotel ambiance. A cosmopolitan interior, boasting thought-provoking architecture, is juxtaposed with bright windows offering panoramic views of the spacious patio and adjoining Marshes Golf Course.
+    
+    With free high speed WiFi, Options Jazz Lounge is an ideal spot for business lunches or relaxing after-work aperitifs. The menu features contemporary sushi, unique to Ottawa&amp;#39;s West End, as well as other mouth-watering culinary creations by Brookstreet&amp;#39;s Executive Chef Clifford Lyness.
+    
+    No cover charge, and no reservations required.
+    Please note that age of majority is required after 9 p.m.</summary>
+    <content type="html">When: Sat May 4, 2013 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Sat May 4, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: May 4:
+    Nicole Ratté - Vocal;
+    Jean-Pierre Allain - Piano.
+    
+    A musician and singer since childhood, Nicole evolved in different styles before developing a true passion for jazz. At home on the stage, she is known for her warm and effervescent presence and her light and sensual voice. Her performances include herfavourite jazz standards, with some special arrangements of well known French songs. She also sings in Spanish and Portuguese. Always, Nicole warms up the atmosphere and offers you a relaxed and delightful evening of jazz.
+    
+    www.nicoleratte.com
+    
+    Come and join us at Options Jazz Lounge for Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air.
+    
+    Jazz:
+    Sunday, Monday &amp;amp; Tuesday: 6 pm - 10 pm
+    Wednesday: 6:30 pm - 10:30 pm
+    Thursday JAM SESSIONS: 7 pm - 11 pm
+    Friday &amp;amp; Saturday: 8 pm - midnight
+    
+    View the upcoming music lineup here: http://www.brookstreet.ca/options_music.php
+    
+    The warm, sophisticated Options Jazz Lounge is an integral part of the Brookstreet boutique hotel ambiance. A cosmopolitan interior, boasting thought-provoking architecture, is juxtaposed with bright windows offering panoramic views of the spacious patio and adjoining Marshes Golf Course.
+    
+    With free high speed WiFi, Options Jazz Lounge is an ideal spot for business lunches or relaxing after-work aperitifs. The menu features contemporary sushi, unique to Ottawa&amp;#39;s West End, as well as other mouth-watering culinary creations by Brookstreet&amp;#39;s Executive Chef Clifford Lyness.
+    
+    No cover charge, and no reservations required.
+    Please note that age of majority is required after 9 p.m.</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzA1MDVUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20130505T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140503T000000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz - MDA Latin Jazz Quartet</title>
+    <summary type="html">When: Fri May 2, 2014 8pm to 11:59pm&amp;nbsp;
+    EDT&lt;br&gt;Replaces event originally scheduled for: Fri May 2, 2014 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Join pianist Miguel de Armas with guest artists who are talented Cuban musicians based in Toronto: drummer Amhed Mitchel and bass player Roberto Riveron.
+    
+    www.migueldearmas.com
+    www.amhedmitchel.com
+    www.robertoriveron.com
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Fri May 2, 2014 8pm to 11:59pm 
+    EDT&lt;br /&gt;Replaces event originally scheduled for: Fri May 2, 2014 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Join pianist Miguel de Armas with guest artists who are talented Cuban musicians based in Toronto: drummer Amhed Mitchel and bass player Roberto Riveron.
+    
+    www.migueldearmas.com
+    www.amhedmitchel.com
+    www.robertoriveron.com
+    
+    Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxNDA1MDNUMDAwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20140503T000000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+<entry>
+    <id>http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20131214T010000Z</id>
+    <published>2013-03-15T16:41:30.000Z</published>
+    <updated>2015-01-04T01:05:20.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="html">Options Jazz - MDA Latin Jazz Quartet</title>
+    <summary type="html">When: Fri Dec 13, 2013 8pm to 11:59pm&amp;nbsp;
+    EST&lt;br&gt;Replaces event originally scheduled for: Fri Dec 13, 2013 8pm&lt;br&gt;
+    
+    &lt;br&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br&gt;Event Status: confirmed
+    &lt;br&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</summary>
+    <content type="html">When: Fri Dec 13, 2013 8pm to 11:59pm 
+    EST&lt;br /&gt;Replaces event originally scheduled for: Fri Dec 13, 2013 8pm&lt;br /&gt;
+    
+    &lt;br /&gt;Where: Brookstreet Hotel, Options Jazz Lounge, 525 Legget Dr, Ottawa ON, 613-271-1800, www.brookstreet.ca
+    &lt;br /&gt;Event Status: confirmed
+    &lt;br /&gt;Event Description: Live Jazz seven days a week! Relax in the rich and elegant warmth of a sophisticated lounge with jazz filling the air. No cover charge; no reservations required; free high speed WiFi; mouth-watering culinary creations. Please note that age of majority is required after 9 p.m. See details on times and music lineup here: http://www.brookstreet.ca/options_music.php</content>
+    <link rel="alternate" type="text/html" href="http://www.google.com/calendar/event?eid=MGJoZjYwYXUwNGowOXE2bm11YXNnYWtqaHNfMjAxMzEyMTRUMDEwMDAwWiBvdHRhd2FqYXp6aGFwcGVuaW5nc0BqYXp6d29ya3NjYW5hZGEuY29t" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="http://www.google.com/calendar/feeds/ottawajazzhappenings%40jazzworkscanada.com/public/basic/0bhf60au04j09q6nmuasgakjhs_20131214T010000Z"/>
+    <author>
+        <name>ottawajazzhappenings@jazzworkscanada.com</name>
+        <email>ottawajazzhappenings@jazzworkscanada.com</email>
+    </author>
+</entry>
+</feed>

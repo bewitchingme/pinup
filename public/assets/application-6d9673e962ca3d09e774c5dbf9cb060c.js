@@ -12988,7 +12988,7 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 				this.push.apply(this, new_array);
 			},
 			clear: function(){
-				this.splice(0);
+				this.length = 0;
 			},
 			copy: function(){
 				var a = new DateArray();
@@ -13041,7 +13041,7 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		this.viewMode = this.o.startView;
 
 		if (this.o.calendarWeeks)
-			this.picker.find('tfoot th.today')
+			this.picker.find('tfoot th.today, tfoot th.clear')
 						.attr('colspan', function(i, val){
 							return parseInt(val) + 1;
 						});
@@ -13472,9 +13472,12 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 				windowHeight = $window.height(),
 				scrollTop = $window.scrollTop();
 
-			var zIndex = parseInt(this.element.parents().filter(function(){
-					return $(this).css('z-index') !== 'auto';
-				}).first().css('z-index'))+10;
+			var parentsZindex = [];
+			this.element.parents().each(function() {
+				var itemZIndex = $(this).css('z-index');
+				if ( itemZIndex !== 'auto' && itemZIndex !== 0 ) parentsZindex.push( parseInt( itemZIndex ) );
+			});
+			var zIndex = Math.max.apply( Math, parentsZindex ) + 10;
 			var offset = this.component ? this.component.parent().offset() : this.element.offset();
 			var height = this.component ? this.component.outerHeight(true) : this.element.outerHeight(false);
 			var width = this.component ? this.component.outerWidth(true) : this.element.outerWidth(false);
@@ -13670,6 +13673,7 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 				todaytxt = dates[this.o.language].today || dates['en'].today || '',
 				cleartxt = dates[this.o.language].clear || dates['en'].clear || '',
 				tooltip;
+			if (isNaN(year) || isNaN(month)) return;
 			this.picker.find('.datepicker-days thead th.datepicker-switch')
 						.text(dates[this.o.language].months[month]+' '+year);
 			this.picker.find('tfoot th.today')
@@ -13729,6 +13733,7 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 
 				clsName = $.unique(clsName);
 				html.push('<td class="'+clsName.join(' ')+'"' + (tooltip ? ' title="'+tooltip+'"' : '') + '>'+prevMonth.getUTCDate() + '</td>');
+				tooltip = null;
 				if (prevMonth.getUTCDay() === this.o.weekEnd){
 					html.push('</tr>');
 				}
@@ -13942,6 +13947,9 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 			if (!date){
 				this.dates.clear();
 			}
+			if (this.o.multidate === 1 && ix === 0){
+                // single datepicker, don't remove selected date
+            }
 			else if (ix !== -1){
 				this.dates.remove(ix);
 			}
@@ -14117,8 +14125,10 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 					break;
 				case 13: // enter
 					focusDate = this.focusDate || this.dates.get(-1) || this.viewDate;
-					this._toggle_multidate(focusDate);
-					dateChanged = true;
+					if (this.o.keyboardNavigation) {
+						this._toggle_multidate(focusDate);
+						dateChanged = true;
+					}
 					this.focusDate = null;
 					this.viewDate = this.dates.get(-1) || this.viewDate;
 					this.setValue();
@@ -14638,6 +14648,22 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 	};
 }(jQuery));
 /**
+ * Bosnian translation for bootstrap-datepicker
+ */
+
+;(function($){
+	$.fn.datepicker.dates['bs'] = {
+		days: ["Nedjelja","Ponedjeljak", "Utorak", "Srijeda", "Četvrtak", "Petak", "Subota", "Nedjelja"],
+		daysShort: ["Ned", "Pon", "Uto", "Sri", "Čet", "Pet", "Sub", "Ned"],
+		daysMin: ["N", "Po", "U", "Sr", "Č", "Pe", "Su", "N"],
+		months: ["Januar", "Februar", "Mart", "April", "Maj", "Juni", "Juli", "August", "Septembar", "Oktobar", "Novembar", "Decembar"],
+		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"],
+		today: "Danas",
+		weekStart: 1,
+		format: "dd.mm.yyyy"
+	};
+}(jQuery));
+/**
  * Catalan translation for bootstrap-datepicker
  * J. Garcia <jogaco.en@gmail.com>
  */
@@ -14649,7 +14675,10 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		daysMin: ["dg", "dl", "dt", "dc", "dj", "dv", "ds", "dg"],
 		months: ["Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Juliol", "Agost", "Setembre", "Octubre", "Novembre", "Desembre"],
 		monthsShort: ["Gen", "Feb", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Oct", "Nov", "Des"],
-		today: "Avui"
+		today: "Avui",
+		clear: "Esborrar",
+		weekStart: 1,
+		format: "dd/mm/yyyy"
 	};
 }(jQuery));
 /**
@@ -14665,7 +14694,10 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		daysMin: ["Ne", "Po", "Út", "St", "Čt", "Pá", "So", "Ne"],
 		months: ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"],
 		monthsShort: ["Led", "Úno", "Bře", "Dub", "Kvě", "Čer", "Čnc", "Srp", "Zář", "Říj", "Lis", "Pro"],
-		today: "Dnes"
+		today: "Dnes",
+		clear: "Vymazat",
+		weekStart: 1,
+		format: "d.m.yyyy"
 	};
 }(jQuery));
 /**
@@ -14728,8 +14760,29 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
     daysMin: ["Κυ", "Δε", "Τρ", "Τε", "Πε", "Πα", "Σα", "Κυ"],
     months: ["Ιανουάριος", "Φεβρουάριος", "Μάρτιος", "Απρίλιος", "Μάιος", "Ιούνιος", "Ιούλιος", "Αύγουστος", "Σεπτέμβριος", "Οκτώβριος", "Νοέμβριος", "Δεκέμβριος"],
     monthsShort: ["Ιαν", "Φεβ", "Μαρ", "Απρ", "Μάι", "Ιουν", "Ιουλ", "Αυγ", "Σεπ", "Οκτ", "Νοε", "Δεκ"],
-    today: "Σήμερα"
+    today: "Σήμερα",
+    clear: "Καθαρισμός",
+    weekStart: 1,
+    format: "d/m/yyyy"
   };
+}(jQuery));
+/**
+ * British English translation for bootstrap-datepicker
+ * Xavier Dutreilh <xavier@dutreilh.com>
+ */
+
+;(function($){
+	$.fn.datepicker.dates['en-GB'] = {
+		days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+		daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+		daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+		months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+		monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+		today: "Today",
+		clear: "Clear",
+		weekStart: 1,
+		format: "dd/mm/yyyy"
+	};
 }(jQuery));
 /**
  * Spanish translation for bootstrap-datepicker
@@ -14743,7 +14796,10 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		daysMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"],
 		months: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
 		monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
-		today: "Hoy"
+		today: "Hoy",
+		clear: "Borrar",
+		weekStart: 1,
+		format: "dd/mm/yyyy"
 	};
 }(jQuery));
 /**
@@ -14765,6 +14821,22 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		format: "dd.mm.yyyy"
 	};
 }(jQuery));
+/**
+ * Basque translation for bootstrap-datepicker
+ * Arkaitz Etxeberria <kondi80@gmail.com>
+ */
+
+;(function($){
+    $.fn.datepicker.dates['eu'] = {
+        days: ['Igandea','Astelehena','Asteartea','Asteazkena','Osteguna','Ostirala','Larunbata','Igandea'],
+        daysShort: ['Ig','Al','Ar','Az','Og','Ol','Lr', 'Ig'],
+        daysMin: ['Ig','Al','Ar','Az','Og','Ol','Lr', 'Ig'],
+        months: ['Urtarrila','Otsaila','Martxoa','Apirila','Maiatza','Ekaina','Uztaila','Abuztua','Iraila','Urria','Azaroa','Abendua'],
+        monthsShort: ['Urt','Ots','Mar','Api','Mai','Eka','Uzt','Abu','Ira','Urr','Aza','Abe'],
+        today: "Gaur"
+    };
+}(jQuery));
+
 /**
  * Persian translation for bootstrap-datepicker
  * Mostafa Rokooie <mostafa.rokooie@gmail.com>
@@ -14801,6 +14873,43 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 	};
 }(jQuery));
 /**
+ * Faroese translation for bootstrap-datepicker
+ * Theodor Johannesen <http://github.com/theodorjohannesen>
+ */
+
+;(function($){
+	$.fn.datepicker.dates['fo'] = {
+		days: ["Sunnudagur", "Mánadagur", "Týsdagur", "Mikudagur", "Hósdagur", "Fríggjadagur", "Leygardagur", "Sunnudagur"],
+		daysShort: ["Sun", "Mán", "Týs", "Mik", "Hós", "Frí", "Ley", "Sun"],
+		daysMin: ["Su", "Má", "Tý", "Mi", "Hó", "Fr", "Le", "Su"],
+		months: ["Januar", "Februar", "Marts", "Apríl", "Mei", "Juni", "Juli", "August", "Septembur", "Oktobur", "Novembur", "Desembur"],
+		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Des"],
+		today: "Í Dag",
+		clear: "Reinsa"
+	};
+}(jQuery));
+/**
+ * French (Switzerland) translation for bootstrap-datepicker
+ * Christoph Jossi <c.jossi@ascami.ch>
+ * Based on 
+ * French translation for bootstrap-datepicker
+ * Nico Mollet <nico.mollet@gmail.com>
+ */
+
+;(function($){
+	$.fn.datepicker.dates['fr'] = {
+		days: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
+		daysShort: ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
+		daysMin: ["D", "L", "Ma", "Me", "J", "V", "S", "D"],
+		months: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+		monthsShort: ["Jan", "Fév", "Mar", "Avr", "Mai", "Jui", "Jul", "Aou", "Sep", "Oct", "Nov", "Déc"],
+		today: "Aujourd'hui",
+		clear: "Effacer",
+		weekStart: 1,
+		format: "dd.mm.yyyy"
+	};
+}(jQuery));
+/**
  * French translation for bootstrap-datepicker
  * Nico Mollet <nico.mollet@gmail.com>
  */
@@ -14826,7 +14935,9 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		months: ["Xaneiro", "Febreiro", "Marzo", "Abril", "Maio", "Xuño", "Xullo", "Agosto", "Setembro", "Outubro", "Novembro", "Decembro"],
 		monthsShort: ["Xan", "Feb", "Mar", "Abr", "Mai", "Xun", "Xul", "Ago", "Sep", "Out", "Nov", "Dec"],
 		today: "Hoxe",
-		clear: "Limpar"
+		clear: "Limpar",
+		weekStart: 1,
+		format: "dd/mm/yyyy"
 	};
 }(jQuery));
 /**
@@ -14877,6 +14988,24 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 	};
 }(jQuery));
 /**
+ * Armenian translation for bootstrap-datepicker
+ * Hayk Chamyan <hamshen@gmail.com>
+ */
+
+;(function($){
+	$.fn.datepicker.dates['hy'] = {
+		days: ["Կիրակի", "Երկուշաբթի", "Երեքշաբթի", "Չորեքշաբթի", "Հինգշաբթի", "Ուրբաթ", "Շաբաթ", "Կիրակի"],
+		daysShort: ["Կիր", "Երկ", "Երք", "Չոր", "Հնգ", "Ուր", "Շաբ", "Կիր"],
+		daysMin: ["Կի", "Եկ", "Եք", "Չո", "Հի", "Ու", "Շա", "Կի"],
+		months: ["Հունվար", "Փետրվար", "Մարտ", "Ապրիլ", "Մայիս", "Հունիս", "Հուլիս", "Օգոստոս", "Սեպտեմբեր", "Հոկտեմբեր", "Նոյեմբեր", "Դեկտեմբեր"],
+		monthsShort: ["Հնվ", "Փետ", "Մար", "Ապր", "Մայ", "Հուն", "Հուլ", "Օգս", "Սեպ", "Հոկ", "Նոյ", "Դեկ"],
+		today: "Այսօր",
+		clear: "Ջնջել",
+		format: "dd.mm.yyyy",
+		weekStart: 1
+	};
+}(jQuery));
+/**
  * Bahasa translation for bootstrap-datepicker
  * Azwar Akbar <azwar.akbar@gmail.com>
  */
@@ -14905,6 +15034,27 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		months: ["Janúar", "Febrúar", "Mars", "Apríl", "Maí", "Júní", "Júlí", "Ágúst", "September", "Október", "Nóvember", "Desember"],
 		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Maí", "Jún", "Júl", "Ágú", "Sep", "Okt", "Nóv", "Des"],
 		today: "Í Dag"
+	};
+}(jQuery));
+/**
+ * Italian (Switzerland) translation for bootstrap-datepicker
+ * Christoph Jossi <c.jossi@ascami.ch>
+ * Based on 
+ * Italian translation for bootstrap-datepicker
+ * Enrico Rubboli <rubboli@gmail.com>
+ */
+
+;(function($){
+	$.fn.datepicker.dates['it'] = {
+		days: ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"],
+		daysShort: ["Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"],
+		daysMin: ["Do", "Lu", "Ma", "Me", "Gi", "Ve", "Sa", "Do"],
+		months: ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"],
+		monthsShort: ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"],
+		today: "Oggi",
+		clear: "Cancella",
+		weekStart: 1,
+		format: "dd.mm.yyyy"
 	};
 }(jQuery));
 /**
@@ -14938,7 +15088,8 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		months: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
 		monthsShort: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
 		today: "今日",
-		format: "yyyy/mm/dd"
+		format: "yyyy/mm/dd",
+		clear: "クリア"
 	};
 }(jQuery));
 /**
@@ -14957,6 +15108,22 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
         clear: "გასუფთავება",
         weekStart: 1,
         format: "dd.mm.yyyy"
+    };
+}(jQuery));
+/**
+ * Cambodia (Khmer) translation for bootstrap-datepicker
+ * Lytay TOUCH <lytaytouch@gmail.com>
+ */
+
+;(function($){
+    $.fn.datepicker.dates['kh'] = {
+        days: ["អាទិត្យ", "ចន្ទ", "អង្គារ", "ពុធ", "ព្រហស្បតិ៍", "សុក្រ", "សៅរ៍", "អាទិត្យ"],
+        daysShort: ["អា.ទិ", "ចន្ទ", "អង្គារ", "ពុធ", "ព្រ.ហ", "សុក្រ", "សៅរ៍", "អារ.ទិ"],
+        daysMin: ["អា.ទិ", "ចន្ទ", "អង្គារ", "ពុធ", "ព្រ.ហ", "សុក្រ", "សៅរ៍", "អារ.ទិ"],
+        months: ["មករា", "កុម្ភះ", "មិនា", "មេសា", "ឧសភា", "មិថុនា", "កក្កដា", "សីហា", "កញ្ញា", "តុលា", "វិច្ឆិកា", "ធ្នូ"],
+        monthsShort: ["មករា", "កុម្ភះ", "មិនា", "មេសា", "ឧសភា", "មិថុនា", "កក្កដា", "សីហា", "កញ្ញា", "តុលា", "វិច្ឆិកា", "ធ្នូ"],
+        today: "ថ្ងៃនេះ",
+        clear: "សំអាត"
     };
 }(jQuery));
 /**
@@ -15099,7 +15266,10 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		daysMin: ["Zo", "Ma", "Di", "Wo", "Do", "Vr", "Za", "Zo"],
 		months: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"],
 		monthsShort: ["Jan", "Feb", "Mrt", "Apr", "Mei", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"],
-		today: "Vandaag"
+		today: "Vandaag",
+		clear: "Wissen",
+		weekStart: 1,
+		format: "dd-mm-yyyy"
 	};
 }(jQuery));
 /**
@@ -15132,7 +15302,8 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
                 months: ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"],
                 monthsShort: ["Sty", "Lu", "Mar", "Kw", "Maj", "Cze", "Lip", "Sie", "Wrz", "Pa", "Lis", "Gru"],
                 today: "Dzisiaj",
-                weekStart: 1
+                weekStart: 1,
+                clear: "Wyczyść"
         };
 }(jQuery));
 /**
@@ -15197,7 +15368,9 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		daysMin: ["N", "Po", "U", "Sr", "Č", "Pe", "Su", "N"],
 		months: ["Januar", "Februar", "Mart", "April", "Maj", "Jun", "Jul", "Avgust", "Septembar", "Oktobar", "Novembar", "Decembar"],
 		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Avg", "Sep", "Okt", "Nov", "Dec"],
-		today: "Danas"
+		today: "Danas",
+		weekStart: 1,
+		format: "dd.mm.yyyy"
 	};
 }(jQuery));
 /**
@@ -15212,7 +15385,9 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		daysMin: ["Н", "По", "У", "Ср", "Ч", "Пе", "Су", "Н"],
 		months: ["Јануар", "Фебруар", "Март", "Април", "Мај", "Јун", "Јул", "Август", "Септембар", "Октобар", "Новембар", "Децембар"],
 		monthsShort: ["Јан", "Феб", "Мар", "Апр", "Мај", "Јун", "Јул", "Авг", "Сеп", "Окт", "Нов", "Дец"],
-		today: "Данас"
+		today: "Данас",
+		weekStart: 1,
+		format: "dd.mm.yyyy"
 	};
 }(jQuery));
 /**
@@ -15228,6 +15403,8 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
 		monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
 		today: "Сегодня",
+		clear: "Очистить",
+		format: "dd.mm.yyyy",
 		weekStart: 1
 	};
 }(jQuery));
@@ -15269,7 +15446,7 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 
 ;(function($){
 	$.fn.datepicker.dates['sq'] = {
-		days: ["E Diel", "E Hënë", "E martē", "E mërkurë", "E Enjte", "E Premte", "E Shtunë", "E Diel"],
+		days: ["E Diel", "E Hënë", "E Martē", "E Mërkurë", "E Enjte", "E Premte", "E Shtunë", "E Diel"],
 		daysShort: ["Die", "Hën", "Mar", "Mër", "Enj", "Pre", "Shtu", "Die"],
 		daysMin: ["Di", "Hë", "Ma", "Më", "En", "Pr", "Sht", "Di"],
 		months: ["Janar", "Shkurt", "Mars", "Prill", "Maj", "Qershor", "Korrik", "Gusht", "Shtator", "Tetor", "Nëntor", "Dhjetor"],
@@ -15278,6 +15455,40 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 	};
 }(jQuery));
 
+/**
+ * Serbian latin translation for bootstrap-datepicker
+ * Bojan Milosavlević <milboj@gmail.com>
+ */
+
+;(function($){
+	$.fn.datepicker.dates['sr-latin'] = {
+		days: ["Nedelja","Ponedeljak", "Utorak", "Sreda", "Četvrtak", "Petak", "Subota", "Nedelja"],
+		daysShort: ["Ned", "Pon", "Uto", "Sre", "Čet", "Pet", "Sub", "Ned"],
+		daysMin: ["N", "Po", "U", "Sr", "Č", "Pe", "Su", "N"],
+		months: ["Januar", "Februar", "Mart", "April", "Maj", "Jun", "Jul", "Avgust", "Septembar", "Oktobar", "Novembar", "Decembar"],
+		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Avg", "Sep", "Okt", "Nov", "Dec"],
+		today: "Danas",
+		weekStart: 1,
+		format: "dd.mm.yyyy"
+	};
+}(jQuery));
+/**
+ * Serbian cyrillic translation for bootstrap-datepicker
+ * Bojan Milosavlević <milboj@gmail.com>
+ */
+
+;(function($){
+	$.fn.datepicker.dates['sr'] = {
+		days: ["Недеља","Понедељак", "Уторак", "Среда", "Четвртак", "Петак", "Субота", "Недеља"],
+		daysShort: ["Нед", "Пон", "Уто", "Сре", "Чет", "Пет", "Суб", "Нед"],
+		daysMin: ["Н", "По", "У", "Ср", "Ч", "Пе", "Су", "Н"],
+		months: ["Јануар", "Фебруар", "Март", "Април", "Мај", "Јун", "Јул", "Август", "Септембар", "Октобар", "Новембар", "Децембар"],
+		monthsShort: ["Јан", "Феб", "Мар", "Апр", "Мај", "Јун", "Јул", "Авг", "Сеп", "Окт", "Нов", "Дец"],
+		today: "Данас",
+		weekStart: 1,
+		format: "dd.mm.yyyy"
+	};
+}(jQuery));
 /**
  * Swedish translation for bootstrap-datepicker
  * Patrik Ragnarsson <patrik@starkast.net>
@@ -15292,7 +15503,8 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"],
 		today: "Idag",
 		format: "yyyy-mm-dd",
-		weekStart: 1
+		weekStart: 1,
+		clear: "Rensa"
 	};
 }(jQuery));
 /**
@@ -15361,7 +15573,7 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 }(jQuery));
 /**
  * Ukrainian translation for bootstrap-datepicker
- * Andrey Vityuk <andrey [dot] vityuk [at] gmail.com>
+ * Igor Polynets
  */
 
 ;(function($){
@@ -15369,9 +15581,10 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"],
 		daysShort: ["Нед", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб", "Нед"],
 		daysMin: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"],
-		months: ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
+		months: ["Cічень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
 		monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
-		today: "Сьогодні"
+		today: "Сьогодні",
+		weekStart: 1
 	};
 }(jQuery));
 /**
@@ -15405,7 +15618,8 @@ Copyright (c) 2012-2013 Sasha Koss & Rico Sta. Cruz
 		monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
 		today: "今日",
 		format: "yyyy年mm月dd日",
-		weekStart: 1
+		weekStart: 1,
+		clear: "清空"
 	};
 }(jQuery));
 /**
@@ -20251,9 +20465,9 @@ THE SOFTWARE.
       this.elementSelector = elementSelector;
       this._trickle = __bind(this._trickle, this);
       this.value = 0;
-      this.opacity = 1;
       this.content = '';
       this.speed = 300;
+      this.opacity = 0.99;
       this.install();
     }
 
@@ -20295,6 +20509,8 @@ THE SOFTWARE.
     };
 
     ProgressBar.prototype._reset = function() {
+      var originalOpacity;
+      originalOpacity = this.opacity;
       setTimeout((function(_this) {
         return function() {
           _this.opacity = 0;
@@ -20304,7 +20520,7 @@ THE SOFTWARE.
       return setTimeout((function(_this) {
         return function() {
           _this.value = 0;
-          _this.opacity = 1;
+          _this.opacity = originalOpacity;
           return _this._withSpeed(0, function() {
             return _this._updateStyle(true);
           });
@@ -20468,6 +20684,10 @@ THE SOFTWARE.
 
 }).call(this);
 (function() {
+
+
+}).call(this);
+(function() {
   $(document).ready(function() {
     if ($('#infinite-scrolling').size() > 0) {
       $(window).on('scroll', function() {
@@ -20480,6 +20700,10 @@ THE SOFTWARE.
       });
     }
   });
+
+}).call(this);
+(function() {
+
 
 }).call(this);
 (function() {
@@ -20543,6 +20767,30 @@ $(document).ready(function() {
     var spinner = new Spinner(opts).spin(target);
   });
 
+  // Cal Load Trigger
+  $('#google-cal-btn').click(function (event) {
+    var opts = {
+      lines: 15, // The number of lines to draw
+      length: 25, // The length of each line
+      width: 10, // The line thickness
+      radius: 34, // The radius of the inner circle
+      corners: 1, // Corner roundness (0..1)
+      rotate: 11, // The rotation offset
+      direction: 1, // 1: clockwise, -1: counterclockwise
+      color: '#000', // #rgb or #rrggbb or array of colors
+      speed: 1.2, // Rounds per second
+      trail: 90, // Afterglow percentage
+      shadow: false, // Whether to render a shadow
+      hwaccel: false, // Whether to use hardware acceleration
+      className: 'spinner', // The CSS class to assign to the spinner
+      zIndex: 2e9, // The z-index (defaults to 2000000000)
+      top: '50%', // Top position relative to parent
+      left: '50%' // Left position relative to parent
+    };
+    var target = document.getElementById('spinner');
+    var spinner = new Spinner(opts).spin(target);
+  });
+
   // File Upload Trigger
   $('#file-upload-btn').click(function (event) {
     event.preventDefault();
@@ -20554,5 +20802,31 @@ $(document).ready(function() {
     var input = $(this),
         label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
     $('#file-upload-label').text(label);
+  });
+
+  // Ad Upload Trigger
+  $('#image-upload-btn').click(function (event) {
+    event.preventDefault();
+    $('#image-upload').click();
+  });
+
+  // Ad Upload Text
+  $(document).on('change', '#image-upload', function() {
+    var input = $(this),
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    $('#image-upload-label').text(label);
+  });
+
+  // Banner Upload Trigger
+  $('#ban-upload-btn').click(function (event) {
+    event.preventDefault();
+    $('#ban-upload').click();
+  });
+
+  // Ad Upload Text
+  $(document).on('change', '#ban-upload', function() {
+    var input = $(this),
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    $('#ban-upload-label').text(label);
   });
 });

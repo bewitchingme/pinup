@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     get 'dashboard', to: 'dashboard#home'
     get 'load_google_calendars', to: 'dashboard#load_google_calendars'
     get 'authorize_all', to: 'dashboard#authorize_all'
+    get 'delete_all_ads', to: 'dashboard#delete_all_ads'
+    get 'delete_all_banners', to: 'dashboard#delete_all_banners'
 
     resources :users
     resources :ads

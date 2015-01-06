@@ -26,6 +26,16 @@ class DashboardController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def delete_all_ads
+    Ad.delete_all
+    redirect_to dashboard_path
+  end
+
+  def delete_all_banners
+    Banner.delete_all
+    redirect_to dashboard_path
+  end
+
   private
 
     def authorize_all_events

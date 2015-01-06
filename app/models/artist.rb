@@ -11,7 +11,7 @@ class Artist < ActiveRecord::Base
 
   ### ID
 
-  obfuscate_id
+  # obfuscate_id
 
 
 

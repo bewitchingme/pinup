@@ -51,7 +51,7 @@ class Event < ActiveRecord::Base
 
   ### ID
 
-  obfuscate_id
+  # obfuscate_id
 
 
 

@@ -6,7 +6,7 @@ class Venue < ActiveRecord::Base
 
   before_save :to_lower_case
 
-  obfuscate_id
+  # obfuscate_id
 
   def to_s
     "#{ name.titleize unless name.nil? }"

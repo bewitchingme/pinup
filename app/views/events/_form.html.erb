@@ -1,5 +1,6 @@
 <%= form_for event, html: { multipart: true } do |f| %>
   <div class="row">
+    <% if current_user.nil? || !current_user.admin? %>
     <div class="col-md-12">
       <div class="form-group">
         <%= f.label :name %>
@@ -7,6 +8,22 @@
         <%= display_error_for(event, :name) %>
       </div>
     </div>
+    <% else %>
+    <div class="col-md-2">
+      <div class="form-group">
+        <%= f.label :id %>
+        <%= f.text_field :id, class: 'form-control disabled', disabled: true %>
+        <%= display_error_for(event, :id) %>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <%= display_error_for(event, :name) %>
+      </div>
+    </div>
+    <% end %>
   </div>
 
   <div class="row">
@@ -51,7 +68,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <%= f.label :begin_at %>
-        <%= f.text_field :begin_at, class: 'datetimepicker form-control', value: Time.now.strftime('%Y-%m-%d %H:%M'), data: { "date-format" => 'YYYY-MM-DD HH:MM' } %>
+        <%= f.text_field :begin_at, class: 'datetimepicker form-control',
+            value: event.begin_at.nil? ? Time.now.strftime('%Y-%m-%d %H:%M') : event.begin_at.strftime('%Y-%m-%d %H:%M'),
+            data: { "date-format" => 'YYYY-MM-DD HH:MM' } %>
         <%= display_error_for(event, :begin_at) %>
       </div>
     </div>

@@ -11,7 +11,7 @@
     <th class="col-md-2">Recurring</th>
   </tr>
   
-  <% @events.order('begin_at ASC').each do |event| %>
+  <% @events.order('begin_at DESC').each do |event| %>
     <tr>
       <td><small><%= event.begin_at.strftime('%Y-%m-%d %H:%M') %></small></td>
       <td><%= link_to event, edit_event_path(event) %></td>

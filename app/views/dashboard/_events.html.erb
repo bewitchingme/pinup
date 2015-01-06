@@ -1,0 +1,21 @@
+<h3>Events</h3>
+<p class="form-control" disabled>
+  <strong>Total : </strong><span class="label label-primary"><%= Event.count %></span>
+  <strong>Total Regular : </strong><span class="label label-default"><%= Event.where('recurring = ?', false).count %></span>
+  <strong>Total Recurring : </strong><span class="label label-warning"><%= Event.where('recurring = ?', true).count %></span>
+</p>
+<table class="table table-striped">
+  <tr>
+    <th class="col-md-3">Date</th>
+    <th class="col-md-7">Name</th>
+    <th class="col-md-2">Recurring</th>
+  </tr>
+  
+  <% @events.order('begin_at ASC').each do |event| %>
+    <tr>
+      <td><small><%= event.begin_at.strftime('%Y-%m-%d %H:%M') %></small></td>
+      <td><%= link_to event, edit_event_path(event) %></td>
+      <td><%= event.recurring? ? "<strong class=\"text-success\">Yes</strong>".html_safe : "<strong class=\"text-danger\">No</strong>".html_safe %></td>
+    </tr>
+  <% end %>
+</table>

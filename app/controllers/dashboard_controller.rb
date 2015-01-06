@@ -8,7 +8,8 @@ class DashboardController < ApplicationController
   before_action :authenticate_user!
   
   def home
-    @events = Event.where(authorized: nil)
+    @events = Event.all
+    @events_authorization = Event.where(authorized: nil)
     @csv_calendar = CsvCalendar.new
     @csv_calendars = CsvCalendar.all
     @ad = Ad.new

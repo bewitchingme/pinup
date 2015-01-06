@@ -20,7 +20,7 @@
     <th class="col-md-2">Authorized</th>
   </tr>
   
-  <% @events.order('begin_at ASC').each do |event| %>
+  <% @events_authorization.order('begin_at ASC').each do |event| %>
     <tr>
       <td><small><%= event.begin_at.strftime('%Y-%m-%d %H:%M') %></small></td>
       <td><%= link_to event, edit_event_path(event) %></td>

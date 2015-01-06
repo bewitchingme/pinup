@@ -1,20 +1,19 @@
 <div class="venue">
-
   <legend><%= venue %></legend>
 
   <strong>Shows</strong>
-  <ol>
-    <% venue.events.each do |event| %>
-      <li><%= link_to event, event %></li>
+  <ul style="list-style-type: none; padding-left: 0;">
+    <% venue.events.order('begin_at ASC').each do |event| %>
+      <li><%= event.begin_at.strftime('%Y-%m-%d %H:%M') %> – <%= link_to event, event %></li>
     <% end %>
-  </ol>
+  </ul>
 
   <br>
   
   <strong>Artists who played here</strong>
-  <ol>
-    <% venue.artists.each do |artist| %>
+  <ul style="list-style-type: none; padding-left: 0;">
+    <% venue.artists.order('name ASC').each do |artist| %>
       <li><%= link_to artist, artist %></li>
     <% end %>
-  </ol>
+  </ul>
 </div>

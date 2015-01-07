@@ -18,38 +18,38 @@ class Event < ActiveRecord::Base
   RECURSIVE_DEPTH = 104
 
   def self.monday(date)
-    find_recurring_events_for( :monday, depth: RECURSIVE_DEPTH ) +
-    where(begin_at: ((date.beginning_of_week + 0).at_beginning_of_day)..((date.beginning_of_week + 0).at_end_of_day))
+    find_recurring_events_for( :monday, depth: RECURSIVE_DEPTH )
+    # where(begin_at: ((date.beginning_of_week + 0).at_beginning_of_day)..((date.beginning_of_week + 0).at_end_of_day)).where(recurring: false)
   end
 
   def self.tuesday(date)
-    find_recurring_events_for( :tuesday, depth: RECURSIVE_DEPTH ) +
-    where(begin_at: ((date.beginning_of_week + 1).at_beginning_of_day)..((date.beginning_of_week + 1).at_end_of_day))
+    find_recurring_events_for( :tuesday, depth: RECURSIVE_DEPTH )
+    # where(begin_at: ((date.beginning_of_week + 1).at_beginning_of_day)..((date.beginning_of_week + 1).at_end_of_day)).where(recurring: false)
   end
 
   def self.wednesday(date)
-    find_recurring_events_for( :wednesday, depth: RECURSIVE_DEPTH ) +
-    where(begin_at: ((date.beginning_of_week + 2).at_beginning_of_day)..((date.beginning_of_week + 2).at_end_of_day))
+    find_recurring_events_for( :wednesday, depth: RECURSIVE_DEPTH )
+    # where(begin_at: ((date.beginning_of_week + 2).at_beginning_of_day)..((date.beginning_of_week + 2).at_end_of_day)).where(recurring: false)
   end
 
   def self.thursday(date)
-    find_recurring_events_for( :thursday, depth: RECURSIVE_DEPTH ) +
-    where(begin_at: ((date.beginning_of_week + 3).at_beginning_of_day)..((date.beginning_of_week + 3).at_end_of_day))
+    find_recurring_events_for( :thursday, depth: RECURSIVE_DEPTH )
+    # where(begin_at: ((date.beginning_of_week + 3).at_beginning_of_day)..((date.beginning_of_week + 3).at_end_of_day)).where(recurring: false)
   end
 
   def self.friday(date)
-    find_recurring_events_for( :friday, depth: RECURSIVE_DEPTH ) +
-    where(begin_at: ((date.beginning_of_week + 4).at_beginning_of_day)..((date.beginning_of_week + 4).at_end_of_day))
+    find_recurring_events_for( :friday, depth: RECURSIVE_DEPTH )
+    # where(begin_at: ((date.beginning_of_week + 4).at_beginning_of_day)..((date.beginning_of_week + 4).at_end_of_day)).where(recurring: false)
   end
   
   def self.saturday(date)
-    find_recurring_events_for( :saturday, depth: RECURSIVE_DEPTH ) +
-    where(begin_at: ((date.beginning_of_week + 5).at_beginning_of_day)..((date.beginning_of_week + 5).at_end_of_day))
+    find_recurring_events_for( :saturday, depth: RECURSIVE_DEPTH )
+    # where(begin_at: ((date.beginning_of_week + 5).at_beginning_of_day)..((date.beginning_of_week + 5).at_end_of_day)).where(recurring: false)
   end
   
   def self.sunday(date)
-    find_recurring_events_for( :sunday, depth: RECURSIVE_DEPTH ) +
-    where(begin_at: ((date.beginning_of_week + 6).at_beginning_of_day)..((date.beginning_of_week + 6).at_end_of_day))
+    find_recurring_events_for( :sunday, depth: RECURSIVE_DEPTH )
+    # where(begin_at: ((date.beginning_of_week + 6).at_beginning_of_day)..((date.beginning_of_week + 6).at_end_of_day)).where(recurring: false)
   end
 
   scope :authorized, -> { where('authorized = ?', true) }

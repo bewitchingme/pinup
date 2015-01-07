@@ -6,14 +6,15 @@ class EventsController < ApplicationController
   expose(:types) { EventType.order('name ASC') }
   expose(:events) { filter_param.nil? ? find_all_events : find_filtered_events }
   expose(:event, attributes: :event_params) { id_param.nil? ? Event.new : Event.find(id_param) }
+  expose(:date) { params[:date].nil? ? Date.today : Date.parse(params[:date]) }
 
-  expose(:monday_events) { Event.monday }
-  expose(:tuesday_events) { Event.tuesday }
-  expose(:wednesday_events) { Event.wednesday }
-  expose(:thursday_events) { Event.thursday }
-  expose(:friday_events) { Event.friday }
-  expose(:saturday_events) { Event.saturday }
-  expose(:sunday_events) { Event.sunday }
+  expose(:monday_events) { Event.monday(date) }
+  expose(:tuesday_events) { Event.tuesday(date) }
+  expose(:wednesday_events) { Event.wednesday(date) }
+  expose(:thursday_events) { Event.thursday(date) }
+  expose(:friday_events) { Event.friday(date) }
+  expose(:saturday_events) { Event.saturday(date) }
+  expose(:sunday_events) { Event.sunday(date) }
 
   def create
     self.event = Event.new(event_params)

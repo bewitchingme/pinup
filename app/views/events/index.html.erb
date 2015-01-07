@@ -1,5 +1,9 @@
 <%= render 'events/filters' %>
 
+<%= link_to '>>', events_path(date: date + 7), class: 'btn btn-primary pull-right' %>
+<%= link_to '<<', events_path(date: date - 7), class: 'btn btn-primary pull-left' %>
+<h1 class="text-center"><%= date.strftime('%Y-%m-%d') %></h1>
+
 <% if monday_events.size > 0 %>
   <legend>Monday</legend>
 <% end %>

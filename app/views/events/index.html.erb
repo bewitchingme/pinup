@@ -5,7 +5,11 @@
 <% end %>
 <% monday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
   <% events_beginning_at_hour.each do |event| %>
+<% if current_user.nil? || !current_user.admin? %>
     <%= render event %>
+    <% else %>
+    <%= render 'events/admin_event', event: event %>
+    <% end %>
   <% end %>
 <% end %>
 
@@ -14,7 +18,11 @@
 <% end %>
 <% tuesday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
   <% events_beginning_at_hour.each do |event| %>
+  <% if current_user.nil? || !current_user.admin? %>
   <%= render event %>
+  <% else %>
+  <%= render 'events/admin_event', event: event %>
+  <% end %>
   <% end %>
 <% end %>
 
@@ -23,7 +31,11 @@
 <% end %>
 <% wednesday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
   <% events_beginning_at_hour.each do |event| %>
+    <% if current_user.nil? || !current_user.admin? %>
     <%= render event %>
+    <% else %>
+    <%= render 'events/admin_event', event: event %>
+    <% end %>
   <% end %>
 <% end %>
 
@@ -32,7 +44,11 @@
 <% end %>
 <% thursday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
   <% events_beginning_at_hour.each do |event| %>
+    <% if current_user.nil? || !current_user.admin? %>
     <%= render event %>
+    <% else %>
+    <%= render 'events/admin_event', event: event %>
+    <% end %>
   <% end %>
 <% end %>
 
@@ -41,7 +57,11 @@
 <% end %>
 <% friday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
   <% events_beginning_at_hour.each do |event| %>
+    <% if current_user.nil? || !current_user.admin? %>
     <%= render event %>
+    <% else %>
+    <%= render 'events/admin_event', event: event %>
+    <% end %>
   <% end %>
 <% end %>
 
@@ -50,7 +70,11 @@
 <% end %>
 <% saturday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
   <% events_beginning_at_hour.each do |event| %>
+    <% if current_user.nil? || !current_user.admin? %>
     <%= render event %>
+    <% else %>
+    <%= render 'events/admin_event', event: event %>
+    <% end %>
   <% end %>
 <% end %>
 
@@ -59,7 +83,11 @@
 <% end %>
 <% sunday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
   <% events_beginning_at_hour.each do |event| %>
+    <% if current_user.nil? || !current_user.admin? %>
     <%= render event %>
+    <% else %>
+    <%= render 'events/admin_event', event: event %>
+    <% end %>
   <% end %>
 <% end %>
 

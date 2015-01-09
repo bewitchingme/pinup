@@ -3,16 +3,10 @@
     <% slice.each do |venue| %>
       <% next if venue.name.nil? || venue.name.empty? %>
       
-      <%= link_to venue, class: 'venue col-md-12' do %>
-        <strong><%= venue %></strong>
-        
-        <% unless venue.address.nil? %>
-          <p><%= venue.address %></p>
-        <% end %>
-        
-        <% unless venue.city.nil? %>
-          <p><%= venue.city %></p>
-        <% end %>
+      <% if current_user.nil? || !current_user.admin? %>
+        <%= render 'venues/index/venue', venue: venue %>
+      <% else %>
+        <%= render 'venues/index/admin_venue', venue: venue %>
       <% end %>
 
     <% end %>

@@ -23,5 +23,7 @@ Rails.application.routes.draw do
     resources :users
     resources :ads
     resources :events
+    resources :artists
+    resources :venues
   end
 end

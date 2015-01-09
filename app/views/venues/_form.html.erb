@@ -1,29 +1,54 @@
-<%= form_for(@venue) do |f| %>
-  <% if @venue.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@venue.errors.count, "error") %> prohibited this venue from being saved :</h2>
-
-      <ul>
-      <% @venue.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for(venue) do |f| %>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <%= display_error_for venue, :name %>
+      </div>
     </div>
-  <% end %>
+  </div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :address %>
+        <%= f.text_field :address, class: 'form-control' %>
+        <%= display_error_for venue, :address %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :city %>
+        <%= f.text_field :city, class: 'form-control' %>
+        <%= display_error_for venue, :city %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="row">
+    <% if current_user.nil? || !current_user.admin? %>
+    <div class="col-md-4 col-md-offset-4">
+      <div class="form-group">
+        <%= f.submit 'Submit', class: 'btn btn-primary form-control' %>
+      </div>
+    </div>
+    <% else %>
+    <div class="col-md-4 col-md-offset-1">
+      <div class="form-group">
+        <%= f.submit 'Submit', class: 'btn btn-primary form-control' %>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= link_to 'Delete', "/admin/venues/#{venue.id}", method: :delete, class: 'btn btn-danger form-control' %>
+      </div>
+    </div>
+    <% end %>
   </div>
 <% end %>

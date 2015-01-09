@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"begi",
+				"beginning_of_week"
+			],
+			[
+				"beg",
+				"beginning_of_week"
+			],
+			[
 				"del",
 				"delete_all_ads"
 			],
@@ -28,10 +36,6 @@
 				"time_begin"
 			],
 			[
-				"beg",
-				"beginning_of_week"
-			],
-			[
 				"auth",
 				"authorized"
 			],
@@ -42,10 +46,6 @@
 			[
 				"to",
 				"to_time"
-			],
-			[
-				"begi",
-				"beginning_of_day"
 			],
 			[
 				"end",
@@ -520,50 +520,34 @@
 	"buffers":
 	[
 		{
-			"file": "Gemfile",
+			"file": "app/controllers/events_controller.rb",
 			"settings":
 			{
-				"buffer_size": 2144,
+				"buffer_size": 2523,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/layouts/_banner.html.erb",
+			"file": "app/views/events/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 198,
+				"buffer_size": 3209,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/controllers/dashboard_controller.rb",
+			"file": "app/models/event.rb",
 			"settings":
 			{
-				"buffer_size": 5253,
+				"buffer_size": 6886,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "config/routes.rb",
+			"file": "app/views/events/_form.html.erb",
 			"settings":
 			{
-				"buffer_size": 804,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/dashboard/_ad_upload.html.erb",
-			"settings":
-			{
-				"buffer_size": 131,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/dashboard/_banner_upload.html.erb",
-			"settings":
-			{
-				"buffer_size": 147,
+				"buffer_size": 3280,
 				"line_ending": "Windows"
 			}
 		}
@@ -620,29 +604,34 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Maxime/Documents/radiant-sands/Gemfile",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/layouts/_banner.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/controllers/dashboard_controller.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/config/routes.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/dashboard/_ad_upload.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/dashboard/_banner_upload.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/_event.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/_admin_event.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/index.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/models/event.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/ads/_form.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/banners/_form.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/layouts/_advertisement.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/dashboard/home.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/dashboard/_events.html.erb",
-		"/C/Users/Maxime/Documents/radiant-sands/app/controllers/dashboard_controller.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/dashboard/_event_authorization.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/_form.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/venues/_form.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/venues/show.html.erb",
-		"/C/Users/Maxime/Documents/radiant-sands/app/views/layouts/_banner.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/controllers/banners_controller.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/controllers/ads_controller.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/db/migrate/20150106101351_add_url_to_ads_and_banners.rb",
-		"/C/Users/Maxime/Documents/radiant-sands/app/views/dashboard/_banner_upload.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/csv_calendars/_form.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/config/environments/production.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/config/initializers/paperclip.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/models/banner.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/models/ad.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/config/environments/development.rb",
-		"/C/Users/Maxime/Documents/radiant-sands/Gemfile",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/show.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/models/venue.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/models/artist.rb",
@@ -742,12 +731,7 @@
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/venues/index.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/artists/index.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/artists/edit.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/artists/_form.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/artists/index.json.jbuilder",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/artists/show.json.jbuilder",
-		"/C/Users/Coldfury/Documents/radiant-sands/lib/tasks/csv.rake",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/admin/ads/index.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/javascripts/events.js.coffee"
+		"/C/Users/Coldfury/Documents/radiant-sands/app/views/artists/_form.html.erb"
 	],
 	"find":
 	{
@@ -766,6 +750,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Date.today",
+			"th)",
+			"VE_D",
+			"DEPT",
+			"where(begin_",
+			"day))",
+			"0",
+			"where(begin_at: (date.at_beginning_of_day)..(date.at_end_of_day))",
+			"where(begin_at: (d",
+			"begin_at:",
+			"find_recurring_ev",
+			"find_recurring_events_for( :monday, depth: RECURSIVE_DEPTH )",
+			"self.find",
+			"admin_event",
+			"<%= render event %>",
 			"ads",
 			"span",
 			"@event",
@@ -878,22 +877,7 @@
 			"container",
 			"avatar",
 			"@",
-			"@event",
-			"@",
-			"@event",
-			"page-content-wrapper",
-			"000",
-			"300px",
-			"width",
-			"250",
-			".container",
-			"@",
-			"\n@",
-			"@",
-			"container",
-			"dash",
-			"side",
-			"not_found"
+			"@event"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -911,28 +895,30 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Gemfile",
+					"file": "app/controllers/events_controller.rb",
 					"settings":
 					{
-						"buffer_size": 2144,
+						"buffer_size": 2523,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								216,
-								216
+								448,
+								448
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -942,23 +928,25 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/layouts/_banner.html.erb",
+					"file": "app/views/events/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 198,
+						"buffer_size": 3209,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								57,
-								57
+								48,
+								48
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -968,18 +956,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/controllers/dashboard_controller.rb",
+					"file": "app/models/event.rb",
 					"settings":
 					{
-						"buffer_size": 5253,
+						"buffer_size": 6886,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								728,
-								728
+								6394,
+								6394
 							]
 						],
 						"settings":
@@ -989,87 +977,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3451.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "config/routes.rb",
+					"file": "app/views/events/_form.html.erb",
 					"settings":
 					{
-						"buffer_size": 804,
+						"buffer_size": 3280,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								609,
-								609
+								1123,
+								1123
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/dashboard/_ad_upload.html.erb",
-					"settings":
-					{
-						"buffer_size": 131,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								84,
-								84
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/dashboard/_banner_upload.html.erb",
-					"settings":
-					{
-						"buffer_size": 147,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								51,
-								51
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 30.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

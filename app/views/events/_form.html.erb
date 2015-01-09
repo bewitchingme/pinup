@@ -102,10 +102,24 @@
   </div>
 
   <div class="row">
+    <% if current_user.nil? || !current_user.admin? %>
     <div class="col-md-4 col-md-offset-4">
       <div class="form-group">
-        <%= f.submit :submit, class: 'btn btn-primary form-control' %>
+        <%= f.submit 'Submit', class: 'btn btn-primary form-control' %>
       </div>
     </div>
+    <% else %>
+    <div class="col-md-4 col-md-offset-1">
+      <div class="form-group">
+        <%= f.submit 'Submit', class: 'btn btn-primary form-control' %>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= link_to 'Delete', "/admin/events/#{event.id}", method: :delete, class: 'btn btn-danger form-control' %>
+      </div>
+    </div>
+    <% end %>
   </div>
 <% end %>

@@ -1,11 +1,13 @@
 <% artists.each_slice(1) do |slice| %>
   <div class="row">
     <% slice.each do |artist| %>
-      
-      <%= link_to artist, class: 'artist col-md-12' do %>
-        <strong><%= artist %></strong>
+      <strong>
+      <% if current_user.nil? || !current_user.admin? %>
+        <%= link_to artist, artist, class: 'artist col-md-12' %>
+      <% else %>
+        <%= link_to artist, "/admin/artists/#{artist.id}/edit", class: 'artist col-md-12' %>
       <% end %>
-
+      </strong>
     <% end %>
   </div>
 <% end %>

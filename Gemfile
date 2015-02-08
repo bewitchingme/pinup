@@ -80,3 +80,5 @@ gem 'redis'
 # gem 'unicorn'
 
 gem 'obfuscate_id', git: 'https://github.com/namick/obfuscate_id.git'
+
+gem 'adminlte-rails'

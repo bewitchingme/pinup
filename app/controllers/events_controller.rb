@@ -8,13 +8,13 @@ class EventsController < ApplicationController
   expose(:event, attributes: :event_params) { id_param.nil? ? Event.new : Event.find(id_param) }
   expose(:date) { params[:date].nil? ? Date.today : Date.parse(params[:date]) }
 
-  expose(:monday_events) { Event.monday(date) }
-  expose(:tuesday_events) { Event.tuesday(date) }
-  expose(:wednesday_events) { Event.wednesday(date) }
-  expose(:thursday_events) { Event.thursday(date) }
-  expose(:friday_events) { Event.friday(date) }
-  expose(:saturday_events) { Event.saturday(date) }
-  expose(:sunday_events) { Event.sunday(date) }
+  expose(:monday_events) { Event.monday.where('begin_at >= ?', date).authorized }
+  expose(:tuesday_events) { Event.tuesday.where('begin_at >= ?', date).authorized }
+  expose(:wednesday_events) { Event.wednesday.where('begin_at >= ?', date).authorized }
+  expose(:thursday_events) { Event.thursday.where('begin_at >= ?', date).authorized }
+  expose(:friday_events) { Event.friday.where('begin_at >= ?', date).authorized }
+  expose(:saturday_events) { Event.saturday.where('begin_at >= ?', date).authorized }
+  expose(:sunday_events) { Event.sunday.where('begin_at >= ?', date).authorized }
 
   def create
     self.event = Event.new(event_params)

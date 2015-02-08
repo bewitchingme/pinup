@@ -19,9 +19,15 @@
       <div class="navbar-collapse collapse" style="margin-left: -15px;">
         
         <ul class="nav navbar-nav">
-          <li class="<%= current_page?(events_path) ? 'active' : nil %>"><%= link_to 'Calendar', events_path %></li>
-          <li class="<%= controller.controller_name == 'artists' ? 'active' : nil %>"><%= link_to 'Artists', artists_path %></li>
-          <li class="<%= controller.controller_name == 'venues' ? 'active' : nil %>"><%= link_to 'Venues', venues_path %></li>
+          <li class="<%= current_page?(events_path) ? 'active' : nil %>">
+            <%= link_to '<i class="flaticon flaticon-election"></i> Calendar'.html_safe, events_path %>
+          </li>
+          <li class="<%= controller.controller_name == 'artists' ? 'active' : nil %>">
+            <%= link_to '<i class="flaticon flaticon-artist2"></i> Artists'.html_safe, artists_path %>
+          </li>
+          <li class="<%= controller.controller_name == 'venues' ? 'active' : nil %>">
+            <%= link_to '<i class="flaticon flaticon-theater5"></i> Venues'.html_safe, venues_path %>
+          </li>
         </ul>
       
         <ul class="nav navbar-nav navbar-right">

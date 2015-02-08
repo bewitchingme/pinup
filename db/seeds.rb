@@ -36,3 +36,15 @@
     { name: 'users', role: Role.find_by( name: 'default' )},
     { name: 'administrators', role: Role.find_by( name: 'admin' )}
   ])
+
+  name  = 'Maxime Gauthier'
+  email = 'maxime.gauthier88@gmail.com'
+  password = password_confirmation = 'esf823r'
+  user  = User.create([{
+    name: name,
+    email: email,
+    password: password,
+    password_confirmation: password,
+    user_group: UserGroup.find_by(name: 'admin'),
+    role: Role.find_by(name: 'admin')
+  }])

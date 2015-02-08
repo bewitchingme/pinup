@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150206003317) do
+ActiveRecord::Schema.define(version: 20150208153423) do
 
   create_table "ads", force: true do |t|
     t.datetime "created_at"
@@ -67,7 +67,8 @@ ActiveRecord::Schema.define(version: 20150206003317) do
     t.boolean  "gcal"
     t.string   "gcal_id"
     t.boolean  "authorized"
-    t.string   "day_of_week",   default: "",    null: false
+    t.string   "day_of_week",   default: "",      null: false
+    t.string   "type",          default: "Event", null: false
   end
 
   add_index "events", ["day_of_week"], name: "index_events_on_day_of_week"

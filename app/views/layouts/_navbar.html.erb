@@ -33,7 +33,8 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="<%= current_page?(new_event_path) ? 'active' : nil %>">
             <form class="navbar-form">
-              <%= link_to 'Post an event', new_event_path, class: "btn btn-primary#{current_page?(new_event_path) ? ' active' : nil}" %>
+              <%= link_to 'Post an event', new_event_path,
+                  class: "btn btn-flat btn-primary#{current_page?(new_event_path) ? ' active' : nil}" %>
             </form>
           </li>
           <% if user_signed_in? %>

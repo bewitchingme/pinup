@@ -8,13 +8,13 @@ class EventsController < ApplicationController
   expose(:event, attributes: :event_params) { id_param.nil? ? Event.new : Event.find(id_param) }
   expose(:date) { params[:date].nil? ? Date.today : Date.parse(params[:date]) }
 
-  expose(:monday_events) { Event.monday.where('begin_at >= ?', date).authorized }
-  expose(:tuesday_events) { Event.tuesday.where('begin_at >= ?', date).authorized }
-  expose(:wednesday_events) { Event.wednesday.where('begin_at >= ?', date).authorized }
-  expose(:thursday_events) { Event.thursday.where('begin_at >= ?', date).authorized }
-  expose(:friday_events) { Event.friday.where('begin_at >= ?', date).authorized }
-  expose(:saturday_events) { Event.saturday.where('begin_at >= ?', date).authorized }
-  expose(:sunday_events) { Event.sunday.where('begin_at >= ?', date).authorized }
+  expose(:monday_events) { events.monday }
+  expose(:tuesday_events) { events.tuesday }
+  expose(:wednesday_events) { events.wednesday }
+  expose(:thursday_events) { events.thursday }
+  expose(:friday_events) { events.friday }
+  expose(:saturday_events) { events.saturday }
+  expose(:sunday_events) { events.sunday }
 
   def create
     self.event = Event.new(event_params)
@@ -64,7 +64,7 @@ class EventsController < ApplicationController
 
     def find_filtered_events
       Event.where(
-        'begin_at > ? AND event_type_id = ?',
+        'begin_at >= ? AND event_type_id = ?',
         Date.today, EventType.find_by( name: filter_param )
       ).authorized.order( 'begin_at ASC' ).page( page_param )
     end

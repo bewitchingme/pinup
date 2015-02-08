@@ -13,8 +13,4 @@
  *= require_tree .
  *= require_self
  *= require pinup/flaticon
- *= require bootstrap
- *= require font-awesome
- *= require ionicons
- *= require admin-lte
  */

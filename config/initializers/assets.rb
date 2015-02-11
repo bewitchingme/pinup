@@ -10,3 +10,8 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( election.png )
 Rails.application.config.assets.precompile += %w( artist2.png )
 Rails.application.config.assets.precompile += %w( theater5.png )
+
+Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "stylesheets", "music")
+Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "stylesheets", "music-and-sound-1")
+Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "stylesheets", "music-and-sound-2")
+Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "stylesheets", "pinup")

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"x",
+				"x64_mingw"
+			],
+			[
 				"font",
 				"font-size"
 			],
@@ -510,28 +514,32 @@
 			[
 				"cop",
 				"copyright"
-			],
-			[
-				"project",
-				"project"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/views/layouts/_navbar.html.erb",
+			"file": "app/assets/stylesheets/bootstrap_and_overrides.css.scss",
 			"settings":
 			{
-				"buffer_size": 2334,
+				"buffer_size": 278,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/assets/stylesheets/layout.css.scss",
+			"file": "app/assets/stylesheets/application.css",
 			"settings":
 			{
-				"buffer_size": 1166,
+				"buffer_size": 709,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 2446,
 				"line_ending": "Windows"
 			}
 		}
@@ -588,17 +596,32 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Maxime/Documents/radiant-sands/app/views/venues/_form.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/bootstrap_theme.css.scss",
+		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/application.css",
+		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/bootstrap_and_overrides.css.scss",
+		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/global.css.scss",
+		"/C/Users/Maxime/Documents/radiant-sands/app/models/event/abstract_event.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/models/event/recurring_event.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/models/event/scheduled_event.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/db/migrate/20150208153423_add_type_to_events.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/models/event/scheduled_event/recurring_event.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/layout.css.scss",
+		"/C/Users/Maxime/Documents/radiant-sands/app/models/event/unscheduled_event.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/index.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/controllers/events_controller.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/Gemfile",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/layouts/application.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/models/event_type.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/models/events/abstract_event.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/layouts/_navbar.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/vendor/assets/stylesheets/pinup/flaticon.css",
+		"/C/Users/Maxime/Documents/radiant-sands/app/assets/javascripts/application.js",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/venues/_form.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/models/event.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/db/migrate/20150206003317_add_day_of_week_to_events.rb",
-		"/C/Users/Maxime/Documents/radiant-sands/app/controllers/events_controller.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/db/seeds.rb",
-		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/global.css.scss",
-		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/application.css",
 		"/C/Users/Maxime/Documents/radiant-sands/config/initializers/assets.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/vendor/assets/stylesheets/pinup/flaticon.ttf",
-		"/C/Users/Maxime/Documents/radiant-sands/Gemfile",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/venues/index/_admin_venue.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/venues/index/_venue.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/artists/_form.html.erb",
@@ -609,7 +632,6 @@
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/venues/new.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/artists/edit.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/artists/new.html.erb",
-		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/index.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/_form.html.erb",
 		"/C/Users/Maxime/Desktop/PID_FINAL.ino",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/layouts/_banner.html.erb",
@@ -640,10 +662,8 @@
 		"/C/Users/Maxime/Documents/radiant-sands/config/application.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/models/user.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/db/data/jazzcal.xml",
-		"/C/Users/Maxime/Documents/radiant-sands/app/assets/javascripts/application.js",
 		"/C/Users/Maxime/Documents/radiant-sands/config/database.yml",
 		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/ads.css.scss",
-		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/layout.css.scss",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/index.html.erb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/events_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/dashboard_controller.rb",
@@ -703,19 +723,7 @@
 		"/C/Users/Coldfury/Downloads/index.php",
 		"/C/Users/Coldfury/Documents/radiant-sands/db/seeds.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/lib/crawler/engine.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/config/unicorn.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141119041102_add_groups_to_users.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141119040712_add_roles_and_users_to_user_groups.rb",
-		"/C/Users/Coldfury/Desktop/iv.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/Procfile",
-		"/C/Users/Coldfury/Documents/radiant-sands/lib/daemons/crawler.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/lib/tasks/crawler.rake",
-		"/E/cmdline.txt.direct",
-		"/C/Users/Coldfury/Documents/radiant-sands/lib/tasks/events.rake",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/events.css.scss",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/new.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/events/edit.html.erb",
-		"/C/Users/Coldfury/Documents/radiant-sands/config/events.yml"
+		"/C/Users/Coldfury/Documents/radiant-sands/config/unicorn.rb"
 	],
 	"find":
 	{
@@ -734,6 +742,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"background\n",
+			"background",
+			"background-color",
+			".authorized",
+			".where('begin_at >= ?', date)",
+			"event",
+			"Event",
 			"image-",
 			"50",
 			"60",
@@ -854,14 +869,7 @@
 			"date_begin",
 			"fill-horizontal",
 			".",
-			"EVENT_CONFIG",
-			"Created event",
-			"row",
-			"title",
-			"cover",
-			"event",
-			"static",
-			"serve_static"
+			"EVENT_CONFIG"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -879,30 +887,28 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/layouts/_navbar.html.erb",
+					"file": "app/assets/stylesheets/bootstrap_and_overrides.css.scss",
 					"settings":
 					{
-						"buffer_size": 2334,
+						"buffer_size": 278,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1299,
-								1299
+								278,
+								278
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -912,28 +918,52 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/assets/stylesheets/layout.css.scss",
+					"file": "app/assets/stylesheets/application.css",
 					"settings":
 					{
-						"buffer_size": 1166,
+						"buffer_size": 709,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1137,
-								1137
+								709,
+								709
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 405.0,
+						"translation.y": 120.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 2446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								745,
+								745
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 990.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

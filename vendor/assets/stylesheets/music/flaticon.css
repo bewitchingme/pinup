@@ -1,0 +1,118 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}.flaticon-acoustic4:before {
+	content: "\e000";
+}
+.flaticon-alto:before {
+	content: "\e001";
+}
+.flaticon-applause:before {
+	content: "\e002";
+}
+.flaticon-audio41:before {
+	content: "\e003";
+}
+.flaticon-audio42:before {
+	content: "\e004";
+}
+.flaticon-bandmaster:before {
+	content: "\e005";
+}
+.flaticon-bass4:before {
+	content: "\e006";
+}
+.flaticon-bell32:before {
+	content: "\e007";
+}
+.flaticon-boombox3:before {
+	content: "\e008";
+}
+.flaticon-bugle:before {
+	content: "\e009";
+}
+.flaticon-clarinet1:before {
+	content: "\e00a";
+}
+.flaticon-cornet3:before {
+	content: "\e00b";
+}
+.flaticon-cymbals2:before {
+	content: "\e00c";
+}
+.flaticon-dj4:before {
+	content: "\e00d";
+}
+.flaticon-french6:before {
+	content: "\e00e";
+}
+.flaticon-herald:before {
+	content: "\e00f";
+}
+.flaticon-loudspeaker8:before {
+	content: "\e010";
+}
+.flaticon-microphone67:before {
+	content: "\e011";
+}
+.flaticon-microphone68:before {
+	content: "\e012";
+}
+.flaticon-music200:before {
+	content: "\e013";
+}
+.flaticon-music201:before {
+	content: "\e014";
+}
+.flaticon-musical84:before {
+	content: "\e015";
+}
+.flaticon-piano16:before {
+	content: "\e016";
+}
+.flaticon-piccolo:before {
+	content: "\e017";
+}
+.flaticon-radio42:before {
+	content: "\e018";
+}
+.flaticon-radio43:before {
+	content: "\e019";
+}
+.flaticon-saxophone8:before {
+	content: "\e01a";
+}
+.flaticon-side10:before {
+	content: "\e01b";
+}
+.flaticon-treble4:before {
+	content: "\e01c";
+}
+.flaticon-trombone3:before {
+	content: "\e01d";
+}
+.flaticon-trumpet13:before {
+	content: "\e01e";
+}
+.flaticon-tuba1:before {
+	content: "\e01f";
+}
+.flaticon-violin9:before {
+	content: "\e020";
+}
+.flaticon-xylophone6:before {
+	content: "\e021";
+}

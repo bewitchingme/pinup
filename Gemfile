@@ -18,8 +18,10 @@ gem 'jquery-turbolinks'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer',  platforms: :ruby
+# gem 'therubyracer',  platforms: [ :ruby, :mingw, :x64_mingw, :mswin ]
+# gem 'therubyrhino',  platforms: :jruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -80,3 +82,7 @@ gem 'redis'
 # gem 'unicorn'
 
 gem 'obfuscate_id', git: 'https://github.com/namick/obfuscate_id.git'
+
+gem 'adminlte-rails'
+
+gem 'font-awesome-rails'

@@ -15,46 +15,23 @@ class Event < ActiveRecord::Base
   ##############################
 
 
-  RECURSIVE_DEPTH = 104
 
-  def self.monday(date)
-    find_recurring_events_for( :monday, depth: RECURSIVE_DEPTH, date: date )
-    # where(begin_at: ((date.beginning_of_week + 0).at_beginning_of_day)..((date.beginning_of_week + 0).at_end_of_day)).where(recurring: false)
-  end
+  scope :monday,    -> { where day_of_week: 'Monday'    }
+  scope :tuesday,   -> { where day_of_week: 'Tuesday'   }
+  scope :wednesday, -> { where day_of_week: 'Wednesday' }
+  scope :thursday,  -> { where day_of_week: 'Thursday'  }
+  scope :friday,    -> { where day_of_week: 'Friday'    }
+  scope :saturday,  -> { where day_of_week: 'Saturday'  }
+  scope :sunday,    -> { where day_of_week: 'Sunday'    }
 
-  def self.tuesday(date)
-    find_recurring_events_for( :tuesday, depth: RECURSIVE_DEPTH, date: date )
-    # where(begin_at: ((date.beginning_of_week + 1).at_beginning_of_day)..((date.beginning_of_week + 1).at_end_of_day)).where(recurring: false)
-  end
+  scope :authorized, -> { where authorized: true }
+  scope :recurring,  -> { where recurring: true  }
 
-  def self.wednesday(date)
-    find_recurring_events_for( :wednesday, depth: RECURSIVE_DEPTH, date: date )
-    # where(begin_at: ((date.beginning_of_week + 2).at_beginning_of_day)..((date.beginning_of_week + 2).at_end_of_day)).where(recurring: false)
-  end
 
-  def self.thursday(date)
-    find_recurring_events_for( :thursday, depth: RECURSIVE_DEPTH, date: date )
-    # where(begin_at: ((date.beginning_of_week + 3).at_beginning_of_day)..((date.beginning_of_week + 3).at_end_of_day)).where(recurring: false)
-  end
 
-  def self.friday(date)
-    find_recurring_events_for( :friday, depth: RECURSIVE_DEPTH, date: date )
-    # where(begin_at: ((date.beginning_of_week + 4).at_beginning_of_day)..((date.beginning_of_week + 4).at_end_of_day)).where(recurring: false)
-  end
+  before_save :set_day_of_week
+
   
-  def self.saturday(date)
-    find_recurring_events_for( :saturday, depth: RECURSIVE_DEPTH, date: date )
-    # where(begin_at: ((date.beginning_of_week + 5).at_beginning_of_day)..((date.beginning_of_week + 5).at_end_of_day)).where(recurring: false)
-  end
-  
-  def self.sunday(date)
-    find_recurring_events_for( :sunday, depth: RECURSIVE_DEPTH, date: date )
-    # where(begin_at: ((date.beginning_of_week + 6).at_beginning_of_day)..((date.beginning_of_week + 6).at_end_of_day)).where(recurring: false)
-  end
-
-  scope :authorized, -> { where('authorized = ?', true) }
-
-
 
   ### ID
 
@@ -207,64 +184,10 @@ class Event < ActiveRecord::Base
     end
 
 
+    ### DAY OF WEEK
 
-    ### EVENTS
-
-    def self.find_recurring_events_for(day, opts)
-      depth = opts[:depth]
-      date = opts[:date]
-      case day
-      when :monday
-        find_recursively_recurring_events_by_index(0, depth, date)
-
-      when :tuesday
-        find_recursively_recurring_events_by_index(1, depth, date)
-
-      when :wednesday
-        find_recursively_recurring_events_by_index(2, depth, date)
-
-      when :thursday
-        find_recursively_recurring_events_by_index(3, depth, date)
-
-      when :friday
-        find_recursively_recurring_events_by_index(4, depth, date)
-
-      when :saturday
-        find_recursively_recurring_events_by_index(5, depth, date)
-
-      when :sunday
-        find_recursively_recurring_events_by_index(6, depth, date)
-
-      end
+    def set_day_of_week
+      self.day_of_week = begin_at.strftime('%A')
     end
 
-    def self.find_recursively_recurring_events_by_index(index, depth, date)
-      events = []
-      (1..depth).each do |i|
-        events += find_recurring_events_between(
-          (date.beginning_of_week  -  (7 * i - index)).beginning_of_day,
-          (date.beginning_of_week  -  (7 * i - index)).end_of_day
-        )
-      end
-      events += find_events_between(
-        (date.beginning_of_week + index).beginning_of_day,
-        (date.beginning_of_week + index).end_of_day
-      )
-      return events.uniq
-    end
-
-    def self.find_recurring_events_between(time_begin, time_end)
-      where(
-        begin_at: time_begin..time_end,
-        recurring: true,
-        authorized: true
-      )
-    end
-
-    def self.find_events_between(time_begin, time_end)
-      where(
-        begin_at: time_begin..time_end,
-        authorized: true
-      )
-    end
 end

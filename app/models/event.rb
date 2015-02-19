@@ -29,7 +29,11 @@ class Event < ActiveRecord::Base
 
 
 
-  before_save :set_day_of_week
+  before_save -> { self.day_of_week = begin_at.strftime('%A') }
+  before_save -> { self.uid = uid.downcase }
+
+
+  belongs_to :list
 
   
 
@@ -181,13 +185,6 @@ class Event < ActiveRecord::Base
     def longer_than_max_description_length?
       return false if description.nil?
       description.length > MAXIMUM_DESCRIPTION_LENGTH
-    end
-
-
-    ### DAY OF WEEK
-
-    def set_day_of_week
-      self.day_of_week = begin_at.strftime('%A')
     end
 
 end

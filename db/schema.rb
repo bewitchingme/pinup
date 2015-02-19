@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150208153423) do
+ActiveRecord::Schema.define(version: 20150219034256) do
 
   create_table "ads", force: true do |t|
     t.datetime "created_at"
@@ -65,13 +65,26 @@ ActiveRecord::Schema.define(version: 20150208153423) do
     t.integer  "referrer_id"
     t.boolean  "recurring",     default: false
     t.boolean  "gcal"
-    t.string   "gcal_id"
+    t.string   "uid"
     t.boolean  "authorized"
     t.string   "day_of_week",   default: "",      null: false
     t.string   "type",          default: "Event", null: false
+    t.integer  "list_id"
+    t.index ["day_of_week"], :name => "index_events_on_day_of_week"
+    t.index ["uid"], :name => "index_events_on_uid", :unique => true
   end
 
-  add_index "events", ["day_of_week"], name: "index_events_on_day_of_week"
+  create_table "events_event_lists", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lists", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "url",        default: "", null: false
+    t.string   "title",      default: "", null: false
+  end
 
   create_table "referrers", force: true do |t|
     t.string   "name"
@@ -111,10 +124,9 @@ ActiveRecord::Schema.define(version: 20150208153423) do
     t.string   "provider"
     t.string   "uid"
     t.integer  "user_group_id"
+    t.index ["email"], :name => "index_users_on_email", :unique => true
+    t.index ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "venues", force: true do |t|
     t.string   "name"

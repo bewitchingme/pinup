@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :banners
 
   root to: 'root#home'
@@ -9,9 +10,9 @@ Rails.application.routes.draw do
                                     sessions: 'users/sessions',
                                     omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  resources :artists
-  resources :venues
-  resources :events, except: [ :edit, :destroy ]
+  resources :artists, except: [ :edit, :update, :destroy ]
+  resources :venues,  except: [ :edit, :update, :destroy ]
+  resources :events,  except: [ :edit, :update, :destroy ]
 
   scope '/admin' do
     get 'dashboard', to: 'dashboard#home'
@@ -22,8 +23,9 @@ Rails.application.routes.draw do
 
     resources :users
     resources :ads
-    resources :events
     resources :artists
     resources :venues
+    resources :lists
+    resources :events
   end
 end

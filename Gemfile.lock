@@ -82,6 +82,7 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
+    icalendar (2.2.2)
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -168,6 +169,9 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
+    schema_plus (1.8.7)
+      activerecord (>= 3.2, < 4.3)
+      valuable
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -177,6 +181,7 @@ GEM
       json
       redis (>= 3.0.6)
       redis-namespace (>= 1.3.1)
+    spring (1.3.1)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -202,6 +207,7 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     uuidtools (2.1.5)
+    valuable (0.9.9)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -220,6 +226,7 @@ DEPENDENCIES
   devise
   font-awesome-rails
   forgery (= 0.6.0)
+  icalendar
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
@@ -234,8 +241,10 @@ DEPENDENCIES
   rails_12factor
   redis
   sass-rails (~> 4.0.3)
+  schema_plus
   sdoc (~> 0.4.0)
   sidekiq
+  spring
   sqlite3
   turbolinks
   tzinfo-data

@@ -17,13 +17,12 @@ class Digger::Calendar
   end
 
   def self.parse_xml_calendar(file, list)
-    xml = Nokogiri::XML(file)
-
-    xml.css('entry').each do |entry|
+    return
+    Nokogiri::XML(file).css('entry').each do |entry|
 
       # Event id
       event_id = Digest::MD5.hexdigest(strip_tags(entry.css('id').text.encode('UTF-8')).html_safe)
-      next if Event.exists?(gcal_id: event_id)
+      next if Event.exists?(uid: event_id)
 
       # Event location
       event_where = nil
@@ -94,7 +93,7 @@ class Digger::Calendar
         end
       end
 
-      Event.new({
+      Event.create({
         name: event_name,
         description: event_description,
         begin_at: DateTime.parse(event_first_start),
@@ -112,25 +111,22 @@ class Digger::Calendar
   end
 
   def self.parse_ics_calendar(file, list)
-    calendars = Icalendar.parse(file)
-
-    calendars.each do |calendar|
+    Icalendar.parse(file).each do |calendar|
       calendar.events.each do |event|
-        puts "----------"
-        puts Event.new({
-          name: event.summary,
-          description: event.description,
-          begin_at: DateTime.parse(event.dtstart),
+        uid  =  Digest::MD5.hexdigest(event.uid)
+        next if Event.exists?(uid: uid)
+        Event.create({
+          name: event.summary.to_s,
+          description: event.description.to_s,
+          begin_at: event.dtstart.to_datetime,
           list_id: list.id,
           price: 0,
           type: nil,
           artist: '',
           venue: '',
           recurring: false,
-          uid: Digest::MD5.hexdigest(event.id),
-          gcal: false
-        }).inspect
-        puts "----------"
+          uid: uid
+        })
       end
     end
   end

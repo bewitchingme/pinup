@@ -90,5 +90,3 @@ gem 'font-awesome-rails'
 gem 'spring', group: :development
 
 gem 'icalendar'
-
-gem 'schema_plus'

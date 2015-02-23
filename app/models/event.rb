@@ -27,7 +27,7 @@ class Event < ActiveRecord::Base
   scope :authorized, -> { where authorized: true }
   scope :recurring,  -> { where recurring: true  }
 
-
+  validates :uid, uniqueness: true
 
   before_save -> { self.day_of_week = begin_at.strftime('%A') }
   before_save -> { self.uid = uid.downcase }

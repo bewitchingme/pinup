@@ -6,10 +6,12 @@ class DashboardController < ApplicationController
   include ActionView::Helpers::SanitizeHelper
 
   before_action :authenticate_user!
+
+  expose(:lists) { List.all }
   
   def home
-    @events = Event.all
-    @events_authorization = Event.where(authorized: nil)
+    @events = Event.all.order(begin_at: :desc)
+    @events_authorization = Event.where(authorized: nil).order(begin_at: :desc)
     @csv_calendar = CsvCalendar.new
     @csv_calendars = CsvCalendar.all
     @ad = Ad.new

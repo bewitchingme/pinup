@@ -17,7 +17,9 @@ class Digger::Calendar
   end
 
   def self.parse_xml_calendar(file, list)
+    # Buggy
     return
+
     Nokogiri::XML(file).css('entry').each do |entry|
 
       # Event id
@@ -111,11 +113,14 @@ class Digger::Calendar
   end
 
   def self.parse_ics_calendar(file, list)
+
+    evts = []
+
     Icalendar.parse(file).each do |calendar|
       calendar.events.each do |event|
         uid  =  Digest::MD5.hexdigest(event.uid)
-        next if Event.exists?(uid: uid)
-        Event.create({
+        next if Event.exists?(uid: uid) || evts.detect { |e| e[:uid] == uid }
+        evts << {
           name: event.summary.to_s,
           description: event.description.to_s,
           begin_at: event.dtstart.to_datetime,
@@ -126,8 +131,10 @@ class Digger::Calendar
           venue: '',
           recurring: false,
           uid: uid
-        })
+        }
       end
     end
+
+    Event.create(evts)
   end
 end

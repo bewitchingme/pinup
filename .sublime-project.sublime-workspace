@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"ev",
+				"evnts"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
 				"gc",
 				"gcal_id"
 			],
@@ -506,24 +514,16 @@
 			[
 				"local",
 				"locales"
-			],
-			[
-				"lo",
-				"locales"
-			],
-			[
-				"messa",
-				"messages"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "config/routes.rb",
+			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 958,
+				"buffer_size": 2322,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,31 +531,7 @@
 			"file": "lib/digger/calendar.rb",
 			"settings":
 			{
-				"buffer_size": 3831,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/models/event.rb",
-			"settings":
-			{
-				"buffer_size": 4072,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "db/migrate/20150219034256_add_title_to_lists.rb",
-			"settings":
-			{
-				"buffer_size": 136,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "db/seeds.rb",
-			"settings":
-			{
-				"buffer_size": 2472,
+				"buffer_size": 3881,
 				"line_ending": "Windows"
 			}
 		}
@@ -616,30 +592,40 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Maxime/Documents/radiant-sands/app/controllers/dashboard_controller.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/lists/index.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/dashboard/_lists.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/lists/_form.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/lists/new.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/models/list.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/controllers/lists_controller.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/lists/show.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/lists/_list.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/db/migrate/20150214171536_add_list_id_to_events.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/db/migrate/20150223065841_add_list_id_to_events.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/db/schema.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/layout.css.scss",
+		"/C/Users/Maxime/Documents/radiant-sands/app/views/dashboard/home.html.erb",
+		"/C/Users/Maxime/Documents/radiant-sands/lib/digger/calendar.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/config/routes.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/app/models/event.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/db/migrate/20150219034256_add_title_to_lists.rb",
+		"/C/Users/Maxime/Documents/radiant-sands/db/seeds.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/Gemfile",
 		"/C/Users/Maxime/Documents/radiant-sands/db/migrate/20150219032622_rename_gcal_id_to_uid.rb",
-		"/C/Users/Maxime/Documents/radiant-sands/app/models/list.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/db/migrate/20150214185315_add_url_to_lists.rb",
-		"/C/Users/Maxime/Documents/radiant-sands/app/views/lists/index.html.erb",
-		"/C/Users/Maxime/Documents/radiant-sands/db/seeds.rb",
-		"/C/Users/Maxime/Documents/radiant-sands/db/schema.rb",
-		"/C/Users/Maxime/Documents/radiant-sands/db/migrate/20150214171536_add_list_id_to_events.rb",
-		"/C/Users/Maxime/Documents/radiant-sands/app/models/event.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/event_lists/index.html.erb",
-		"/C/Users/Maxime/Documents/radiant-sands/config/routes.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/event_lists/new.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/event_lists/edit.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/event_lists/show.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/event_lists/_form.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/controllers/events/event_lists_controller.rb",
-		"/C/Users/Maxime/Documents/radiant-sands/lib/digger/calendar.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/event_lists/show.json.jbuilder",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/event_lists/index.json.jbuilder",
 		"/C/Users/Maxime/AppData/Roaming/Sublime Text 2/Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
 		"/C/Users/Maxime/AppData/Roaming/Sublime Text 2/Packages/BeautifyRuby/BeautifyRuby.sublime-settings",
 		"/C/Users/Maxime/AppData/Roaming/Sublime Text 2/Packages/User/Ruby.sublime-settings",
 		"/C/Users/Maxime/Documents/radiant-sands/app/models/events/event_list.rb",
-		"/C/Users/Maxime/Documents/radiant-sands/app/controllers/dashboard_controller.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/lib/tasks/calendar.rake",
 		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/bootstrap_and_overrides.css.scss",
 		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/application.css",
@@ -652,7 +638,6 @@
 		"/C/Users/Maxime/Documents/radiant-sands/app/models/event/recurring_event.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/models/event/scheduled_event.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/db/migrate/20150208153423_add_type_to_events.rb",
-		"/C/Users/Maxime/Documents/radiant-sands/app/assets/stylesheets/layout.css.scss",
 		"/C/Users/Maxime/Documents/radiant-sands/app/models/event/unscheduled_event.rb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/events/index.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/controllers/events_controller.rb",
@@ -684,7 +669,6 @@
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/ads/_form.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/banners/_form.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/layouts/_advertisement.html.erb",
-		"/C/Users/Maxime/Documents/radiant-sands/app/views/dashboard/home.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/dashboard/_events.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/dashboard/_event_authorization.html.erb",
 		"/C/Users/Maxime/Documents/radiant-sands/app/views/venues/show.html.erb",
@@ -735,15 +719,7 @@
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/venues_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/artists_controller.rb",
 		"/C/Users/Coldfury/Documents/radiant-sands/app/controllers/admin/ads_controller.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141207194620_create_csv_calendars.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/models/csv_calendar.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/models/admin/ad.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/application.css",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/helpers/application_helper.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141207033658_add_authorized_to_events.rb",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/assets/stylesheets/artists.css.scss",
-		"/C/Users/Coldfury/Documents/radiant-sands/lib/tasks/calendar.rake",
-		"/C/Users/Coldfury/Documents/radiant-sands/app/views/layouts/_navbar.html.erb"
+		"/C/Users/Coldfury/Documents/radiant-sands/db/migrate/20141207194620_create_csv_calendars.rb"
 	],
 	"find":
 	{
@@ -762,6 +738,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"list",
+			"title",
 			"events",
 			"lists",
 			"puts",
@@ -887,9 +865,7 @@
 			"_content_length",
 			"_CONTENT_LENGTH",
 			"_content_length",
-			"_CONTENT_LENGTH",
-			"_TITLE_LENGTH",
-			"_title_length"
+			"_CONTENT_LENGTH"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -912,28 +888,26 @@
 			[
 				{
 					"buffer": 0,
-					"file": "config/routes.rb",
+					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 958,
+						"buffer_size": 2322,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								636,
-								636
+								2322,
+								2322
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1155.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -943,15 +917,15 @@
 					"file": "lib/digger/calendar.rb",
 					"settings":
 					{
-						"buffer_size": 3831,
+						"buffer_size": 3881,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3629,
-								3629
+								3292,
+								3292
 							]
 						],
 						"settings":
@@ -961,89 +935,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1335.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/models/event.rb",
-					"settings":
-					{
-						"buffer_size": 4072,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1010,
-								1010
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 180.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "db/migrate/20150219034256_add_title_to_lists.rb",
-					"settings":
-					{
-						"buffer_size": 136,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								125,
-								125
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "db/seeds.rb",
-					"settings":
-					{
-						"buffer_size": 2472,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2330,
-								2330
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 480.0,
+						"translation.y": 1500.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

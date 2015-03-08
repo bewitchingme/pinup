@@ -4,17 +4,9 @@ class EventsController < ApplicationController
   before_action :authenticate_user!, only: [ :edit, :update, :destroy ]
 
   expose(:types) { EventType.order('name ASC') }
-  expose(:events) { filter_param.nil? ? find_all_events : find_filtered_events }
-  expose(:event, attributes: :event_params) { id_param.nil? ? Event.new : Event.find(id_param) }
+  expose(:events) { params[:filter].nil? ? find_all_events : find_filtered_events }
+  expose(:event, attributes: :event_params) { params[:id].nil? ? Event.new : Event.find(params[:id]) }
   expose(:date) { params[:date].nil? ? Date.today : Date.parse(params[:date]) }
-
-  expose(:monday_events) { events.monday }
-  expose(:tuesday_events) { events.tuesday }
-  expose(:wednesday_events) { events.wednesday }
-  expose(:thursday_events) { events.thursday }
-  expose(:friday_events) { events.friday }
-  expose(:saturday_events) { events.saturday }
-  expose(:sunday_events) { events.sunday }
 
   def create
     self.event = Event.new(event_params)
@@ -59,25 +51,13 @@ class EventsController < ApplicationController
     def find_all_events
       Event.where(
         'begin_at > ?', Time.now
-      ).authorized.order( 'begin_at ASC' ).page( page_param )
+      ).authorized.order( 'begin_at ASC' ).page( params[:page] )
     end
 
     def find_filtered_events
       Event.where(
         'begin_at >= ? AND event_type_id = ?',
-        Date.today, EventType.find_by( name: filter_param )
-      ).authorized.order( 'begin_at ASC' ).page( page_param )
-    end
-
-    def id_param
-      params[:id]
-    end
-
-    def page_param
-      params[:page]
-    end
-
-    def filter_param
-      params[:filter]
+        Date.today, EventType.find_by( name: params[:filter] )
+      ).authorized.order( 'begin_at ASC' ).page( params[:page] )
     end
 end

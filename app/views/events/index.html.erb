@@ -4,101 +4,10 @@
 <%= link_to fa_icon('arrow-left'),  events_path(date: date - 7), class: 'btn btn-flat btn-primary pull-left' %>
 <h1 class="text-center"><%= date.strftime('%Y-%m-%d') %></h1>
 
-<% if monday_events.size > 0 %>
-  <legend>Monday</legend>
-<% end %>
-<% monday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
-  <% events_beginning_at_hour.each do |event| %>
-<% if current_user.nil? || !current_user.admin? %>
-    <%= render event %>
-    <% else %>
-    <%= render 'events/admin_event', event: event %>
+<div class="events">
+  <div class="page">
+    <% events.each do |event| %>
+      <%= render event %>
     <% end %>
-  <% end %>
-<% end %>
-
-<% if tuesday_events.size > 0 %>
-  <legend>Tuesday</legend>
-<% end %>
-<% tuesday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
-  <% events_beginning_at_hour.each do |event| %>
-  <% if current_user.nil? || !current_user.admin? %>
-  <%= render event %>
-  <% else %>
-  <%= render 'events/admin_event', event: event %>
-  <% end %>
-  <% end %>
-<% end %>
-
-<% if wednesday_events.size > 0 %>
-  <legend>Wednesday</legend>
-<% end %>
-<% wednesday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
-  <% events_beginning_at_hour.each do |event| %>
-    <% if current_user.nil? || !current_user.admin? %>
-    <%= render event %>
-    <% else %>
-    <%= render 'events/admin_event', event: event %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<% if thursday_events.size > 0 %>
-  <legend>Thursday</legend>
-<% end %>
-<% thursday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
-  <% events_beginning_at_hour.each do |event| %>
-    <% if current_user.nil? || !current_user.admin? %>
-    <%= render event %>
-    <% else %>
-    <%= render 'events/admin_event', event: event %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<% if friday_events.size > 0 %>
-  <legend>Friday</legend>
-<% end %>
-<% friday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
-  <% events_beginning_at_hour.each do |event| %>
-    <% if current_user.nil? || !current_user.admin? %>
-    <%= render event %>
-    <% else %>
-    <%= render 'events/admin_event', event: event %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<% if saturday_events.size > 0 %>
-  <legend>Saturday</legend>
-<% end %>
-<% saturday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
-  <% events_beginning_at_hour.each do |event| %>
-    <% if current_user.nil? || !current_user.admin? %>
-    <%= render event %>
-    <% else %>
-    <%= render 'events/admin_event', event: event %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<% if sunday_events.size > 0 %>
-  <legend>Sunday</legend>
-<% end %>
-<% sunday_events.group_by(&:begin_at_hour).each do |begin_at_hour, events_beginning_at_hour| %>
-  <% events_beginning_at_hour.each do |event| %>
-    <% if current_user.nil? || !current_user.admin? %>
-    <%= render event %>
-    <% else %>
-    <%= render 'events/admin_event', event: event %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<!-- <div id="events"> -->
-  <%# render 'events/event' %>
-<!-- </div> -->
-
-<!-- <div id="infinite-scrolling"> -->
-  <%# paginate events %>
-<!-- </div> -->
+  </div>
+</div>

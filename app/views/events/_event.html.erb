@@ -1,28 +1,42 @@
-<%# events.group_by(&:begin_at_date).each do |begin_at_date, events_beginning_at_date| %>
-  <!-- <div class="row"> -->
-    <!-- <time id="begin-at-date" class="col-md-12" datetime="<%# begin_at_date %>"> -->
-      <!-- <legend><%# begin_at_date %></legend> -->
-    <!-- </time> -->
-  <!-- </div> -->
+<% if current_user.nil? || !current_user.admin? %>
+  <div class="row">
+    <%= link_to event, id: "event-#{event.id}", class: 'event col-md-12' do %>
+      <%= image_tag event.type_icon, class: 'type-icon pull-left', width: 42, height: 42 %>
+      
+      <p id="name-container">
+        <time id="begin-at" datetime="<%= event.begin_at %>">
+          <%= event.begin_at.to_s(:long) %>
+        </time>
+        <strong id="name"><%= event %></strong>
+      </p>
+      
+      <p>
+        <span id="artist"><%= event.artist %></span>
+         @ 
+        <span id="venue"><%= event.venue %></span> 
+        <span id="price"><%= number_to_currency(event.price) %></span>
+      </p>
+    <% end %>
+  </div>
 
-  <%# events_beginning_at_date.each do |event| %>
-    <div class="row">
-      <%= link_to event, id: "event-#{event.id}", class: 'event col-md-12' do %>
-        <%= image_tag event.type_icon, class: 'type-icon pull-left', width: 42, height: 42 %>
-        <p id="name-container">
-          <time id="begin-at-time" datetime="<%= event.begin_at_time %>">
-            <%= event.begin_at_time.to_s(:time) %>
-          </time>
-          <strong id="name"><%= event %></strong>
-        </p>
-        <p>
-          <span id="artist"><%= event.artist %></span>
-           @ 
-          <span id="venue"><%= event.venue %></span> 
-          <span id="price"><%= number_to_currency(event.price) %></span>
-        </p>
-      <% end %>
-    </div>
-  <%# end %>
-
-<%# end %>
+<% else %>
+  <div class="row">
+    <%= link_to edit_event_path(event), id: "event-#{event.id}", class: 'event col-md-12' do %>
+      <%= image_tag event.type_icon, class: 'type-icon pull-left', width: 42, height: 42 %>
+      
+      <p id="name-container">
+        <time id="begin-at-time" datetime="<%= event.begin_at %>">
+          <%= event.begin_at.to_s(:long) %>
+        </time>
+        <strong id="name"><%= event %></strong>
+      </p>
+      
+      <p>
+        <span id="artist"><%= event.artist %></span>
+         @ 
+        <span id="venue"><%= event.venue %></span> 
+        <span id="price"><%= number_to_currency(event.price) %></span>
+      </p>
+    <% end %>
+  </div>
+<% end %>

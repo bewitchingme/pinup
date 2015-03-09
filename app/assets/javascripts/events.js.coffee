@@ -3,9 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-  $("#events .page").infinitescroll
-    navSelector: "nav.pagination" # selector for the paged navigation (it will be hidden)
-    nextSelector: "nav.pagination a[rel=next]" # selector for the NEXT link (to page 2)
-    itemSelector: "#events event" # selector for all items you'll retrieve
-
-  return
+  $("#events").infinitescroll
+    navSelector: ".prev" # selector for the paged navigation (it will be hidden)
+    nextSelector: ".next" # selector for the NEXT link (to page 2)
+    itemSelector: ".event" # selector for all items you'll retrieve

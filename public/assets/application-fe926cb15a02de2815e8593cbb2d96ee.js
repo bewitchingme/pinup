@@ -22766,10 +22766,10 @@ THE SOFTWARE.
 }).call(this);
 (function() {
   $(document).ready(function() {
-    $("#events .page").infinitescroll({
-      navSelector: "nav.pagination",
-      nextSelector: "nav.pagination a[rel=next]",
-      itemSelector: "#events event"
+    return $("#events").infinitescroll({
+      navSelector: ".prev",
+      nextSelector: ".next",
+      itemSelector: ".event"
     });
   });
 

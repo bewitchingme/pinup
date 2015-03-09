@@ -16,6 +16,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery.turbolinks
+//= require jquery.infinitescroll
 //= require bootstrap-datepicker
 //= require moment
 //= require bootstrap-datetimepicker

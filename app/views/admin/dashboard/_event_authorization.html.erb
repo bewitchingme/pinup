@@ -26,9 +26,9 @@
       <td><%= link_to event, edit_event_path(event) %></td>
       <td>
         <div class="btn-group btn-group-justified" role="group">
-          <%= link_to 'Yes', event_path(event, :"event[authorized]" => true),
+          <%= link_to 'Yes', admin_event_path(event, :"event[authorized]" => true),
               class: 'btn btn-primary btn-xs', method: :patch %>
-          <%= link_to 'No', event_path(event, :"event[authorized]" => false),
+          <%= link_to 'No',  admin_event_path(event, :"event[authorized]" => false),
               class: 'btn btn-danger btn-xs', method: :patch %>
         </div>
       </td>

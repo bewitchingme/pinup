@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'digest/sha1'
 require 'open-uri'
 
-class DashboardController < ApplicationController
+class Admin::DashboardController < ApplicationController
   include ActionView::Helpers::SanitizeHelper
 
   before_action :authenticate_user!

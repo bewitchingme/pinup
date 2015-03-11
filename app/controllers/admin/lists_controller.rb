@@ -1,4 +1,4 @@
-class ListsController < ApplicationController
+class Admin::ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
 
   respond_to :html

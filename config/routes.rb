@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :banners
-
   root to: 'root#home'
-
-  resources :csv_calendars
 
   devise_for :users, controllers: { registrations: 'users/registrations',
                                     sessions: 'users/sessions',
@@ -36,6 +32,8 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :csv_calendars
+
     resources :artists
     
     resources :venues
@@ -45,6 +43,7 @@ Rails.application.routes.draw do
     resources :events do
       member do
         patch :authorize
+        patch :unauthorize
       end
       
       collection do

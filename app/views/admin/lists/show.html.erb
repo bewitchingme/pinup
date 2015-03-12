@@ -1,6 +1,6 @@
-<h3><%= @list.title %></h3>
+<h3><%= list.title %></h3>
 
-<p><strong>Url :</strong><pre><%= @list.url %></pre></p>
+<p><strong>Url :</strong><pre><%= list.url %></pre></p>
 
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+<%= link_to 'Edit', edit_admin_list_path(list) %> |
+<%= link_to 'Back', admin_lists_path %>

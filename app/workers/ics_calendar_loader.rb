@@ -3,7 +3,7 @@ class ICSCalendarLoader
 
   def perform(url, list_id)
     open(url) do |file|
-      list = List.find(list_id)
+      list = Admin::List.find(list_id)
       evts = []
 
       Icalendar.parse(file).each do |calendar|

@@ -3,7 +3,7 @@ require './app/workers/xml_calendar_loader'
 
 class Digger::Calendar
   def self.load
-    List.all.each do |list|
+    Admin::List.all.each do |list|
       open(list.url) do |file|
         case file.content_type
         when 'application/atom+xml'

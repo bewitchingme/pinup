@@ -1,42 +1,25 @@
-<% if current_user.nil? || !current_user.admin? %>
-  <div class="row">
-    <%= link_to event, id: "event-#{event.id}", class: 'event col-md-12' do %>
-      <%= image_tag event.type_icon, class: 'type-icon pull-left', width: 42, height: 42 %>
-      
-      <p id="name-container">
-        <time id="begin-at" datetime="<%= event.begin_at %>">
-          <%= event.begin_at.to_s(:long) %>
-        </time>
-        <strong id="name"><%= event %></strong>
-      </p>
-      
-      <p>
-        <span id="artist"><%= event.artist %></span>
-         @ 
-        <span id="venue"><%= event.venue %></span> 
-        <span id="price"><%= number_to_currency(event.price) %></span>
-      </p>
-    <% end %>
-  </div>
+<div class="row">
+  <div class="col-md-12">
+    <%= link_to event, id: "event-#{event.id}", class: 'event' do %>
 
-<% else %>
-  <div class="row">
-    <%= link_to edit_event_path(event), id: "event-#{event.id}", class: 'event col-md-12' do %>
       <%= image_tag event.type_icon, class: 'type-icon pull-left', width: 42, height: 42 %>
       
-      <p id="name-container">
-        <time id="begin-at-time" datetime="<%= event.begin_at %>">
-          <%= event.begin_at.to_s(:long) %>
-        </time>
-        <strong id="name"><%= event %></strong>
-      </p>
+      <div id="event-title">
+        <strong>
+          <time id="event-begin-at" datetime="<%= event.begin_at %>">
+            <%= event.begin_at.strftime('%Y-%m-%d %H:%M') %>
+          </time>
+          <span id="event-name"><%= event %></span>
+        </strong>
+      </div>
       
-      <p>
-        <span id="artist"><%= event.artist %></span>
+      <div id="event-description">
+        <span id="event-artist"><%= event.artist %></span>
          @ 
-        <span id="venue"><%= event.venue %></span> 
-        <span id="price"><%= number_to_currency(event.price) %></span>
-      </p>
+        <span id="event-venue"><%= event.venue %></span> 
+        <span id="event-price"><%= number_to_currency(event.price) %></span>
+      </div>
+      
     <% end %>
   </div>
-<% end %>
+</div>

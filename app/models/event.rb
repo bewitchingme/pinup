@@ -159,6 +159,24 @@ class Event < ActiveRecord::Base
 
 
 
+  ### AUTHORIZATION
+
+  def self.authorize_all
+    where(authorized: nil).each do |event|
+      event.authorize
+    end
+  end
+
+  def authorize
+    update(authorized: true)
+  end
+
+  def unauthorize
+    update(authorized: false)
+  end
+
+
+
   private
 
 

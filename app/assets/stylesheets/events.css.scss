@@ -13,7 +13,7 @@
 
 .event {
   padding-top: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 21px;
   
   color: $text-color;
 
@@ -32,8 +32,18 @@
   margin-right: 10px;
 }
 
-#begin-at-time {
+#event-title {
+  font-size: 17px;
+}
+
+#event-description {
+  font-size: 16px;
+}
+
+#event-begin-at {
   font-weight: bold;
+  color: black;
+  margin-right: 6px;
 }
 
 @media (max-width: 480px), (max-width: 768px) {

@@ -1,0 +1,53 @@
+<div role="tabpanel">
+  <ul id="dashboard-tabs" class="nav nav-tabs" role="tablist">
+    <li>
+      <%= link_to 'Events', '#events', role: 'tab', data: { toggle: 'tab' } %>
+    </li>
+
+    <li role="presentation">
+      <%= link_to 'Lists', '#lists', role: 'tab', data: { toggle: 'tab' } %>
+    </li>
+
+    <li role="presentation" class="active">
+      <%= link_to 'Authorization', '#event-authorization', role: 'tab', data: { toggle: 'tab' } %>
+    </li>
+
+    <li role="presentation">
+      <%= link_to 'Banner Upload', '#banner-upload', role: 'tab', data: { toggle: 'tab' } %>
+    </li>
+
+    <li role="presentation">
+      <%= link_to 'Ad Upload', '#ad-upload', role: 'tab', data: { toggle: 'tab' } %>
+    </li>
+    
+    <li role="presentation">
+      <%= link_to 'CSV Upload', '#csv-upload', role: 'tab', data: { toggle: 'tab' } %>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane" id="events">
+      <%= render 'admin/dashboard/events' %>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="lists">
+      <%= render 'admin/dashboard/lists' %>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="banner-upload">
+      <%= render 'admin/dashboard/banner_upload' %>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="ad-upload">
+      <%= render 'admin/dashboard/ad_upload' %>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="csv-upload">
+      <%= render 'admin/dashboard/csv_upload' %>
+    </div>
+
+    <div role="tabpanel" class="tab-pane active" id="event-authorization">
+      <%= render 'admin/dashboard/event_authorization' %>
+    </div>
+  </div>
+</div>

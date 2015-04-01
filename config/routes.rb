@@ -51,4 +51,5 @@ Rails.application.routes.draw do
       end
     end
   end
+    get '/blog', to: 'static_pages#blog', as: 'blog'
 end

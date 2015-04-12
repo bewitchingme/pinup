@@ -1,4 +1,4 @@
-ical_renderer.rb# Return an iCalendar string representing an Array of Event instances.
+# Return an iCalendar string representing an Array of Event instances.
 #
 # Arguments:
 # * :events - Event instance or array of them.

@@ -2,21 +2,21 @@
   <div class="col-md-12">
     <%= link_to event, id: "event-#{event.id}", class: 'event' do %>
 
-      <%= image_tag event.type_icon, class: 'type-icon pull-left', width: 42, height: 42 %>
       
       <div id="event-title">
         <strong>
-          <time id="event-begin-at" datetime="<%= event.begin_at %>">
-            <%= event.begin_at.strftime('%Y-%m-%d %H:%M') %>
+          <time id="event-begin-at" datetime="<%= event.start_time %>">
+            <%= event.start_time.strftime('%Y-%m-%d %H:%M') %>
           </time>
-          <span id="event-name"><%= event %></span>
+          <span id="event-name"><%= event.title %></span>
         </strong>
       </div>
       
       <div id="event-description">
-        <span id="event-artist"><%= event.artist %></span>
-         @ 
-        <span id="event-venue"><%= event.venue %></span> 
+        <span id="event-artist"><%= event.artist %></span> 
+        <% if event.venue_id? %>
+        <span id="event-venue"><%= event.venue.title %></span> 
+        <% end %>
         <span id="event-price"><%= number_to_currency(event.price) %></span>
       </div>
       

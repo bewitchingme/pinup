@@ -1,6 +1,8 @@
 class EventType < ActiveRecord::Base
   before_save :to_lower_case
 
+  has_many :events
+
   def to_s
     "#{ name.titleize unless name.nil? }"
   end

@@ -8,7 +8,7 @@
     <% artist.events.group_by(&:begin_at_date).each_with_index do |(begin_at_date, events_beginning_at_date), index| %>
       <% events_beginning_at_date.each do |event| %>
         <li id="event-list-item-<%= index %> event-<%= event.id %>" class="row">
-          <time datetime="<%= event.begin_at %>" class="col-md-4"><%= event.begin_at.to_s(:long) %></time>
+          <time datetime="<%= event.start_time %>" class="col-md-4"><%= event.start_time.to_s(:long) %></time>
           <%= link_to event, event, class: 'col-md-8' %>
         </li>
       <% end %>

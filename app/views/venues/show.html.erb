@@ -3,8 +3,8 @@
 
   <strong>Shows</strong>
   <ul style="list-style-type: none; padding-left: 0;">
-    <% venue.events.order('begin_at ASC').each do |event| %>
-      <li><%= event.begin_at.strftime('%Y-%m-%d %H:%M') %> – <%= link_to event, event %></li>
+    <% venue.events.order('start_time ASC').each do |event| %>
+      <li><%= event.start_time.strftime('%Y-%m-%d %H:%M') %> – <%= link_to event, event %></li>
     <% end %>
   </ul>
 

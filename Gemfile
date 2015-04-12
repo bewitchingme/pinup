@@ -20,7 +20,16 @@ gem 'jquery-turbolinks'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-
+gem 'paper_trail', '3.0.7'
+gem 'loofah', '2.0.1'
+gem 'loofah-activerecord', '1.2.0'
+gem 'formtastic', '2.2.1'
+gem 'htmlentities', '4.3.1'
+gem 'ri_cal', '0.8.8'
+gem 'rest-client', '1.6.7'
+gem 'mofo', path: 'vendor/gems/mofo-0.2.8' # vendored fork with hpricot dependency replaced with nokogiri
+gem 'acts-as-taggable-on', '2.4.1'
+gem 'geokit', '1.6.5'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: [ :ruby, :mingw, :x64_mingw, :mswin ]
 # gem 'therubyrhino',  platforms: :jruby
@@ -64,7 +73,7 @@ gem 'nokogiri'
 
 # Use unicorn as the app server
 gem 'unicorn'
-
+gem 'quiet_assets', group: :development
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

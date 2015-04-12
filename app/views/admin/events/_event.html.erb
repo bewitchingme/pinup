@@ -3,8 +3,8 @@
     <%= image_tag event.type_icon, class: 'type-icon pull-left', width: 42, height: 42 %>
     
     <p id="name-container">
-      <time id="begin-at-time" datetime="<%= event.begin_at %>">
-        <%= event.begin_at.strftime('%Y-%m-%d %H:%M') %>
+      <time id="begin-at-time" datetime="<%= event.start_time %>">
+        <%= event.start_time.strftime('%Y-%m-%d %H:%M') %>
       </time>
       <strong id="name"><%= event %></strong>
     </p>

@@ -14,8 +14,8 @@ class Admin::DashboardController < ApplicationController
   expose(:csv_calendars) { Admin::CsvCalendar.all }
   
   def home
-    @events = Event.order(begin_at: :desc)
-    @events_authorization = Event.where(authorized: nil).order(begin_at: :desc)
+    @events = Event.order(start_time: :desc)
+    @events_authorization = Event.where(authorized: false).order(start_time: :desc)
   end
 
   def load_google_calendars

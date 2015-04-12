@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :sources do
+    collection do
+      post :import
+    end
+  end
+
   root to: 'root#home'
 
   devise_for :users, controllers: { registrations: 'users/registrations',

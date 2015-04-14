@@ -49,6 +49,28 @@
     role: Role.find_by(name: 'admin')
   }])
 
+  name2  = 'Cindy Savard'
+  email2 = 'savardcindy@gmail.com'
+  user  = User.create([{
+    name: name2,
+    email: email2,
+    password: password2,
+    password_confirmation: password2,
+    user_group: UserGroup.find_by(name: 'admin'),
+    role: Role.find_by(name: 'admin')
+  }])
+
+  name3  = 'Philippe Mineau'
+  email3 = 'philippe.mineau@gmail.com'
+  user  = User.create([{
+    name: name3,
+    email: email3,
+    password: password,
+    password_confirmation: password,
+    user_group: UserGroup.find_by(name: 'admin'),
+    role: Role.find_by(name: 'admin')
+  }])
+
   # lists = List.create([
   #   { title: "Ottawa Jazz Happenings",
   #     url:   "http://www.google.com/calendar/ical/ottawajazzhappenings%40jazzworkscanada.com/public/basic.ics"},

@@ -54,8 +54,8 @@
   user  = User.create([{
     name: name2,
     email: email2,
-    password: password2,
-    password_confirmation: password2,
+    password: password,
+    password_confirmation: password,
     user_group: UserGroup.find_by(name: 'admin'),
     role: Role.find_by(name: 'admin')
   }])

@@ -54,6 +54,7 @@ Rails.application.routes.draw do
       
       collection do
         patch :authorize_all
+        post :import
       end
     end
   end

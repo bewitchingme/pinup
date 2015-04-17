@@ -3,3 +3,4 @@ class Admin::CsvCalendar < ActiveRecord::Base
 
   do_not_validate_attachment_file_type :file
 end
+

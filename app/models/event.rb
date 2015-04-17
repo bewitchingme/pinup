@@ -139,6 +139,14 @@ class Event < ActiveRecord::Base
     super nil
   end
 
+  def self.import(file)
+
+    CSV.foreach(file.path, headers: true) do |row|
+
+      event.attributes = row.to_hash.slice(*accessible_attributes)
+    end # end CSV.foreach
+  end
+
   def time_for(value)
     value = value.join(' ') if value.kind_of?(Array)
     value = Time.zone.parse(value) if value.kind_of?(String) # this will throw ArgumentError if invalid

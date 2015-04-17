@@ -22,6 +22,11 @@ class EventsController < ApplicationController
     end
   end
 
+  def import
+      Event.import(params[:file])
+      redirect_to admin_dashboard_path, notice: "Events from CSV Imported"
+  end
+
   def update
     respond_to do |format|
       if event.update_attributes(event_params)
@@ -45,7 +50,7 @@ class EventsController < ApplicationController
 
   private
     def event_params
-      params.require(:event).permit(:name, :description, :begin_at, :price, :referrer, :artist, :venue, :type, :authorized, :source, :title, :organization, :start_time, :url, :duplicate_of, :end_time, :rrule, :venue_details, :venue_id, :artist_id, :event_type_id)
+      params.require(:event).permit(:description, :price, :referrer, :authorized, :source, :title, :organization, :start_time, :url, :duplicate_of, :end_time, :rrule, :venue_details, :venue_id, :artist_id, :event_type_id)
     end
 
     def find_all_events

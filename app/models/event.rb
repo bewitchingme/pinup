@@ -23,7 +23,7 @@
 #
 # A model representing a calendar event.
 class Event < ActiveRecord::Base
-  require 'CSV'
+  require 'csv'
   has_paper_trail
   acts_as_taggable
 

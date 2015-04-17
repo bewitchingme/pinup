@@ -14,7 +14,11 @@ Rails.application.routes.draw do
 
   resources :artists, except: [ :edit, :update, :destroy ]
   resources :venues,  except: [ :edit, :update, :destroy ]
-  resources :events,  except: [ :edit, :update, :destroy ]
+  resources :events,  except: [ :edit, :update, :destroy ] do
+    collection do
+      post :import
+    end
+  end
 
   namespace :admin do
     get 'dashboard', to: 'dashboard#home'
@@ -54,7 +58,6 @@ Rails.application.routes.draw do
       
       collection do
         patch :authorize_all
-        post :import
       end
     end
   end

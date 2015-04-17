@@ -23,6 +23,7 @@
 #
 # A model representing a calendar event.
 class Event < ActiveRecord::Base
+  require 'CSV'
   has_paper_trail
   acts_as_taggable
 
@@ -139,11 +140,15 @@ class Event < ActiveRecord::Base
     super nil
   end
 
+  # def accessible_attributes
+  #   [title, description, start_time, end_time, url, price, venue_id, event_type_id, artist_id, referrer, authorized, source, organization, duplicate_of, rrule, venue_details]
+  # end
+
   def self.import(file)
 
     CSV.foreach(file.path, headers: true) do |row|
 
-      event.attributes = row.to_hash.slice(*accessible_attributes)
+      Event.create! row.to_hash.slice(*row.to_hash.keys)
     end # end CSV.foreach
   end
 

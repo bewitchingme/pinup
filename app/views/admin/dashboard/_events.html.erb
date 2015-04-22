@@ -13,9 +13,11 @@
   
   <% @events.order('start_time DESC').each do |event| %>
     <tr>
-      <td><small><%= event.start_time.strftime('%H:%M %d-%m-%Y') %></small></td>
-      <td><%= link_to event.title, edit_admin_event_path(event) %></td>
-      <td><%= event.recurring? ? "<strong class=\"text-success\">Yes</strong>".html_safe : "<strong class=\"text-danger\">No</strong>".html_safe %></td>
+      <% if event.authorized %>
+        <td><small><%= event.start_time.strftime('%H:%M %d-%m-%Y') %></small></td>
+        <td><%= link_to event.title, edit_admin_event_path(event) %></td>
+        <td><%= event.recurring? ? "<strong class=\"text-success\">Yes</strong>".html_safe : "<strong class=\"text-danger\">No</strong>".html_safe %></td>
+      <% end %>
     </tr>
   <% end %>
 </table>

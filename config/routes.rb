@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :artists, except: [ :edit, :update, :destroy ]
   resources :venues,  except: [ :edit, :update, :destroy ]
-  resources :events,  except: [ :edit, :update, :destroy ] do
+  resources :events,  except: [ :destroy ] do
     collection do
       post :import
     end

@@ -33,7 +33,7 @@ module DuplicateChecking
   DUPLICATE_MARK_COLUMN = :duplicate_of_id
   DEFAULT_SQUASH_METHOD = :mark
   DUPLICATE_CHECKING_IGNORES_ATTRIBUTES =
-    Set.new((%w(created_at updated_at id) + [DUPLICATE_MARK_COLUMN]).map(&:to_sym))
+    Set.new((%w(created_at updated_at id authorized event_type_id artist_id venue_id price) + [DUPLICATE_MARK_COLUMN]).map(&:to_sym))
 
   def self.included(base)
     base.extend ClassMethods

@@ -45,7 +45,7 @@
     email: email,
     password: password,
     password_confirmation: password,
-    user_group: UserGroup.find_by(name: 'admin'),
+    user_group_id: 2,
     role: Role.find_by(name: 'admin')
   }])
 
@@ -56,7 +56,7 @@
     email: email2,
     password: password,
     password_confirmation: password,
-    user_group: UserGroup.find_by(name: 'admin'),
+    user_group_id: 2,
     role: Role.find_by(name: 'admin')
   }])
 
@@ -67,7 +67,7 @@
     email: email3,
     password: password,
     password_confirmation: password,
-    user_group: UserGroup.find_by(name: 'admin'),
+    user_group_id: 2,
     role: Role.find_by(name: 'admin')
   }])
 

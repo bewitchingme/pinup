@@ -170,7 +170,7 @@ class EventsController < ApplicationController
   def find_authorized_event
     @event = Event.find(params[:id])
     authorized =
-      (current_admin || !@event.organization || @event.organization == current_organization) && !@event.locked?
+      (current_user.user_group_id == 2 || !@event.organization || @event.organization == current_organization) && !@event.locked?
 
     unless authorized
       not_authorized

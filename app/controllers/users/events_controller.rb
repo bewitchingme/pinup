@@ -33,7 +33,7 @@ class EventsController < ApplicationController
   # GET /events/new
   # GET /events/new.xml
   def new
-    if current_admin || current_organization
+    if current_user.user_group_id == 2 || current_organization
       attrs = { organization: current_organization}.merge(params[:event] || {})
       @event = Event.new(attrs)
     else
@@ -48,7 +48,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.xml
   def create
-    if current_admin || current_organization
+    if current_user.user_group_id == 2 || current_organization
       attrs = { organization: current_organization}.merge(params[:event] || {})
       @event = Event.new(attrs)
       create_or_update

@@ -9,14 +9,8 @@
       </div>
     </div>
     <% else %>
-    <div class="col-md-2">
-      <div class="form-group">
-        <%= f.label :id %>
-        <%= f.text_field :id, class: 'form-control disabled', disabled: true %>
-        <%= display_error_for(event, :id) %>
-      </div>
-    </div>
-    <div class="col-md-10">
+
+    <div class="col-md-12">
       <div class="form-group">
         <%= f.label :title %>
         <%= f.text_field :title, class: 'form-control' %>
@@ -28,15 +22,8 @@
 
   <% if current_user.nil? || !current_user.admin? %>
   <% else %>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="form-group">
-        <%= f.label :recurring %>
-        <%= f.text_field :recurring, class: 'form-control disabled', disabled: true, value: event.recurring? %>
-        <%= display_error_for(event, :recurring) %>
-      </div>
-    </div>
-  </div>
+  <%= f.hidden_field :authorized, value: true %>
+
   <% end %>
 
   <div class="row">
@@ -50,15 +37,15 @@
   </div>
 
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="form-group">
-        <%= f.label :venue_id %>
-        <%= f.text_field :venue_id, class: 'form-control' %>
+        <%= f.label :venue_id %> <br />
+        <%= f.collection_select :venue_id, Venue.all, :id, :title %>
         <%= display_error_for(event, :venue_id) %>
       </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="form-group">
         <%= f.label :artist_id %>
         <%= f.text_field :artist_id, class: 'form-control' %>
@@ -70,8 +57,8 @@
   <div class="row">
     <div class="col-md-12">
       <div class="form-group">
-        <%= f.label :event_type_id %>
-        <%= f.select :event_type_id, types.map {|t| [t, t]}, {}, { class: 'form-control' } %>
+        <%= f.label :event_type_id %> <br />
+        <%= f.collection_select :event_type_id, EventType.all, :id, :name %>
         <%= display_error_for(event, :event_type_id) %>
       </div>
     </div>
@@ -82,7 +69,7 @@
       <div class="form-group">
         <%= f.label :start_time %>
         <%= f.text_field :start_time, class: 'datetimepicker form-control',
-            value: event.start_time.nil? ? Time.now.strftime('%H:%M %d-%m-%Y') : event.start_time.strftime('%H:%M %d-%m-%Y'),
+            value: event.start_time.nil? ? Time.now.strftime('%Y-%m-%d %H:%M') : event.start_time.strftime('%Y-%m-%d %H:%M'),
             data: { "date-format" => 'YYYY-MM-DD HH:MM' } %>
         <%= display_error_for(event, :start_time) %>
       </div>

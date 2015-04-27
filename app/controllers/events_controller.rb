@@ -29,7 +29,7 @@ class EventsController < ApplicationController
 
   def update
     respond_to do |format|
-      if event.update(event_params)
+      if event.update_attributes!(event_params)
         format.html { redirect_to admin_dashboard_path, notice: 'Event was successfully updated.' }
         format.json { render :show, status: :ok, location: event }
       else

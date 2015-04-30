@@ -60,7 +60,16 @@ class EventsController < ApplicationController
   # PUT /events/1
   # PUT /events/1.xml
   def update
-    create_or_update
+    # create_or_update
+        respond_to do |format|
+      if event.update(event_params)
+        format.html { redirect_to admin_dashboard_path, notice: 'Event was successfully updated.' }
+        format.json { render :show, status: :ok, location: event }
+      else
+        format.html { render :edit }
+        format.json { render json: event.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def create_or_update

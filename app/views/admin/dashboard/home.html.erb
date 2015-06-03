@@ -4,6 +4,10 @@
       <%= link_to 'Events', '#events', role: 'tab', data: { toggle: 'tab' } %>
     </li>
 
+    <li>
+      <%= link_to 'Venues', '#venues', role: 'tab', data: { toggle: 'tab' } %>
+    </li>
+
     <li role="presentation">
       <%= link_to 'Lists', '#lists', role: 'tab', data: { toggle: 'tab' } %>
     </li>
@@ -28,6 +32,10 @@
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane" id="events">
       <%= render 'admin/dashboard/events' %>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="venues">
+      <%= render 'admin/dashboard/venues' %>
     </div>
 
     <div role="tabpanel" class="tab-pane" id="lists">

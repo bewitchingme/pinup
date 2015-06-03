@@ -19,6 +19,7 @@ class Venue < ActiveRecord::Base
   # Triggers
   strip_whitespace! :title, :description, :address, :url, :street_address, :locality, :region, :postal_code, :country, :email, :telephone
   before_save :geocode!
+  before_update :geocode!
 
   # Validations
   validates_presence_of :title

@@ -11,7 +11,7 @@
 class Admin::Source::Parser::Ical < Admin::Source::Parser
   self.label = :iCalendar
 
-  VENUE_CONTENT_RE = /^BEGIN:VVENUE$.*?^END:VVENUE$/m
+  VENUE_CONTENT_RE = /^BEGIN:VEVENT$.*?^END:VEVENT$/m
 
   # Override Base::read_url to handle "webcal" scheme addresses.
   def self.read_url(url)

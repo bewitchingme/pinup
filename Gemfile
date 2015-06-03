@@ -1,12 +1,15 @@
 source 'https://rubygems.org'
 ruby '2.2.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.2.0'
 
 gem 'rails_12factor', group: :production
 
 # Use postgre for production
 gem 'pg'
+gem 'rgeo'
+gem 'rgeo-geojson'
+gem 'activerecord-postgis-adapter', '3.0.0.beta5'
 
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', group: :development
@@ -47,7 +50,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
-
+gem 'unicorn'
 gem 'decent_exposure'
 
 # Date and datetime picker
@@ -72,7 +75,6 @@ gem 'nokogiri'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-gem 'unicorn'
 gem 'quiet_assets', group: :development
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -91,7 +93,14 @@ gem 'redis'
 
 # Unicorn web server
 # gem 'unicorn'
-
+group :development do
+	gem 'capistrano', '~> 3.2.1'
+	gem 'capistrano-bundler', '~> 1.1.2'
+	gem 'capistrano-rails', '~> 1.1.1'
+	gem 'capistrano-rbenv', github: "capistrano/rbenv"
+	gem 'capistrano-secrets-yml', '~> 1.0.0'
+  	gem 'capistrano3-delayed-job', '~> 1.0'
+end
 # gem 'obfuscate_id', git: 'https://github.com/namick/obfuscate_id.git'
 
 gem 'adminlte-rails'

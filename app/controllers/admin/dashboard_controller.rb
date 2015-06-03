@@ -16,6 +16,8 @@ class Admin::DashboardController < ApplicationController
   def home
     @events = Event.order(start_time: :desc)
     @events_authorization = Event.where(authorized: false).order(start_time: :desc)
+    @artists = Artist.all
+    @venues = Venue.all
   end
 
   def load_google_calendars

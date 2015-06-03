@@ -13,7 +13,7 @@ Rails.application.routes.draw do
                                     omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :artists, except: [ :edit, :update, :destroy ]
-  resources :venues,  except: [ :edit, :update, :destroy ]
+  resources :venues,  except: [ :destroy ]
   resources :events,  except: [ :destroy ] do
     collection do
       post :import

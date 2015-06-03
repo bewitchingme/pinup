@@ -1,0 +1,20 @@
+<h3>Venues</h3>
+
+<table class="table table-striped">
+  <tr>
+    <th class="col-md-7">Address</th>
+    <th class="col-md-3">Title</th>
+  </tr>
+  
+  <% @venues.order('updated_at DESC').each do |venue| %>
+    <tr>
+		<% if venue.street_address? %>
+      		<td><%= venue.street_address %></td>
+  		<% else %>
+  			<td>Unedited</td>
+		<% end %>
+      <td><%= link_to venue.title, edit_venue_path(venue) %></td>
+      
+    </tr>
+  <% end %>
+</table>

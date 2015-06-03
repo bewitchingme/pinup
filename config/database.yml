@@ -5,13 +5,15 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  adapter: postgis
+  encoding: LATIN1
   database: radiant_sands_devel
   pool: 5
   username: postgres
-  password: esf823r
-
+  password: Rails.application.secrets.database_password
+  schema_search_path: "public,postgis"
+  script_dir: /Applications/Postgres.app/Contents/Versions/9.3/share/postgresql/contrib/postgis-2.1
+  
 development:
   <<: *default
 
@@ -22,4 +24,12 @@ test:
   <<: *default
 
 production:
-  <<: *default
+  adapter: postgis  
+  encoding: LATIN1
+  database: radiant_sands_production
+  username: deploy
+  pool: 5
+  timeout: 5000
+  schema_search_path: "public,postgis"
+  script_dir: /usr/share/postgresql/9.3/contrib/postgis-2.1
+

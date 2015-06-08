@@ -10,7 +10,7 @@ gem 'pg'
 gem 'rgeo'
 gem 'rgeo-geojson'
 gem 'activerecord-postgis-adapter', '3.0.0.beta5'
-
+gem 'geocoder'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', group: :development
 

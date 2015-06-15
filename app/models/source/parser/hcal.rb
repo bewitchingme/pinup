@@ -64,7 +64,7 @@ class Source::Parser::Hcal < Source::Parser
       assign_geo(venue, raw) if raw.respond_to?(:geo)
       assign_address(venue, raw) if raw.respond_to?(:adr)
     end
-    venue.geocode!
+    # venue.geocode!
     venue_or_duplicate(venue)
   end
 

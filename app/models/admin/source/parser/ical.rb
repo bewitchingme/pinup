@@ -139,7 +139,7 @@ class Admin::Source::Parser::Ical < Admin::Source::Parser
       return nil
     end
 
-    venue.geocode!
+    # venue.geocode!
     venue_or_duplicate(venue)
   end
 

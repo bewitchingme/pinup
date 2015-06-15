@@ -45,7 +45,7 @@ class Source::Parser::Plancast < Source::Parser
         address: value['address'],
         tag_list: "plancast:place=#{value['id']}",
       })
-      venue.geocode!
+      # venue.geocode!
       venue_or_duplicate(venue)
     elsif fallback.present?
       venue = Venue.new(title: fallback)

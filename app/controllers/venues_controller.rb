@@ -1,7 +1,7 @@
 class VenuesController < ApplicationController
 
   before_action :authenticate_user!, only: [ :edit, :update, :destroy ]
-  
+
   expose(:venues) { Venue.order('name ASC') }
 
   expose(:venue, attributes: :venue_params) do 
@@ -11,6 +11,8 @@ class VenuesController < ApplicationController
       Venue.new
     end
   end
+
+  # before_filter :set_venue, :only => [:edit]
 
   def create
     self.venue = Venue.new(venue_params)
@@ -26,7 +28,20 @@ class VenuesController < ApplicationController
     end
   end
 
+  def edit
+    # @koord = Geocoder.coordinates(@venue.title)
+    #   unless @koord == nil
+    #     @lokat = Geocoder.search(@koord)[0].data
+    #     @venue.street_address = @lokat["stnumber"] + " " + @lokat["staddress"]
+    #     @venue.locality = @lokat["city"]
+    #     @venue.region = @lokat["prov"]
+    #     @venue.postal_code = @lokat["postal"]
+    #   end
+    # end
+  end
+
   def update
+    venue.rewite_dupes
     respond_to do |format|
       if venue.update(venue_params)
         format.html { redirect_to venue, notice: 'Venue was successfully updated.' }
@@ -49,6 +64,10 @@ class VenuesController < ApplicationController
   private
     
     def venue_params
-      params.require(:venue).permit(:name, :address, :city, :title, :description, :url, :street_address, :locality, :duplicate_of_id, :region, :postal_code, :country, :latitude, :longitude, :email, :telephone, :closed, :wifi, :access_notes, :source_id)
+      params.require(:venue).permit(:name, :address, :city, :title, :description, :url, :street_address, :locality, :duplicate_of_id, :region, :postal_code, :country, :latitude, :longitude, :email, :telephone, :closed, :wifi, :access_notes, :source_id, :authorized)
+    end
+
+    def set_venue
+      @venue = Venue.find(params[:id])
     end
 end

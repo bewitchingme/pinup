@@ -40,7 +40,7 @@
     <div class="col-md-12">
       <div class="form-group">
         <%= f.label :venue_id %> <br />
-        <%= f.collection_select :venue_id, Venue.all, :id, :title %>
+        <%= f.collection_select :venue_id, Venue.where(authorized: true), :id, :title %>
         <%= display_error_for(event, :venue_id) %>
       </div>
     </div>

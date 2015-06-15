@@ -57,7 +57,7 @@ class Source::Parser::Facebook < Source::Parser
       latitude:       fields['latitude'],
       longitude:      fields['longitude'],
     })
-    venue.geocode!
+    # venue.geocode!
     venue_or_duplicate(venue)
   end
 end

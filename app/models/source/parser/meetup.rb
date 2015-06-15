@@ -54,7 +54,7 @@ class Source::Parser::Meetup < Source::Parser
       telephone: value['phone'],
       tag_list: "meetup:venue=#{value['id']}",
     })
-    venue.geocode!
+    # venue.geocode!
     venue_or_duplicate(venue)
   end
 

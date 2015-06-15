@@ -1,3 +1,7 @@
 <h1>Editing venue</h1>
-
-<%= render 'form' %>
+<% @venue = Venue.find(params[:id]) %>
+<% if @venue.authorized == false %>
+	<%= render 'authorize' %>
+<% else %>
+	<%= render 'form' %>
+<% end %>

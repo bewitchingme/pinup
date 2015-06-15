@@ -18,8 +18,8 @@ class Venue < ActiveRecord::Base
 
   # Triggers
   strip_whitespace! :title, :description, :address, :url, :street_address, :locality, :region, :postal_code, :country, :email, :telephone
-  before_save :geocode!
-  before_update :geocode!
+  # before_save :geocode!
+  # before_update :geocode!
 
   # Validations
   validates_presence_of :title
@@ -122,6 +122,33 @@ class Venue < ActiveRecord::Base
 
   def to_s
     "#{ name.titleize unless name.nil? }"
+  end
+
+  def self.deauth_all
+    Venue.all.each do |f|
+      f.authorized = false
+    end
+  end
+
+  def rewite_dupes
+    @dupe_venues = Venue.where(title: self.title).ids
+    @dupe_events = []
+    @dupe_venues.each do |d|
+      @dupe_events << Event.where(venue_id: d).ids
+    end
+    @dupe_events = @dupe_events.flatten
+    @dupe_events.each do |f|
+      @event = Event.find(f)
+      @event.venue_id = self.id
+      @event.save!
+    end
+    @dupe_venues.delete(self.id)
+    unless @dupe_venues == []
+      @dupe_venues.each do |t|
+        @venue = Venue.find(t)
+        @venue.destroy
+      end
+    end
   end
 
   private

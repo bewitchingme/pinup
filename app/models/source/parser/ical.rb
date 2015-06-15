@@ -140,7 +140,7 @@ class Source::Parser::Ical < Source::Parser
       return nil
     end
 
-    venue.geocode!
+    # venue.geocode!
     venue_or_duplicate(venue)
   end
 

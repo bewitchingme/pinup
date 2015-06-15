@@ -1,22 +1,44 @@
+<% @venue = Venue.find(params[:id]) %>
+<% @koord = Geocoder.coordinates(@venue.title) %>
+<% unless @koord == nil %>
+  <% @lokat = Geocoder.search(@koord)[0].data %>
+<% end %> 
+<% unless @lokat == nil %>
+  <% @citprov = Geocoder.search(@lokat["postal"])[0].data %>
+<% end %>
+
+<% if defined?(@lokat["staddress"]) != nil %>
 <%= form_for(venue) do |f| %>
-  
+  <%= f.hidden_field :authorized, value: true %>
   <div class="row">
     <div class="col-md-12">
       <div class="form-group">
         <%= f.label :title %>
-        <%= f.text_area :title, rows: 6, class: 'form-control' %>
+        <%= f.text_field :title, class: 'form-control' %>
         <%= display_error_for venue, :title %>
       </div>
     </div>
   </div>
 
-  <%= f.hidden_field :authorized, value: true %>
-  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <%= display_error_for venue, :name %>
+      </div>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-md-12">
       <div class="form-group">
         <%= f.label :street_address %>
-        <%= f.text_field :street_address, class: 'form-control' %>
+        <% if @venue.street_address != nil %>
+          <%= f.text_field :street_address, class: 'form-control' %>
+        <% else %>
+          <%= f.text_field :street_address, :value => @lokat["stnumber"] + " " + @lokat["staddress"], class: 'form-control' %>
+        <% end %>
         <%= display_error_for venue, :street_address %>
       </div>
     </div>
@@ -26,7 +48,11 @@
     <div class="col-md-12">
       <div class="form-group">
         <%= f.label 'City' %>
-        <%= f.text_field :locality, class: 'form-control' %>
+        <% if @venue.locality != nil %>
+          <%= f.text_field :locality, class: 'form-control' %>
+        <% else %>
+          <%= f.text_field :locality, :value => @citprov["standard"]["city"], class: 'form-control' %>
+        <% end %>  
         <%= display_error_for venue, :locality %>
       </div>
     </div>
@@ -36,7 +62,11 @@
     <div class="col-md-12">
       <div class="form-group">
         <%= f.label 'Province' %>
+        <% if @venue.region != nil %>
         <%= f.text_field :region, class: 'form-control' %>
+        <% else %>
+          <%= f.text_field :region, :value => @citprov["standard"]["prov"], class: 'form-control' %>
+        <% end %> 
         <%= display_error_for venue, :region %>
       </div>
     </div>
@@ -46,7 +76,11 @@
     <div class="col-md-12">
       <div class="form-group">
         <%= f.label :postal_code %>
+        <% if @venue.postal_code != nil %>
         <%= f.text_field :postal_code, class: 'form-control' %>
+        <% else %>
+          <%= f.text_field :postal_code, :value => @lokat["postal"], class: 'form-control' %>
+        <% end %> 
         <%= display_error_for venue, :postal_code %>
       </div>
     </div>
@@ -56,7 +90,7 @@
     <div class="col-md-12">
       <div class="form-group">
         <%= f.label :url %>
-        <%= f.text_field :url, class: 'form-control' %>
+        <%= f.text_field :url, :value => url(@venue.title), class: 'form-control' %>
         <%= display_error_for venue, :url %>
       </div>
     </div>
@@ -113,4 +147,7 @@
     </div>
     <% end %>
   </div>
+<% end %>
+<% else %>
+	<%= render 'form' %>
 <% end %>

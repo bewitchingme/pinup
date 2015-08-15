@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   protect_from_forgery except: :index
-
+  before_filter :venue_authorized, only: [:edit]
   before_action :authenticate_user!, only: [ :edit, :update, :destroy ]
 
   expose(:types) { EventType.order('name ASC') }
@@ -20,11 +20,6 @@ class EventsController < ApplicationController
         format.json { render json: event.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-  def list_artists
-    @artists = Event.find(params[:event]).artists
-
   end
 
   def import
@@ -69,5 +64,12 @@ class EventsController < ApplicationController
         'start_time >= ? AND event_type_id = ? AND authorized = ?',
         Date.today, EventType.find_by( name: params[:filter] ), true
       ).order( 'start_time ASC' ).page( params[:page] )
+    end
+
+    def venue_authorized
+      @event = Event.find(params[:id])
+      if @event.venue.authorized == false
+        redirect_to edit_venue_path(@event.venue.id, :orig_id => @event.id), alert: "Please authorize this venue before authirizing the selected event."
+      end
     end
 end

@@ -41,14 +41,28 @@ class VenuesController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if venue.update(venue_params)
-        format.html { redirect_to venue, notice: 'Venue was successfully updated.' }
-        format.json { render :show, status: :ok, location: venue }
-        venue.rewite_dupes
-      else
-        format.html { render :edit }
-        format.json { render json: venue.errors, status: :unprocessable_entity }
+    if params[:venue][:orig_id].present?
+      @event = Event.find(params[:venue][:orig_id])
+      respond_to do |format|
+        if venue.update(venue_params)
+          format.html { redirect_to edit_event_path(@event), notice: 'Venue was successfully updated.' }
+          format.json { render :show, status: :ok, location: venue }
+          venue.rewite_dupes
+        else
+          format.html { render :edit }
+          format.json { render json: venue.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
+        if venue.update(venue_params)
+          format.html { redirect_to venue, notice: "Venue was successfully updated." }
+          format.json { render :show, status: :ok, location: venue }
+          venue.rewite_dupes
+        else
+          format.html { render :edit }
+          format.json { render json: venue.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -64,7 +78,7 @@ class VenuesController < ApplicationController
   private
     
     def venue_params
-      params.require(:venue).permit(:name, :address, :city, :title, :description, :url, :street_address, :locality, :duplicate_of_id, :region, :postal_code, :country, :latitude, :longitude, :email, :telephone, :closed, :wifi, :access_notes, :source_id, :authorized, :original_title)
+      params.require(:venue).permit(:name, :address, :city, :title, :description, :url, :street_address, :locality, :duplicate_of_id, :region, :postal_code, :country, :latitude, :longitude, :email, :telephone, :closed, :wifi, :access_notes, :source_id, :authorized, :original_title, :source_id, :orig_id)
     end
 
     def set_venue

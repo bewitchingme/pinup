@@ -45,14 +45,11 @@
       </div>
     </div>
 
-    <div class="col-md-12">
-      <div class="form-group">
-        <%= f.label :artist_id %>
-        <%= f.text_field :artist_id, class: 'form-control' %>
-        <%= display_error_for(event, :artist_id) %>
-      </div>
-    </div>
-  </div>
+    <h3>Artists</h3>
+    <%= f.fields_for :artists do |build| %>
+      <%= render 'artist_fields', f: build %>
+    <% end %>
+    <%= link_to_add_fields "Add Artist", f, :artists %>
 
   <div class="row">
     <div class="col-md-12">

@@ -131,7 +131,7 @@ class Venue < ActiveRecord::Base
   end
 
   def rewite_dupes
-    @dupe_venues = Venue.where(title: self.title).ids
+    @dupe_venues = Venue.where(title: self.original_title).ids
     @dupe_events = []
     @dupe_venues.each do |d|
       @dupe_events << Event.where(venue_id: d).ids

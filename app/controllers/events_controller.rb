@@ -22,6 +22,11 @@ class EventsController < ApplicationController
     end
   end
 
+  def list_artists
+    @artists = Event.find(params[:event]).artists
+
+  end
+
   def import
       Event.import(params[:file])
       redirect_to admin_dashboard_path, notice: "Events from CSV Imported"
@@ -50,7 +55,7 @@ class EventsController < ApplicationController
 
   private
     def event_params
-      params.require(:event).permit(:description, :price, :referrer, :authorized, :source, :title, :organization, :start_time, :url, :duplicate_of, :end_time, :rrule, :venue_details, :venue_id, :artist_id, :event_type_id)
+      params.require(:event).permit(:description, :price, :referrer, :authorized, :source, :title, :organization, :start_time, :url, :duplicate_of, :end_time, :rrule, :venue_details, :venue_id, :artist_id, :event_type_id, :event, :artists_attributes => [:id, :name, :_destroy])
     end
 
     def find_all_events

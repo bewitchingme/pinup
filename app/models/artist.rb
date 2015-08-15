@@ -23,7 +23,7 @@ class Artist < ActiveRecord::Base
 
   #### EVENTS
 
-  has_many :events
+  has_and_belongs_to_many :events
 
 
 
@@ -38,8 +38,6 @@ class Artist < ActiveRecord::Base
   def to_s
     "#{name.titleize unless name.nil? }"
   end
-
-
 
   private
 

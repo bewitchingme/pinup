@@ -12,10 +12,11 @@ Rails.application.routes.draw do
                                     sessions: 'users/sessions',
                                     omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  resources :artists, except: [ :edit, :update, :destroy ]
+  resources :artists
   resources :venues,  except: [ :destroy ]
   resources :events,  except: [ :destroy ] do
     collection do
+      get :list_artists
       post :import
     end
   end

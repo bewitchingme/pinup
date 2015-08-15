@@ -9,6 +9,13 @@ module EventsHelper
     end
   end
 
+  def all_by_name_array
+    @artists = []
+    Artist.all.each do |artist|
+      @artists << artist.name.html_safe
+    end
+    @artists
+  end
 # calculate rowspans for an array of events
 # argument:  array of events
 # returns:  rowspans, an array in which each entry corresponds to an event in events;

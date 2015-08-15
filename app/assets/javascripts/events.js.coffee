@@ -7,3 +7,15 @@ $(document).ready ->
     navSelector: ".prev" # selector for the paged navigation (it will be hidden)
     nextSelector: ".next" # selector for the NEXT link (to page 2)
     itemSelector: ".event" # selector for all items you'll retrieve
+
+jQuery ->
+  $('form').on 'click', '.remove_fields', (event) ->
+    $(this).prev('input[type=hidden]').val('1')
+    $(this).closest('fieldset').hide()
+    event.preventDefault()
+
+  $('form').on 'click', '.add_fields', (event) ->
+    time = new Date().getTime()
+    regexp = new RegExp($(this).data('id'), 'g')
+    $(this).before($(this).data('fields').replace(regexp, time))
+    event.preventDefault()

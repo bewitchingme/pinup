@@ -5,7 +5,7 @@
       <% if current_user.nil? || !current_user.admin? %>
         <%= link_to artist, artist, class: 'artist col-md-12' %>
       <% else %>
-        <%= link_to artist, "/admin/artists/#{artist.id}/edit", class: 'artist col-md-12' %>
+        <%= link_to artist, "/artists/#{artist.id}/edit", class: 'artist col-md-12' %>
       <% end %>
       </strong>
     <% end %>

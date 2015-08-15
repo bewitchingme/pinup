@@ -14,6 +14,7 @@
 //= require bootstrap.min
 //= require admin-lte
 //= require bootstrap-sprockets
+//= require jquery-ui
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require jquery.infinitescroll

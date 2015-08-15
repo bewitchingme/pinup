@@ -93,6 +93,26 @@
   </div>
 
   <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :latitude %>
+        <%= f.text_field :latitude, class: 'form-control' %>
+        <%= display_error_for venue, :latitude %>
+      </div>
+    </div>
+  </div>  
+
+   <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :longitude %>
+        <%= f.text_field :longitude, class: 'form-control' %>
+        <%= display_error_for venue, :longitude %>
+      </div>
+    </div>
+  </div>  
+
+  <div class="row">
     <% if current_user.nil? || !current_user.admin? %>
     <div class="col-md-4 col-md-offset-4">
       <div class="form-group">

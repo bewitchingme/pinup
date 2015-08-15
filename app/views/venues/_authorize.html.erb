@@ -3,13 +3,14 @@
 <% unless @koord == nil %>
   <% @lokat = Geocoder.search(@koord)[0].data %>
 <% end %> 
-<% unless @lokat == nil %>
+<% unless @lokat["postal"] == nil %>
   <% @citprov = Geocoder.search(@lokat["postal"])[0].data %>
 <% end %>
 
 <% if defined?(@lokat["staddress"]) != nil %>
 <%= form_for(venue) do |f| %>
   <%= f.hidden_field :authorized, value: true %>
+  <%= f.hidden_field :original_title, value: @venue.title %>
   <div class="row">
     <div class="col-md-12">
       <div class="form-group">

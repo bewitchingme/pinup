@@ -1,3 +1,11 @@
+<script>
+  $(function() {
+    var availableTags = <%= raw all_by_name_array %>;
+    $( ".autocomplete-artist" ).autocomplete({
+      source: availableTags
+    });
+  });
+  </script>
 <%= render 'events/filters' %>
 
 <div class="panel panel-primary">

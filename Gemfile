@@ -84,7 +84,7 @@ gem 'quiet_assets', group: :development
 # gem 'debugger', group: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [ :mingw, :mswin, :x64_mingw ]
+gem 'tzinfo-data', platforms: [ :mingw, :mswin ]
 
 # Sidekiq for process handling
 gem 'sidekiq'

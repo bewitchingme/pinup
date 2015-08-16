@@ -36,6 +36,18 @@
     </div>
   </div>
 
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :url %>
+        <%= f.url_field :url, class: 'form-control' %>
+        <%= display_error_for(event, :description) %>
+      </div>
+    </div>
+  </div>    
+
   <div class="row">
     <div class="col-md-12">
       <div class="form-group">
@@ -81,6 +93,16 @@
           <span class="input-group-addon">.00</span>
         </div>
         <%= display_error_for(event, :price) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :note %>
+        <%= f.text_area :note, rows: 16, class: 'form-control' %>
+        <%= display_error_for(event, :description) %>
       </div>
     </div>
   </div>

@@ -18,12 +18,12 @@ class Artist < ActiveRecord::Base
   ### NAME
 
   before_save :to_lower_case
-
+  
 
 
   #### EVENTS
 
-  has_and_belongs_to_many :events
+  has_and_belongs_to_many :events, :uniq => true
 
 
 

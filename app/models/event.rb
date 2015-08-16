@@ -34,7 +34,7 @@ class Event < ActiveRecord::Base
   belongs_to :venue, :counter_cache => true
   belongs_to :organization, :counter_cache => true
   belongs_to :source
-  has_and_belongs_to_many :artists
+  has_and_belongs_to_many :artists, :uniq => true
   accepts_nested_attributes_for :artists, allow_destroy: true
   belongs_to :event_type
 
@@ -49,7 +49,7 @@ class Event < ActiveRecord::Base
     :allow_nil => true
 
   validates :title, :description, :url, blacklist: true
-
+  before_save :get_artists
   before_destroy :verify_lock_status
 
   # Duplicates
@@ -238,6 +238,12 @@ class Event < ActiveRecord::Base
       (end_time - start_time)
     else
       0
+    end
+  end
+
+  def get_artists
+    self.artists = self.artists.collect do |artist|
+      Artist.where(name: artist.name).first_or_create
     end
   end
 

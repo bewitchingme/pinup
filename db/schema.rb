@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150815210406) do
+ActiveRecord::Schema.define(version: 20150816160759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 20150815210406) do
     t.boolean  "locked",                      default: false
     t.integer  "source_id"
     t.boolean  "authorized",                  default: false
+    t.text     "note"
   end
 
   add_index "events", ["day_of_week"], name: "index_events_on_day_of_week", using: :btree

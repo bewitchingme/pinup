@@ -6,15 +6,16 @@
     <th class="col-md-3">Title</th>
   </tr>
   
-  <% @venues.order('updated_at DESC').each do |venue| %>
+  <% @venues.each do |venue| %>
     <tr>
-		<% if venue.street_address? %>
-      		<td><%= venue.street_address %></td>
-  		<% else %>
-  			<td>Unedited</td>
-		<% end %>
       <td><%= link_to venue.title, edit_venue_path(venue) %></td>
-      
+		  <% if venue.street_address? %>
+		    <td><%= venue.street_address %></td>
+      <% elsif venue.authorized == false %>
+        <td>UNAUTHORIZED</td>
+		  <% else %>
+		  	<td>Unedited</td>
+		  <% end %>      
     </tr>
   <% end %>
 </table>

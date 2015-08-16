@@ -17,7 +17,7 @@ class Admin::DashboardController < ApplicationController
     @events = Event.order(start_time: :desc)
     @events_authorization = Event.where(authorized: false).order(start_time: :desc)
     @artists = Artist.all
-    @venues = Venue.all
+    @venues = Venue.order('authorized ASC, title ASC').all
   end
 
   def load_google_calendars

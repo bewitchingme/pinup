@@ -3,7 +3,7 @@ ruby '2.2.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
-gem 'rails_12factor', group: :production
+# gem 'rails_12factor', group: :production
 
 # Use postgre for production
 gem 'pg'

@@ -15,6 +15,7 @@
       <% if event.authorized %>
         <td><small><%= event.start_time.strftime('%H:%M %d-%m-%Y') %></small></td>
         <td><%= link_to event.title, edit_event_path(event) %></td>
+        <td><%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tr>
   <% end %>

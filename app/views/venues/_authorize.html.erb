@@ -3,7 +3,7 @@
 <% unless @koord == nil %>
   <% @lokat = Geocoder.search(@koord)[0].data %>
 <% end %> 
-<% unless @lokat["postal"] == nil %>
+<% unless @lokat["postal"] == nil || '[]' %>
   <% @citprov = Geocoder.search(@lokat["postal"])[0].data %>
 <% end %>
 
@@ -49,11 +49,9 @@
     <div class="col-md-12">
       <div class="form-group">
         <%= f.label 'City' %>
-        <% if @venue.locality != nil %>
+        
           <%= f.text_field :locality, class: 'form-control' %>
-        <% else %>
-          <%= f.text_field :locality, :value => @citprov["standard"]["city"], class: 'form-control' %>
-        <% end %>  
+         
         <%= display_error_for venue, :locality %>
       </div>
     </div>
@@ -63,11 +61,7 @@
     <div class="col-md-12">
       <div class="form-group">
         <%= f.label 'Province' %>
-        <% if @venue.region != nil %>
         <%= f.text_field :region, class: 'form-control' %>
-        <% else %>
-          <%= f.text_field :region, :value => @citprov["standard"]["prov"], class: 'form-control' %>
-        <% end %> 
         <%= display_error_for venue, :region %>
       </div>
     </div>

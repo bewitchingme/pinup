@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
     strategy DecentExposure::StrongParametersStrategy
   end
 
+  def download_csv_template
+    send_file 'template.csv', :disposition => 'attachment'
+  end
+
   private
 
     def ssl_configured?

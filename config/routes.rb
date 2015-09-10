@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :artists
   resources :venues,  except: [ :destroy ]
-  resources :events,  except: [ :destroy ] do
+  resources :events do
     collection do
       get :list_artists
       post :import
@@ -63,4 +63,5 @@ Rails.application.routes.draw do
     end
   end
     get '/blog', to: 'static_pages#blog', as: 'blog'
+    get 'download_csv_template', to: 'application#download_csv_template'
 end

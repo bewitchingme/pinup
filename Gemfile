@@ -12,7 +12,7 @@ gem 'rgeo-geojson'
 gem 'activerecord-postgis-adapter', '3.0.0.beta5'
 gem 'geocoder'
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3', group: :development
+gem 'sqlite3', group: :development
 
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.2.0'
@@ -87,7 +87,7 @@ gem 'quiet_assets', group: :development
 gem 'tzinfo-data', platforms: [ :mingw, :mswin ]
 
 # Sidekiq for process handling
-gem 'sidekiq'
+gem 'sidekiq', '4.0.1'
 
 # Redis for sidekiq data storing
 gem 'redis'

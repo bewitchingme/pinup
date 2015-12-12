@@ -130,20 +130,21 @@ class Venue < ActiveRecord::Base
     end
   end
 
-  def rewite_dupes
-    @dupe_venues = Venue.where(title: self.original_title).ids
+  # KT@HOME - 2015/12/12: rewrite_duplicates takes all events from venues with the same "original_title" and moves them into this venue before deleting the duplicate venues.
+  def rewrite_duplicates
+    @dupe_venues = Venue.where(title: self.original_title).ids # KT@HOME - Collect ids for all venues with the same original_title
     @dupe_events = []
     @dupe_venues.each do |d|
-      @dupe_events << Event.where(venue_id: d).ids
+      @dupe_events << Event.where(venue_id: d).ids # KT@HOME - add all events for the venue to an iteration array
     end
-    @dupe_events = @dupe_events.flatten
+    @dupe_events = @dupe_events.flatten # KT@HOME - Remove any inner array hierarchy
     @dupe_events.each do |f|
-      @event = Event.find(f)
-      @event.venue_id = self.id
-      @event.save!
+      @event = Event.find(f)  # KT@HOME - 2015/12/12: Note: Possible inefficiency here. 2 Database calls for each event. Could just retain the event from earlier and reuse it here. Also - since each find causes another database call lots of time is lost getting the server to respond.
+      @event.venue_id = self.id # KT@HOME - Change the event to use this one instead
+      @event.save! # KT@HOME - Now Save it (and throw exceptions in validation is failed)
     end
-    @dupe_venues.delete(self.id)
-    unless @dupe_venues == []
+    @dupe_venues.delete(self.id) # KT@HOME - Don't delete yourself
+    unless @dupe_venues == [] # KT@HOME - But do delete everyone else
       @dupe_venues.each do |t|
         @venue = Venue.find(t)
         @venue.destroy

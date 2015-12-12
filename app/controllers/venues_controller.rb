@@ -47,7 +47,7 @@ class VenuesController < ApplicationController
         if venue.update(venue_params)
           format.html { redirect_to edit_event_path(@event), notice: 'Venue was successfully updated.' }
           format.json { render :show, status: :ok, location: venue }
-          venue.rewite_dupes
+          venue.rewrite_duplicates
         else
           format.html { render :edit }
           format.json { render json: venue.errors, status: :unprocessable_entity }
@@ -58,7 +58,7 @@ class VenuesController < ApplicationController
         if venue.update(venue_params)
           format.html { redirect_to venue, notice: "Venue was successfully updated." }
           format.json { render :show, status: :ok, location: venue }
-          venue.rewite_dupes
+          venue.rewrite_duplicates
         else
           format.html { render :edit }
           format.json { render json: venue.errors, status: :unprocessable_entity }

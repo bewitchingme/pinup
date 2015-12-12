@@ -107,6 +107,11 @@ class Event < ActiveRecord::Base
 
   #---[ Overrides ]-------------------------------------------------------
 
+  # KT@HOME - In response to github issue #1 adding to_s using just the title
+  def to_s
+    title
+  end
+
   # Return the title but strip out any whitespace.
   def title
     # TODO Generalize this code so we can use it on other attributes in the different model classes. The solution should use an #alias_method_chain to make sure it's not breaking any explicit overrides for an attribute.

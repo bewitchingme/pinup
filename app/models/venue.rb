@@ -121,7 +121,7 @@ class Venue < ActiveRecord::Base
   # obfuscate_id
 
   def to_s
-    "#{ name.titleize unless name.nil? }"
+    "#{ title.titleize unless title.nil? }"
   end
 
   def self.deauth_all

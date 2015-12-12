@@ -1,6 +1,8 @@
 <% @venue = Venue.find(params[:id]) %>
 <% @koord = Geocoder.coordinates(@venue.title) %>
-<% unless @koord == nil %>
+<% if @koord == nil %>
+  <% @lokat = {'postal'=>'','staddress'=>'','stnumber'=>""}%>
+<% else %>
   <% @lokat = Geocoder.search(@koord)[0].data %>
 <% end %> 
 <% unless @lokat["postal"] == nil || '[]' %>

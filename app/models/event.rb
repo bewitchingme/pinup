@@ -223,6 +223,17 @@ class Event < ActiveRecord::Base
     end
   end
 
+  def begin_at_date
+    # Deprecated Alias
+    start_date
+  end
+
+  def begin_at_time
+    # Deprecated Alias
+    start_time
+  end
+
+
   # Is this event current?
   def current?
     (end_time || start_time) >= Date.today.to_time

@@ -178,6 +178,7 @@ class EventsController < ApplicationController
 
   def find_authorized_event
     @event = Event.find(params[:id])
+    # KT@HOME - 2015/12/16: TODO: Potential problem in next line. Hard-coded user_group_id
     authorized =
       (current_user.user_group_id == 2 || !@event.organization || @event.organization == current_organization) && !@event.locked?
 

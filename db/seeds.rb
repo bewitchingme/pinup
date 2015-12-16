@@ -71,11 +71,11 @@
     role: Role.find_by(name: 'admin')
   }])
 
-  # lists = List.create([
-  #   { title: "Ottawa Jazz Happenings",
-  #     url:   "http://www.google.com/calendar/ical/ottawajazzhappenings%40jazzworkscanada.com/public/basic.ics"},
-  #   { title: "Jazz Works Canada",
-  #     url:   "http://www.google.com/calendar/ical/jazzworkscanada.com_29lcl1pmtk661nr45rv5hckho8%40group.calendar.google.com/public/basic.ics"},
-  #   { title: "Jazz Works Canada",
-  #     url:   "http://www.google.com/calendar/ical/jazzworkscanada.com_g53tni1lq25vk1kt66ljin2sg4%40group.calendar.google.com/public/basic.ics"}
-  # ])
+#  lists = List.create([
+#    { title: "Ottawa Jazz Happenings",
+#      url:   "http://www.google.com/calendar/ical/ottawajazzhappenings%40jazzworkscanada.com/public/basic.ics"},
+#    { title: "Jazz Works Canada",
+#      url:   "http://www.google.com/calendar/ical/jazzworkscanada.com_29lcl1pmtk661nr45rv5hckho8%40group.calendar.google.com/public/basic.ics"},
+#    { title: "Jazz Works Canada",
+#      url:   "http://www.google.com/calendar/ical/jazzworkscanada.com_g53tni1lq25vk1kt66ljin2sg4%40group.calendar.google.com/public/basic.ics"}
+#  ])

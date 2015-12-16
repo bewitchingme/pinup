@@ -252,6 +252,10 @@ class Event < ActiveRecord::Base
     end
   end
 
+  def artist
+    get_artists.first
+  end
+
 protected
 
   def end_time_later_than_start_time

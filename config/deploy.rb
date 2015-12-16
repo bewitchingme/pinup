@@ -2,7 +2,7 @@
 lock '3.2.1'
 
 set :application, 'pinup'
-set :repo_url, 'git@github.com:theoandtheb/gattawa.git'
+set :repo_url, 'git@github.com:kevinturnbull/pinup.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call

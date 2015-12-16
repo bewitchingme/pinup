@@ -10,7 +10,7 @@
     <% types.each do |type| %>
       <% next if type.name.nil? or type.name.empty? %>
       <li>
-        <%= link_to events_path( filter => type.name ) do %>
+        <%= link_to events_path( :filter => type.name, :date => params[:date] ) do %>
           <%= image_tag type.icon, width: 12, height: 12, style: 'margin: 2px;' %>
           <span> <%= type %></span>
         <% end %>

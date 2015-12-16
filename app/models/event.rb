@@ -225,7 +225,7 @@ class Event < ActiveRecord::Base
 
   def begin_at_date
     # Deprecated Alias
-    start_date
+    start_time.to_date
   end
 
   def begin_at_time

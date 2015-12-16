@@ -1,19 +1,18 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
 
+
 * System dependencies
+KT@HOME - 2015/12/15: If you don't have ImageMagick installed on the server you'll get issue #11
 
 * Configuration
 
 * Database creation
+rake db:migrate
 
 * Database initialization
+rake db:seed
 
 * How to run the test suite
 

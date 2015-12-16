@@ -1,7 +1,7 @@
 # Load DSL and Setup Up Stages
 require 'capistrano/setup'
 require 'capistrano/deploy'
-require 'capistrano/rbenv'
+require 'capistrano/rvm'
 require 'capistrano/secrets_yml'
 require 'capistrano/rails'
 

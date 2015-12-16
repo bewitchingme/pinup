@@ -7,8 +7,9 @@
   <p><strong>Recurring Event</strong></p>
   <% end %>
   <p>
-    <span id="artist">KT@HOME - 2015/12/08 @ 03:41:50 PM - oops broken, can't display list of artists yet see issue #3<%= #link_to_unless event.artist.nil?, event.artist, event.artist 
-%></span>
+    <% event.get_artists.each do |artist| %>
+      <span id="artist"><%= link_to_unless artist.nil?, artist, artist %></span>
+    <% end %>
     <span id="at"> @ </span>
     <span id="venue"><%= link_to_unless event.venue.nil?, event.venue, event.venue %></span>
     <time id="begin_at" datetime="<%= event.start_time %>"><%= event.start_time.strftime('%F %R') %></time>

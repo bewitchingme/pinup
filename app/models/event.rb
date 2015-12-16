@@ -233,7 +233,6 @@ class Event < ActiveRecord::Base
     start_time
   end
 
-
   # Is this event current?
   def current?
     (end_time || start_time) >= Date.today.to_time

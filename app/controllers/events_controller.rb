@@ -69,7 +69,7 @@ class EventsController < ApplicationController
     def venue_authorized
       @event = Event.find(params[:id])
       if @event.venue.authorized == false
-        redirect_to edit_venue_path(@event.venue.id, :orig_id => @event.id), alert: "Please authorize this venue before authirizing the selected event."
+        redirect_to edit_venue_path(@event.venue.id, :orig_id => @event.id), alert: "Please authorize this venue before authorizing the selected event."
       end
     end
 end

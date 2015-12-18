@@ -1,3 +1,86 @@
+=================== Server Prerequisites for Ruby
+echo "KT@HOME - New Ubuntu Server Setup Script"
+sudo apt-get update
+sudo apt-get install git
+
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+
+echo "KT@HOME - Install rbenv using instructions from https://gorails.com/setup/ubuntu/14.04"
+cd
+git clone git://github.com/sstephenson/rbenv.git .rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+exec $SHELL
+
+=================== Ruby on Rails Setup
+git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+
+echo "KT@HOME - This next part might take 5 minutes or so. Go make a sandwich or something."
+rbenv install 2.2.0
+rbenv global 2.2.0
+ruby -v
+
+echo "KT@HOME - Tell gem not to waste time downloading docs"
+echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+gem install bundler
+
+echo "KT@HOME - Set up NodeJS"
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+
+echo "KT@HOME - Install Rails"
+gem install rails -v 4.2.4
+rbenv rehash
+
+echo "KT@HOME - If nothing went wrong - you should have ruby 2.2.0 and rails 4.2.4 now"
+ruby -v
+rails -v
+
+================= CODE PULL
+echo "KT@HOME - Bringing up Development Environment (Post Snapshot Instructions)"
+
+echo "KT@HOME - Pull in the code base"
+git clone https://github.com/KevinTurnbull/pinup.git
+
+sudo apt-get install libpq-dev
+
+cd pinup
+bundle install
+
+echo "KT@HOME - Setting up non-repo files"
+cat <<EOT >> ~/pinup/config/database.yml
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+EOT
+
+cat <<EOT >> ~/pinup/config/secrets.yml
+production:
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+  seed_password: asdffdsa
+development:
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+  seed_password: asdffdsa
+EOT
+
+echo "KT@HOME - Don't forget to set up basics for Git"
+echo "git config --global color.ui true"
+echo "git config --global user.name 'YOUR NAME'"
+echo "git config --global user.email 'YOUR@EMAIL.com'"
+echo "ssh-keygen -t rsa -C 'YOUR@EMAIL.com'"
+echo "KT@HOME - Then take the output from this command and paste it into github's SSH area"
+cat ~/.ssh/id_rsa.pub
+
+echo "You'll have to do this next part yourself http://stackoverflow.com/a/26172408"
+echo "Once you're done that - go to ~/pinup and type unicorn in a new terminal"
+
 == README
 
 * Ruby version

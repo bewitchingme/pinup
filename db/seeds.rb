@@ -71,7 +71,7 @@
     role: Role.find_by(name: 'admin')
   }])
 
-#  lists = List.create([
+#  external_calendars = ExternalCalendar.create([
 #    { title: "Ottawa Jazz Happenings",
 #      url:   "http://www.google.com/calendar/ical/ottawajazzhappenings%40jazzworkscanada.com/public/basic.ics"},
 #    { title: "Jazz Works Canada",

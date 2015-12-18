@@ -1,9 +1,9 @@
 class ICSCalendarLoader
   include Sidekiq::Worker
 
-  def perform(url, list_id)
+  def perform(url, external_calendar_id)
     open(url) do |file|
-      list = Admin::List.find(list_id)
+      external_calendar = Admin::ExternalCalendar.find(external_calendar_id)
       evts = []
 
       Icalendar.parse(file).each do |calendar|
@@ -14,7 +14,7 @@ class ICSCalendarLoader
             name: event.summary.to_s,
             description: event.description.to_s,
             begin_at: event.dtstart.to_datetime,
-            list_id: list.id,
+            external_calendar_id: external_calendar.id,
             price: 0,
             type: nil,
             artist: '',

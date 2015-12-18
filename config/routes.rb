@@ -49,7 +49,7 @@ Rails.application.routes.draw do
     
     resources :venues
 
-    resources :lists
+    resources :external_calendars
     
     resources :events do
       member do

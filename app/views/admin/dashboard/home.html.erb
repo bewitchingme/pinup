@@ -13,7 +13,7 @@
     </li>    
 
     <li role="presentation">
-      <%= link_to 'Lists', '#lists', role: 'tab', data: { toggle: 'tab' } %>
+      <%= link_to 'External Calendars', '#external_calendars', role: 'tab', data: { toggle: 'tab' } %>
     </li>
 
     <li role="presentation" class="active">
@@ -46,8 +46,8 @@
       <%= render 'admin/dashboard/artists' %>
     </div>
 
-    <div role="tabpanel" class="tab-pane" id="lists">
-      <%= render 'admin/dashboard/lists' %>
+    <div role="tabpanel" class="tab-pane" id="external_calendars">
+      <%= render 'admin/dashboard/external_calendars' %>
     </div>
 
     <div role="tabpanel" class="tab-pane" id="banner-upload">

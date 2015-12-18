@@ -7,7 +7,7 @@ class Admin::DashboardController < ApplicationController
 
   before_action :authenticate_user!
 
-  expose(:lists) { Admin::List.all }
+  expose(:external_calendars) { Admin::ExternalCalendar.all }
   expose(:banner) { Admin::Banner.new }
   expose(:ad) { Admin::Ad.new }
   expose(:csv_calendar) { Admin::CsvCalendar.new }

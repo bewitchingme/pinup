@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ListTest < ActiveSupport::TestCase
+class ExternalCalendarTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

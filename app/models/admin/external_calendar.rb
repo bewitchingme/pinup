@@ -1,4 +1,4 @@
-class Admin::List < ActiveRecord::Base
+class Admin::ExternalCalendar < ActiveRecord::Base
   has_many :events
 
   validates :title, presence: true

@@ -1,9 +1,9 @@
 class XMLCalendarLoader
   include Sidekiq::Worker
 
-  def perform(url, list_id)
+  def perform(url, external_calendar_id)
     open(url) do |file|
-      list = List.find(list_id)
+      external_calendar = ExternalCalendar.find(external_calendar_id)
       puts "Performing"
       # Buggy
       return
@@ -87,7 +87,7 @@ class XMLCalendarLoader
           name: event_name,
           description: event_description,
           begin_at: DateTime.parse(event_first_start),
-          list_id: list.id,
+          external_calendar_id: external_calendar.id,
           price: 0,
           type: nil,
           referrer: nil,

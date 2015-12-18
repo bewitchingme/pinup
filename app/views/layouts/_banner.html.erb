@@ -1,5 +1,6 @@
 <section id="banner">
   <% unless Admin::Banner.first.nil? %>
-  <%= link_to image_tag(Admin::Banner.first.image(:medium), size: '468x60', alt: :banner, class: 'banner'), Admin::Banner.first.url %>
+  <% chosenbanner = Admin::Banner.first %>
+  <%= link_to image_tag(chosenbanner.image(:medium), size: '468x60', alt: :banner, class: 'banner'), chosenbanner.url %>
   <% end %>
 </section>

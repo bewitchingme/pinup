@@ -1,6 +1,7 @@
 <section id="banner">
   <% unless Admin::Banner.first.nil? %>
-  <% chosenbanner = Admin::Banner.first %>
+
+  <% chosenbanner = Admin::Banner.all.pluck # KT@HOME - PerfTune: This is not ideal since _all_ banners get pulled into memory to use just one. It would be better to tell the database that we just want a random banner. But that's also tough to do in a database agnostic way. %>
   <%= link_to image_tag(chosenbanner.image(:medium), size: '468x60', alt: :banner, class: 'banner'), chosenbanner.url %>
   <% end %>
 </section>

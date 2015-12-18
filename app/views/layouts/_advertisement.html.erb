@@ -1,6 +1,6 @@
 <section id="ads">
   <% Admin::Ad.all.each do |ad| %>
-    <%= link_to image_tag(ad.image(:medium), size: '300x300', alt: :advertisement, class: 'ad'), ad.url %>
+    <%= link_to image_tag(ad.image(:medium), size: '240x400', alt: :advertisement, class: 'ad'), ad.url %>
   <% end %>
 </section>
 

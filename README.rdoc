@@ -3,7 +3,7 @@ echo "KT@HOME - New Ubuntu Server Setup Script"
 sudo apt-get update
 sudo apt-get install git
 
-sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev redis-server imagemagick
 
 echo "KT@HOME - Install rbenv using instructions from https://gorails.com/setup/ubuntu/14.04"
 cd
@@ -76,10 +76,24 @@ echo "git config --global user.name 'YOUR NAME'"
 echo "git config --global user.email 'YOUR@EMAIL.com'"
 echo "ssh-keygen -t rsa -C 'YOUR@EMAIL.com'"
 echo "KT@HOME - Then take the output from this command and paste it into github's SSH area"
-cat ~/.ssh/id_rsa.pub
+echo "cat ~/.ssh/id_rsa.pub"
 
 echo "You'll have to do this next part yourself http://stackoverflow.com/a/26172408"
 echo "Once you're done that - go to ~/pinup and type unicorn in a new terminal"
+
+============ Setup the Database
+cd ~/pinup
+rake db:migrate
+rake db:seed
+
+============ Startup the server post installation
+cd ~/pinup
+redis-server &
+sleep 5 &
+sidekiq &
+sleep 5 &
+unicorn &
+disown
 
 == README
 

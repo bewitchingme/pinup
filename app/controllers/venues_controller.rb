@@ -2,7 +2,7 @@ class VenuesController < ApplicationController
 
   before_action :authenticate_user!, only: [ :edit, :update, :destroy ]
 
-  expose(:venues) { Venue.order('name ASC') }
+  expose(:venues) { Venue.order('title ASC') }
 
   expose(:venue, attributes: :venue_params) do 
     unless params[:id].nil?

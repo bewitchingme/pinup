@@ -69,7 +69,7 @@ class EventsController < ApplicationController
     def venue_authorized
       @event = Event.find(params[:id])
       if @event.venue == nil 
-        # KT@HOME - 2015/12/20: Issue #22 a nil event is considered authorized
+        return true # KT@HOME - 2015/12/20: Issue #22 a nil event is considered authorized
       elsif @event.venue.authorized == false
         redirect_to edit_venue_path(@event.venue.id, :orig_id => @event.id), alert: "Please authorize this venue before authorizing the selected event."
       end

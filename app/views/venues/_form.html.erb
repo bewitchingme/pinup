@@ -10,7 +10,15 @@
     </div>
   </div>
 
-  <%= f.hidden_field :authorized, value: true %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :street_address %>
+        <%= f.check_box :authorized, value: true %>
+        <%= display_error_for venue, :street_address %>
+      </div>
+    </div>
+  </div>
   
   <div class="row">
     <div class="col-md-12">

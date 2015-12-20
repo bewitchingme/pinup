@@ -153,6 +153,7 @@ class Venue < ActiveRecord::Base
   end
 
   private
+    # KT@HOME - 2015/12/20: Deprecated - name isn't consistently used. Prefer use of "title"
     def to_lower_case
       self.name = name.downcase unless name.nil?
     end

@@ -262,6 +262,7 @@ class Event < ActiveRecord::Base
     end
   end
 
+  # KT@HOME - 2015/12/20: Deprecated: This is a hacky solution to a bug.
   def artist
     get_artists.first
   end

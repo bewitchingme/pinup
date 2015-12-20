@@ -13,9 +13,9 @@
   <div class="row">
     <div class="col-md-12">
       <div class="form-group">
-        <%= f.label :street_address %>
-        <%= f.check_box :authorized, value: true %>
-        <%= display_error_for venue, :street_address %>
+        <%= f.label :authorized %>
+        <%= f.check_box :authorized %>
+        <%= display_error_for venue, :authorized %>
       </div>
     </div>
   </div>

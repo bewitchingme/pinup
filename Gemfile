@@ -104,7 +104,8 @@ group :development do
 end
 # gem 'obfuscate_id', git: 'https://github.com/namick/obfuscate_id.git'
 
-gem 'adminlte-rails'
+# using the hfwang version since it doesn't have the minimal.png bug.
+gem 'adminlte-rails', :git => 'git://github.com/hfwang/adminlte-rails.git'
 
 gem 'font-awesome-rails'
 

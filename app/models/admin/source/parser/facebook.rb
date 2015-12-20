@@ -25,6 +25,9 @@ class Admin::Source::Parser::Facebook < Admin::Source::Parser
 
     raise ::Admin::Source::Parser::HttpAuthenticationRequiredError if data['parsed_response'] === false
 
+    # KT@HOME - 2015/12/20: Issue #20 Skip any private events
+    return unless (data['privacy'] == "OPEN") # KT@HOME - This solution will only work when using facebook api version <= 2.3 - I can only presume this matches the version we're using since the field names used below imply this. I can't however find specific proof of this.
+
     event = Event.new({
       admin_source:      opts[:admin_source],
       title:       data['name'],

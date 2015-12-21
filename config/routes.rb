@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :sidekiq_tests
+
   resources :sources do
     collection do
       post :import

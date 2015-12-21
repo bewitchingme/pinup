@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @sidekiq_test.text %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @sidekiq_test.count %>
+</p>
+
+<%= link_to 'Edit', edit_sidekiq_test_path(@sidekiq_test) %> |
+<%= link_to 'Back', sidekiq_tests_path %>

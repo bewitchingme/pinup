@@ -4,6 +4,7 @@ class SidekiqTestsController < ApplicationController
   # GET /sidekiq_tests
   # GET /sidekiq_tests.json
   def index
+    SidekiqTestCreatorWorker:perform()
     @sidekiq_tests = SidekiqTest.all
   end
 

@@ -18,7 +18,7 @@ class ICSCalendarLoader
             price: 0,
             type: nil,
             #artist: '',
-            venue: '',
+            #venue: '',
             recurring: false,
             uid: uid
           }

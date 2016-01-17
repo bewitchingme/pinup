@@ -88,6 +88,7 @@ gem 'tzinfo-data', platforms: [ :mingw, :mswin ]
 
 # Sidekiq for process handling
 gem 'sidekiq', '4.0.1'
+gem 'sinatra', group: :development, :require => nil # sinatra is used for displaying sidekiq instances
 
 # Redis for sidekiq data storing
 gem 'redis'

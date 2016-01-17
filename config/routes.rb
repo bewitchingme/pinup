@@ -61,6 +61,9 @@ Rails.application.routes.draw do
         patch :authorize_all
       end
     end
+
+    mount Sidekiq::Web => '/sidekiq'
+
   end
     get '/blog', to: 'static_pages#blog', as: 'blog'
     get 'download_csv_template', to: 'application#download_csv_template'

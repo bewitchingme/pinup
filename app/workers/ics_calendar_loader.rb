@@ -17,7 +17,7 @@ class ICSCalendarLoader
             external_calendar_id: external_calendar.id,
             price: 0,
             type: nil,
-            artist: '',
+            #artist: '',
             venue: '',
             recurring: false,
             uid: uid

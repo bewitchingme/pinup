@@ -22,6 +22,7 @@ class Admin::DashboardController < ApplicationController
 
   def load_google_calendars
     load_cals
+    redirect_to admin_dashboard_path
   end
 
   private

@@ -4,12 +4,15 @@ require './app/workers/xml_calendar_loader'
 class Digger::Calendar
   def self.load
     Admin::ExternalCalendar.all.each do |external_calendar|
-      open(external_calendar.url) do |file|
+      
+      url_safe = external_calendar.url.gsub(/^(webcal)/, "http")
+
+      open(url_safe) do |file|
         case file.content_type
         when 'application/atom+xml'
-          parse_xml_calendar(external_calendar.url, external_calendar.id)
+          parse_xml_calendar(url_safe, external_calendar.id)
         when 'text/calendar'
-          parse_ics_calendar(external_calendar.url, external_calendar.id)
+          parse_ics_calendar(url_safe, external_calendar.id)
         else
           raise "Unsupported Format"
         end

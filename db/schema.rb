@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150816160759) do
+ActiveRecord::Schema.define(version: 20151218211311) do
 
   create_table "admin_ads", force: :cascade do |t|
     t.datetime "created_at"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20150816160759) do
     t.datetime "updated_at"
   end
 
-  create_table "admin_lists", force: :cascade do |t|
+  create_table "admin_external_calendars", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "url",        default: "", null: false

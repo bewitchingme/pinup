@@ -70,6 +70,12 @@ development:
   seed_password: asdffdsa
 EOT
 
+echo "KT@HOME - Injecting test facebook app environment variables (These should be overwritten by production credentials during move-to-production process)"
+cat <<EOT >> ~/.bashrc
+export FACEBOOK_APP_ID=452221581640675
+export FACEBOOK_APP_SECRET=44e769a8bee592e10c803191f4d63216
+EOT
+
 echo "KT@HOME - Don't forget to set up basics for Git"
 echo "git config --global color.ui true"
 echo "git config --global user.name 'YOUR NAME'"

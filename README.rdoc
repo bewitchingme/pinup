@@ -93,7 +93,7 @@ rake db:migrate
 rake db:seed
 
 ============ Startup the server post installation
-cd ~/pinup
+cd ~/git-repo/pinup
 redis-server &
 sleep 5 &
 sidekiq &

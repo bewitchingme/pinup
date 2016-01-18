@@ -34,6 +34,7 @@ class Event < ActiveRecord::Base
   belongs_to :venue, :counter_cache => true
   belongs_to :organization, :counter_cache => true
   belongs_to :source
+  belongs_to :external_calendar
   has_and_belongs_to_many :artists, :uniq => true
   accepts_nested_attributes_for :artists, allow_destroy: true
   belongs_to :event_type
@@ -116,6 +117,10 @@ class Event < ActiveRecord::Base
   def title
     # TODO Generalize this code so we can use it on other attributes in the different model classes. The solution should use an #alias_method_chain to make sure it's not breaking any explicit overrides for an attribute.
     read_attribute(:title).to_s.strip
+  end
+
+  def parent_external_calendar
+    external_calendar
   end
 
   # Return description without those pesky carriage-returns.
@@ -262,7 +267,7 @@ class Event < ActiveRecord::Base
     end
   end
 
-  # KT@HOME - 2015/12/20: Deprecated: This is a hacky solution to a bug.
+  # KT@HOME - 2015/12/20: Deprecated: This is a hacky solution to a bug. Prefer 'get_artists'
   def artist
     get_artists.first
   end

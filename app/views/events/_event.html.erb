@@ -6,7 +6,7 @@
       <div id="event-title">
         <strong>
           <time id="event-begin-at" datetime="<%= event.start_time %>">
-            <%= event.start_time.strftime('%Y-%m-%d %H:%M') %>
+            <%= event.start_time.strftime('%a, %b %d @ %H:%M') %>
           </time>
           <span id="event-name"><%= event.title %></span>
         </strong>

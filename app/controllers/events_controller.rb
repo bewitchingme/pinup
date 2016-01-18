@@ -56,14 +56,14 @@ class EventsController < ApplicationController
     def find_all_events
       Event.where(
         'start_time > ? AND authorized = ?', Time.now, true
-      ).order( 'start_time ASC' ).page( params[:page] )
+      ).order( 'start_time DESC' ).page( params[:page] )
     end
 
     def find_filtered_events
       Event.where(
         'start_time >= ? AND event_type_id = ? AND authorized = ?',
         Date.today, EventType.find_by( name: params[:filter] ), true
-      ).order( 'start_time ASC' ).page( params[:page] )
+      ).order( 'start_time DESC' ).page( params[:page] )
     end
 
     def venue_authorized

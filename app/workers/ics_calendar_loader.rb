@@ -1,3 +1,5 @@
+require "yaml"
+
 class ICSCalendarLoader
   include Sidekiq::Worker
 
@@ -24,6 +26,8 @@ class ICSCalendarLoader
           }
         end
       end
+
+      raise YAML::dump(evts)
 
       Event.create(evts)
     end

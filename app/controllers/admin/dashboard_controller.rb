@@ -33,7 +33,7 @@ class Admin::DashboardController < ApplicationController
 
     def load_cals
       Admin::ExternalCalendar.all.each do |external_calendar|
-        Admin::SourcesController
+        Admin::SourcesController.new_with external_calendar.url
       end
     end
 end

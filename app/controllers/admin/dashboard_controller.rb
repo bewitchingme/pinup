@@ -32,6 +32,8 @@ class Admin::DashboardController < ApplicationController
     end
 
     def load_cals
-      Digger::Calendar.load
+      Admin::ExternalCalendar.all.each do |external_calendar|
+        Admin::SourcesController
+      end
     end
 end

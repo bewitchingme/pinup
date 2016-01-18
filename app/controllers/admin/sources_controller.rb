@@ -18,6 +18,10 @@ class Admin::SourcesController < ApplicationController
     @source.url = params[:url] if params[:url].present?
   end
   
+  def new_with(url)
+    @source = Admin::Source.new
+    @source.url = url
+  end
     private
 
     def admin_source_params

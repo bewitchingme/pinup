@@ -7,7 +7,6 @@ class Admin::DashboardController < ApplicationController
 
   before_action :authenticate_user!
 
-  expose(:external_calendars) { Admin::ExternalCalendar.all }
   expose(:banner) { Admin::Banner.new }
   expose(:ad) { Admin::Ad.new }
   expose(:csv_calendar) { Admin::CsvCalendar.new }
@@ -20,20 +19,10 @@ class Admin::DashboardController < ApplicationController
     @venues = Venue.order('authorized ASC, title ASC').all
   end
 
-  def load_google_calendars
-    load_cals
-    redirect_to admin_dashboard_path
-  end
-
   private
 
     def authorize_all_events
       Event.authorize_all
     end
 
-    def load_cals
-      Admin::ExternalCalendar.all.each do |external_calendar|
-        Admin::SourcesController.new_with external_calendar.url
-      end
-    end
 end

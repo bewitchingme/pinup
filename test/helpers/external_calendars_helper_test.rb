@@ -1,4 +1,4 @@
-require 'test_helper'
+# require 'test_helper'
 
-class ExternalCalendarsHelperTest < ActionView::TestCase
-end
+# class ExternalCalendarsHelperTest < ActionView::TestCase
+# end

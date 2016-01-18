@@ -42,8 +42,10 @@
             </form>
           </li>
           <li>
+            <form class="navbar-form">
             <%= link_to 'Submit Event', new_event_path,
                   class: "btn btn-flat btn-primary" %>
+            </form>
           </li>
           <% if user_signed_in? %>
             <li>

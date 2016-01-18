@@ -1,3 +1,7 @@
+<%= @sources.each do |source|
+  link_to "Edit Source", edit_source_path(source)
+end %>
+
 <div role="tabpanel">
   <ul id="dashboard-tabs" class="nav nav-tabs" role="tablist">
     <li>

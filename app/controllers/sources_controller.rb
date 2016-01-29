@@ -85,6 +85,6 @@ class SourcesController < ApplicationController
     end
 
     def source_params
-      params.require(:source).permit(:title, :url, :imported_at, :reimport, :event_type_id)
+      params.require(:source).permit(:title, :url, :imported_at, :reimport, :commit, :event_type_id, :id)
     end
 end

@@ -12,16 +12,16 @@
       <%= link_to 'Artists', '#artists', role: 'tab', data: { toggle: 'tab' } %>
     </li>    
 
-    <li role="presentation">
-      <%= link_to 'External Calendars', '#external_calendars', role: 'tab', data: { toggle: 'tab' } %>
-    </li>
-
     <li role="presentation" class="active">
       <%= link_to 'Authorization', '#event-authorization', role: 'tab', data: { toggle: 'tab' } %>
     </li>
 
     <li role="presentation">
       <%= link_to 'Banner Upload', '#banner-upload', role: 'tab', data: { toggle: 'tab' } %>
+    </li>
+
+    <li role="presentation">
+      <%= link_to 'Sources', '#sources', role: 'tab', data: { toggle: 'tab' } %>
     </li>
 
     <li role="presentation">
@@ -46,8 +46,8 @@
       <%= render 'admin/dashboard/artists' %>
     </div>
 
-    <div role="tabpanel" class="tab-pane" id="external_calendars">
-      <%= render 'admin/dashboard/external_calendars' %>
+    <div role="tabpanel" class="tab-pane" id="sources">
+      <%= render 'admin/dashboard/sources' %>
     </div>
 
     <div role="tabpanel" class="tab-pane" id="banner-upload">

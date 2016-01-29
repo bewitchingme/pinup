@@ -1,8 +1,0 @@
-<li style="margin-bottom: 6px;">
-  <div class="btn-group pull-right">
-    <%= link_to 'Edit', edit_admin_external_calendar_path(external_calendar), class: 'btn btn-warning btn-xs' %>
-    <%= link_to 'Remove', admin_external_calendar_path(external_calendar), method: :delete, class: 'btn btn-danger btn-xs', data: { confirm: 'Are you sure?' } %>
-  </div>
-  
-  <%= link_to external_calendar.title, admin_external_calendar_path(external_calendar) %>
-</li>

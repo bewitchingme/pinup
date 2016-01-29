@@ -48,8 +48,6 @@ Rails.application.routes.draw do
     resources :artists
     
     resources :venues
-
-    resources :external_calendars
     
     resources :events do
       member do
